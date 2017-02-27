@@ -10,6 +10,7 @@ By {{author}}
 {% endif %}
 
 {# print the quote #}
-{{ h[1] }}
+{{ h[1] }}{% if h[6] is not none and h[6]|length > 0 %}  _NOTE: {{ h[6] }}_{% endif %}
+
 {% endif %}
 {% endfor %}

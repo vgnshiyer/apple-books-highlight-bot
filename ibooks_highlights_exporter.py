@@ -130,6 +130,7 @@ def do_note_list(args):
         ZFUTUREPROOFING5, 
         ZANNOTATIONSTYLE, 
         ZANNOTATIONLOCATION,
+        ZANNOTATIONNOTE,
         books.ZBKLIBRARYASSET.ZTITLE, 
         books.ZBKLIBRARYASSET.ZAUTHOR
 
@@ -141,7 +142,7 @@ def do_note_list(args):
         order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
     """)
     res1 = res1.fetchall()
-    res1 = sorted(res1, key=cmp_to_key(query_compare))
+    res1 = [list(r) for r in res1]
 
     template = TEMPLATE_ENVIRONMENT.get_template("markdown_template.md")
 
@@ -150,22 +151,25 @@ def do_note_list(args):
         if r[2] is None:
             continue
         assetid = r[0]
+        r[1] = r[1].strip()
         if assetid not in books:
             books[assetid] = []
         books[assetid].append(r)
 
     for book in books.values():
 
+        book.sort(key=cmp_to_key(query_compare))
+
         md = template.render(
-            title=book[0][6],
-            author=book[0][7],
+            title=book[0][7],
+            author=book[0][8],
             last="###", 
             highlights=book,
             notoc=args.notoc,
             nobootstrap=args.nobootstrap
         )
 
-        fn = '{}/{}.md'.format(args.dname, book[0][6])
+        fn = '{}/{}.md'.format(args.dname, book[0][7])
         with open(fn, 'wb') as f:
             f.write(md.encode('utf-8'))
 
