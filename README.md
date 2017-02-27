@@ -1,6 +1,9 @@
 # ibooks_highlights_export
 
-Export *all* highlights in your iBooks library into html.
+Export *all* highlights in your iBooks library into html.  Modified from [original][] by [shrsv][].
+
+[original]: https://github.com/shrsv/ibooks_highlights_export
+[shrsv]:    https://github.com/shrsv
 
 ## Usage
 
