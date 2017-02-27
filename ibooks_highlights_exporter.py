@@ -120,6 +120,33 @@ def cmp_to_key(mycmp):
     return K
 
 
+def do_book_list(args):
+
+    #only prints a list of books with highlights and exists
+    res2 = cur1.execute("""
+        select 
+        ZANNOTATIONASSETID, 
+        count(ZANNOTATIONSELECTEDTEXT), 
+        books.ZBKLIBRARYASSET.ZTITLE, 
+        books.ZBKLIBRARYASSET.ZAUTHOR 
+
+        from ZAEANNOTATION
+
+        left join books.ZBKLIBRARYASSET
+        on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
+
+        group by 1
+    """)
+    res2 = sorted(res2, key=lambda x: x[1])
+    for assetid, count, title, author in res2:
+        if count > 0:
+            print(assetid.ljust(32), count, '\t', title, ',', author)
+    print()
+    for assetid, count, title, author in res2:
+        if count == 0 and title is not None:
+            print(assetid.ljust(32), count, '\t', title, ',', author)
+
+
 def do_note_list(args):
 
     res1 = cur1.execute("""
@@ -164,9 +191,7 @@ def do_note_list(args):
             title=book[0][7],
             author=book[0][8],
             last="###", 
-            highlights=book,
-            notoc=args.notoc,
-            nobootstrap=args.nobootstrap
+            highlights=book
         )
 
         fn = '{}/{}.md'.format(args.dname, book[0][7])
@@ -179,24 +204,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='iBooks Highlights Exporter')
     parser.add_argument('-o', action="store", default="books", dest="dname",
             help="Specify output directory (default: books)")
-    parser.add_argument('--notoc', action="store_true", help="Disable the javascript TOC in the output")
-    parser.add_argument('--nobootstrap', action="store_true", help="Disable the bootstrap library in the output")
-    parser.add_argument('--mindmap', action="store_true", help="Generate a Simple Mind Mind Map instead of .html file. "
-                                                               "You need to specify a book first.")
     parser.add_argument('--list', action="store_true", help="Lists a books having highlights.")
-    parser.add_argument('--book', action="store", help="Name of the book for which annotations will be exported",
-                        dest="book")
     args = parser.parse_args()
 
 
     if args.list:
-        #only prints a list of books with highlights and exists
-        res2 = cur2.execute("""
-            select distinct(ZASSETID), ZTITLE, ZAUTHOR 
-            from ZBKLIBRARYASSET
-        """)
-        for assetid, title, author in res2:
-            print(assetid, title, author)
+        do_book_list(args)
 
     else:
         if not os.path.exists(args.dname):
