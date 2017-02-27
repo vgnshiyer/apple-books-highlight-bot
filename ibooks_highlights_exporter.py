@@ -24,7 +24,7 @@ base1 = os.path.expanduser(base1)
 sqlite_file = glob(base1 + "*.sqlite")
 
 if not sqlite_file:
-    print "Couldn't find the iBooks database. Exiting."
+    print("Couldn't find the iBooks database. Exiting.")
     exit()
 else:
     sqlite_file = sqlite_file[0]
@@ -34,7 +34,7 @@ base2 = os.path.expanduser(base2)
 assets_file = glob(base2 + "*.sqlite")
 
 if not assets_file:
-    print "Couldn't find the iBooks assets database. Exiting."
+    print("Couldn't find the iBooks assets database. Exiting.")
     exit()
 else:
     assets_file = assets_file[0]
@@ -64,7 +64,7 @@ def get_all_relevant_assetids_and_counts():
 
 def get_all_relevant_titles():
     aids_and_counts = get_all_relevant_assetids_and_counts()
-    print aids_and_counts
+    print(aids_and_counts)
     all_titles = get_all_titles()
 
     op = {}
@@ -104,7 +104,7 @@ def get_chapter_name():
     return t[4]
 
 def make_text_readable(text, every=80):
-    return '\N'.join(text[i:i+every] for i in xrange(0, len(text), every))
+    return '\n'.join(text[i:i+every] for i in xrange(0, len(text), every))
 
 
 def get_asset_title_tab():
@@ -159,14 +159,14 @@ if args.list:
     #only prints a list of books with highlights and exists
     res2 = cur2.execute("select distinct(ZASSETID), ZTITLE, ZAUTHOR from ZBKLIBRARYASSET")
     for assetid, title, author in res2:
-        print assetid,title, author
+        print(assetid, title, author)
 
 else:
     if args.mindmap:
         if args.book:
             if args.fname == 'output.html':
                 args.fname = 'output.smmx'
-            with open(args.fname, 'w') as f:
+            with open(args.fname, 'wb') as f:
                 template = TEMPLATE_ENVIRONMENT.get_template("simple_mind_template.xml")
                 template.globals['get_mm_color'] = get_mm_color
                 template.globals['make_text_readable'] = make_text_readable
@@ -179,7 +179,7 @@ else:
                 for chapter in res1:
                     if chapter not in chapters:
                         chapters.append(chapter[0])
-                print chapters
+                print(chapters)
 
 
                 chapters_list = []
@@ -208,18 +208,18 @@ else:
                     asset_title_tab[assetid] = [assetid, title, author]
 
                 today = datetime.date.isoformat(datetime.date.today())
-                print get_book_details(args.book)
-                print args.book
+                print(get_book_details(args.book))
+                print(args.book)
 
                 smmx = template.render(obj={"last":"###", "date":today, "highlights":annotations,
                     "assetlist":asset_title_tab, "notoc":args.notoc, "bookname": get_book_details(args.book),
                     "nobootstrap":args.nobootstrap, "chapters": chapters_list})
                 f.write(smmx.encode('utf-8'))
         else:
-            print 'Please, specify book for which you want MM to be created. List can be obtained with --list'
+            print('Please, specify book for which you want MM to be created. List can be obtained with --list')
 
     else:
-        with open(args.fname, 'w') as f:
+        with open(args.fname, 'wb') as f:
 
             res1 = cur1.execute("select ZANNOTATIONASSETID, ZANNOTATIONREPRESENTATIVETEXT, ZANNOTATIONSELECTEDTEXT, "
                                 "ZFUTUREPROOFING5, ZANNOTATIONSTYLE, ZFUTUREPROOFING5 from ZAEANNOTATION order by"
