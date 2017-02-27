@@ -15,7 +15,8 @@ PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_ENVIRONMENT = Environment(
     autoescape=False,
     loader=FileSystemLoader(os.path.join(PATH, 'templates')),
-    trim_blocks=False)
+    trim_blocks=True,
+    lstrip_blocks=False)
 
 
 asset_title_tab = {}
@@ -41,186 +42,139 @@ else:
 
 db1 = sqlite3.connect(sqlite_file, check_same_thread=False)
 cur1 = db1.cursor()
+cur1.execute("""
+    attach database ? as books
+    """,
+    (assets_file,)
+)
 
 db2 = sqlite3.connect(assets_file, check_same_thread=False)
 cur2 = db2.cursor()
 
 
-def get_all_titles():
-    global cur2
-    res = cur2.execute("""
-        select ZASSETID, ZTITLE, ZAUTHOR 
-        from ZBKLIBRARYASSET;
-    """).fetchall()
-    m = {}
-    for r in res:
-        m[r[0]] = {"ZTITLE": r[1], "ZAUTHOR": r[2]}
-
-    return m
+def uniquify(lst):
+    return list(set(list))
 
 
-def get_all_relevant_assetids_and_counts():
-    global cur1
-    q = """
-        select count(*), ZANNOTATIONASSETID 
-        from ZAEANNOTATION 
-        where ZANNOTATIONREPRESENTATIVETEXT IS NOT NULL 
-        group by ZANNOTATIONASSETID;
-    """
-    res = cur1.execute(q).fetchall()
-    return res
+def parse_epubcfi(raw):
+
+    if raw is None:
+        return []
+
+    parts = raw[8:-1].split(',')
+    cfistart = parts[0] + parts[1]
+
+    parts = cfistart.split(':')
+
+    path = parts[0]
+    offsets = [ 
+        int(x[1:]) 
+        for x in re.findall('(/\d+)', path) 
+    ]
+
+    if len(parts) > 1:
+        offsets.append(int(parts[1]))
+
+    return offsets
 
 
-def get_all_relevant_titles():
-    aids_and_counts = get_all_relevant_assetids_and_counts()
-    print(aids_and_counts)
-    all_titles = get_all_titles()
+def epubcfi_compare(x, y):
+    depth = min( len(x), len(y) )
+    for d in range(depth):
+        if x[d] == y[d]:
+            continue
+        else:
+            return x[d] - y[d]
 
-    op = {}
-
-    for cnt, aid in aids_and_counts:
-        all_titles[aid]["COUNT"] = cnt
-        op[aid] = all_titles[aid]
-
-    return op
+    return len(x) - len(y)
 
 
-def bold_text(selected_text, representative_text):
-    left = representative_text.find(selected_text)
-    right = left + len(selected_text)
-
-    op = representative_text[:left] + "<b>" +  representative_text[left:right] + "</b>" + representative_text[right:]
-    return op
-
-
-def get_book_details(assetid):
-    global cur2
-    res2 = cur2.execute("""
-        select ZTITLE, ZAUTHOR 
-        from ZBKLIBRARYASSET 
-        where ZASSETID=?
-        """, 
-        (assetid,)
+def query_compare(x, y):
+    if x[0] > y[0]:
+        return 1
+    elif x[0] < y[0]:
+        return -1
+    return epubcfi_compare(
+        parse_epubcfi(x[5]), 
+        parse_epubcfi(y[5])
     )
-    t =  res2.fetchone()
-    return t[0] + ", " + t[1]
 
 
-def get_all_highlights():
-    global cur1
-    res1 = cur1.execute("""
-        select 
-        ZANNOTATIONASSETID, 
-        ZANNOTATIONREPRESENTATIVETEXT, 
-        ZANNOTATIONSELECTEDTEXT, 
-        ZANNOTATIONSTYLE 
-
-        from ZAEANNOTATION 
-        order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
-    """)
-
-    return res1
-
-
-def get_chapter_name():
-    global cur1
-    res1 = cur1.execute("""
-        select 
-        ZANNOTATIONASSETID, 
-        ZANNOTATIONREPRESENTATIVETEXT, 
-        ZANNOTATIONSELECTEDTEXT, 
-        ZANNOTATIONSTYLE, 
-        ZFUTUREPROOFING5 
-
-        from ZAEANNOTATION 
-        order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART ;
-    """)
-    t =  res1.fetchone()
-    return t[4]
-
-
-def make_text_readable(text, every=80):
-    return '\n'.join(text[i:i+every] for i in range(0, len(text), every))
-
-
-def get_asset_title_tab():
-    global cur2
-
-    res2 = cur2.execute("select distinct(ZASSETID), ZTITLE, ZAUTHOR from ZBKLIBRARYASSET")
-    for assetid, title, author in res2:
-        asset_title_tab[assetid] = [title, author]
-
-    return asset_title_tab
-
-
-def get_color(num):
-    if num == 0:
-        return "b_gray"
-    elif num == 1:
-        return "b_green"
-    elif num == 2:
-        return "b_blue"
-    elif num == 3:
-        return "b_yellow"
-    elif num == 4:
-        return "b_pink"
-    elif num == 5:
-        return "b_violet"
-    else:
-        return "b_gray"
-
-
-def get_mm_color(num):
-    if num>7:
-        return ((num - 2) % 6) + 2
-    else:
-        return num
+def cmp_to_key(mycmp):
+    'Convert a cmp= function into a key= function'
+    class K:
+        def __init__(self, obj, *args):
+            self.obj = obj
+        def __lt__(self, other):
+            return mycmp(self.obj, other.obj) < 0
+        def __gt__(self, other):
+            return mycmp(self.obj, other.obj) > 0
+        def __eq__(self, other):
+            return mycmp(self.obj, other.obj) == 0
+        def __le__(self, other):
+            return mycmp(self.obj, other.obj) <= 0
+        def __ge__(self, other):
+            return mycmp(self.obj, other.obj) >= 0
+        def __ne__(self, other):
+            return mycmp(self.obj, other.obj) != 0
+    return K
 
 
 def do_note_list(args):
 
-    with open(args.fname, 'wb') as f:
+    res1 = cur1.execute("""
+        select 
+        ZANNOTATIONASSETID, 
+        ZANNOTATIONREPRESENTATIVETEXT, 
+        ZANNOTATIONSELECTEDTEXT, 
+        ZFUTUREPROOFING5, 
+        ZANNOTATIONSTYLE, 
+        ZANNOTATIONLOCATION,
+        books.ZBKLIBRARYASSET.ZTITLE, 
+        books.ZBKLIBRARYASSET.ZAUTHOR
 
-        res1 = cur1.execute("""
-            select 
-            ZANNOTATIONASSETID, 
-            ZANNOTATIONREPRESENTATIVETEXT, 
-            ZANNOTATIONSELECTEDTEXT, 
-            ZFUTUREPROOFING5, 
-            ZANNOTATIONSTYLE, 
-            ZFUTUREPROOFING5 
+        from ZAEANNOTATION
 
-            from ZAEANNOTATION 
-            
-            order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
-        """)
-        today = datetime.date.isoformat(datetime.date.today())
+        left join books.ZBKLIBRARYASSET
+        on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
+        
+        order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
+    """)
+    res1 = res1.fetchall()
+    res1 = sorted(res1, key=cmp_to_key(query_compare))
 
-        # beginning another way of doing the same thing, just more efficient
-        res2 = cur2.execute("""
-            select distinct(ZASSETID), ZTITLE, ZAUTHOR 
-            from ZBKLIBRARYASSET
-        """)
-        for assetid, title, author in res2:
-            asset_title_tab[assetid] = [title, author]
+    template = TEMPLATE_ENVIRONMENT.get_template("markdown_template.md")
 
-        template = TEMPLATE_ENVIRONMENT.get_template("simpletemplate.html")
-        template.globals['bold_text'] = bold_text
-        template.globals['get_color'] = get_color
-        template.globals['get_book_details'] = get_book_details
-        template.globals['get_chapter_name'] = get_chapter_name
+    books = {}
+    for r in res1:
+        if r[2] is None:
+            continue
+        assetid = r[0]
+        if assetid not in books:
+            books[assetid] = []
+        books[assetid].append(r)
 
-        html = template.render(obj={"last":"###", "date":today, "highlights":res1,
-            "assetlist":asset_title_tab, "notoc":args.notoc,
-            "nobootstrap":args.nobootstrap})
-        f.write(html.encode('utf-8'))
+    for book in books.values():
+
+        md = template.render(
+            title=book[0][6],
+            author=book[0][7],
+            last="###", 
+            highlights=book,
+            notoc=args.notoc,
+            nobootstrap=args.nobootstrap
+        )
+
+        fn = '{}/{}.md'.format(args.dname, book[0][6])
+        with open(fn, 'wb') as f:
+            f.write(md.encode('utf-8'))
 
 
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='iBooks Highlights Exporter')
-    parser.add_argument('-o', action="store", default="output.html", dest="fname",
-            help="Specify output filename (default: output.html)")
+    parser.add_argument('-o', action="store", default="books", dest="dname",
+            help="Specify output directory (default: books)")
     parser.add_argument('--notoc', action="store_true", help="Disable the javascript TOC in the output")
     parser.add_argument('--nobootstrap', action="store_true", help="Disable the bootstrap library in the output")
     parser.add_argument('--mindmap', action="store_true", help="Generate a Simple Mind Mind Map instead of .html file. "
@@ -241,4 +195,6 @@ if __name__ == '__main__':
             print(assetid, title, author)
 
     else:
+        if not os.path.exists(args.dname):
+            os.makedirs(args.dname)
         do_note_list(args)
