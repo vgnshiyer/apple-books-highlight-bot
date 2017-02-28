@@ -131,7 +131,7 @@ def do_book_list(args):
 
         group by 1
     """)
-    res = sorted(res2, key=lambda x: x[1])
+    res = sorted(res, key=lambda x: x[1])
     for assetid, count, title, author in res:
         if count > 0:
             print(assetid.ljust(32), count, '\t', title, ',', author)
