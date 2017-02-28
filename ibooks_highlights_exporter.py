@@ -6,6 +6,7 @@ import sqlite3
 import datetime
 import argparse
 import re
+import frontmatter
 
 from glob import glob
 from jinja2 import Environment, FileSystemLoader
@@ -47,13 +48,6 @@ cur1.execute("""
     """,
     (assets_file,)
 )
-
-db2 = sqlite3.connect(assets_file, check_same_thread=False)
-cur2 = db2.cursor()
-
-
-def uniquify(lst):
-    return list(set(list))
 
 
 def parse_epubcfi(raw):
@@ -123,7 +117,7 @@ def cmp_to_key(mycmp):
 def do_book_list(args):
 
     #only prints a list of books with highlights and exists
-    res2 = cur1.execute("""
+    res = cur1.execute("""
         select 
         ZANNOTATIONASSETID, 
         count(ZANNOTATIONSELECTEDTEXT), 
@@ -137,19 +131,19 @@ def do_book_list(args):
 
         group by 1
     """)
-    res2 = sorted(res2, key=lambda x: x[1])
-    for assetid, count, title, author in res2:
+    res = sorted(res2, key=lambda x: x[1])
+    for assetid, count, title, author in res:
         if count > 0:
             print(assetid.ljust(32), count, '\t', title, ',', author)
     print()
-    for assetid, count, title, author in res2:
+    for assetid, count, title, author in res:
         if count == 0 and title is not None:
             print(assetid.ljust(32), count, '\t', title, ',', author)
 
 
 def do_note_list(args):
 
-    res1 = cur1.execute("""
+    res = cur1.execute("""
         select 
         ZANNOTATIONASSETID, 
         ZANNOTATIONREPRESENTATIVETEXT, 
@@ -168,13 +162,13 @@ def do_note_list(args):
         
         order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
     """)
-    res1 = res1.fetchall()
-    res1 = [list(r) for r in res1]
+    res = res.fetchall()
+    res = [list(r) for r in res]
 
     template = TEMPLATE_ENVIRONMENT.get_template("markdown_template.md")
 
     books = {}
-    for r in res1:
+    for r in res:
         if r[2] is None:
             continue
         assetid = r[0]
@@ -191,12 +185,15 @@ def do_note_list(args):
             title=book[0][7],
             author=book[0][8],
             last="###", 
-            highlights=book
+            highlights=book,
         )
+
+        fmpost = frontmatter.Post(md, asset_id=book[0][0])
+        fmpost_txt = frontmatter.dumps(fmpost)
 
         fn = '{}/{}.md'.format(args.dname, book[0][7])
         with open(fn, 'wb') as f:
-            f.write(md.encode('utf-8'))
+            f.write(fmpost_txt.encode('utf-8'))
 
 
 if __name__ == '__main__':
