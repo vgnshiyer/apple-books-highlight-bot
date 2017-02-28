@@ -135,10 +135,6 @@ def do_book_list(args):
     for assetid, count, title, author in res:
         if count > 0:
             print(assetid.ljust(32), count, '\t', title, ',', author)
-    print()
-    for assetid, count, title, author in res:
-        if count == 0 and title is not None:
-            print(assetid.ljust(32), count, '\t', title, ',', author)
 
 
 def do_note_list(args):
