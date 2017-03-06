@@ -168,7 +168,8 @@ def do_note_list(args):
         if r[2] is None:
             continue
         assetid = r[0]
-        r[1] = r[1].strip()
+        if r[1] is not None:
+            r[1] = r[1].strip()
         if assetid not in books:
             books[assetid] = []
         books[assetid].append(r)
@@ -180,7 +181,7 @@ def do_note_list(args):
         md = template.render(
             title=book[0][7],
             author=book[0][8],
-            last="###", 
+            vars={'last': '###'}, 
             highlights=book,
         )
 
