@@ -1,6 +1,7 @@
 # {{ title }}
 
 By {{author}}
+{% set vars={'last': none} %}
 {% for h in highlights %}
 {# found a new chapter, print its title #}
 {% if h[1] %}

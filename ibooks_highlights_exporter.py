@@ -181,7 +181,6 @@ def do_note_list(args):
         md = template.render(
             title=book[0][7],
             author=book[0][8],
-            vars={'last': '###'}, 
             highlights=book,
         )
 
