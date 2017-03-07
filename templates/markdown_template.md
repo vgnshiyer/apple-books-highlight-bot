@@ -4,16 +4,16 @@ By {{author}}
 {% set vars={'last': none} %}
 {% for h in highlights %}
 {# found a new chapter, print its title #}
-{% if h[1] %}
-{% if h[3] is not none and vars.last != h[3] %}
+{% if h.selected_text %}
+{% if h.chapter is not none and vars.last != h.chapter %}
 {# stupid hacky nonsense to get around assignment not holding in outer scope #}
-{% if vars.update({'last': h[3]}) %}{% endif %}
+{% if vars.update({'last': h.chapter}) %}{% endif %}
 
-## {{ h[3] }}
+## {{ h.chapter }}
 {% endif %}
 
 {# print the quote #}
-{{ h[1] }}{% if h[6] is not none and h[6]|length > 0 %}  _NOTE: {{ h[6] }}_{% endif %}
+{{ h.selected_text }}{% if h.note is not none and h.note|length > 0 %}  _NOTE: {{ h.not }}_{% endif %}
 
 {% endif %}
 {% endfor %}

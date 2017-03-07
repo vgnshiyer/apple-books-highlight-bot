@@ -84,13 +84,13 @@ def epubcfi_compare(x, y):
 
 
 def query_compare(x, y):
-    if x[0] > y[0]:
+    if x['assetid'] > y['assetid']:
         return 1
-    elif x[0] < y[0]:
+    elif x['assetid'] < y['assetid']:
         return -1
     return epubcfi_compare(
-        parse_epubcfi(x[5]), 
-        parse_epubcfi(y[5])
+        parse_epubcfi(x['location']), 
+        parse_epubcfi(y['location'])
     )
 
 
@@ -139,37 +139,51 @@ def do_book_list(args):
 
 def do_note_list(args):
 
+    fields = [
+        'assetid', 
+        'represent_text', 
+        'selected_text', 
+        'chapter', 
+        'style', 
+        'location',
+        'note',
+        'title', 
+        'author'
+    ]
+
     res = cur1.execute("""
         select 
-        ZANNOTATIONASSETID, 
-        ZANNOTATIONREPRESENTATIVETEXT, 
-        ZANNOTATIONSELECTEDTEXT, 
-        ZFUTUREPROOFING5, 
-        ZANNOTATIONSTYLE, 
-        ZANNOTATIONLOCATION,
-        ZANNOTATIONNOTE,
-        books.ZBKLIBRARYASSET.ZTITLE, 
-        books.ZBKLIBRARYASSET.ZAUTHOR
+        ZANNOTATIONASSETID as assetid, 
+        ZANNOTATIONREPRESENTATIVETEXT as represent_text, 
+        ZANNOTATIONSELECTEDTEXT as selected_text, 
+        ZFUTUREPROOFING5 as chapter, 
+        ZANNOTATIONSTYLE as style, 
+        ZANNOTATIONLOCATION as location,
+        ZANNOTATIONNOTE as note,
+        books.ZBKLIBRARYASSET.ZTITLE as title, 
+        books.ZBKLIBRARYASSET.ZAUTHOR as author
 
         from ZAEANNOTATION
 
         left join books.ZBKLIBRARYASSET
         on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
         
+        where ZANNOTATIONDELETED = 0
+
         order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
     """)
     res = res.fetchall()
-    res = [list(r) for r in res]
+    res = [dict(zip(fields, r)) for r in res]
 
     template = TEMPLATE_ENVIRONMENT.get_template("markdown_template.md")
 
     books = {}
     for r in res:
-        if r[2] is None:
+        if r['selected_text'] is None:
             continue
-        assetid = r[0]
-        if r[1] is not None:
-            r[1] = r[1].strip()
+        assetid = r['assetid']
+        if r['represent_text'] is not None:
+            r['represent_text'] = r['represent_text'].strip()
         if assetid not in books:
             books[assetid] = []
         books[assetid].append(r)
@@ -179,15 +193,15 @@ def do_note_list(args):
         book.sort(key=cmp_to_key(query_compare))
 
         md = template.render(
-            title=book[0][7],
-            author=book[0][8],
+            title=book[0]['title'],
+            author=book[0]['author'],
             highlights=book,
         )
 
-        fmpost = frontmatter.Post(md, asset_id=book[0][0])
+        fmpost = frontmatter.Post(md, asset_id=book[0]['assetid'])
         fmpost_txt = frontmatter.dumps(fmpost)
 
-        fn = '{}/{}.md'.format(args.dname, book[0][7])
+        fn = '{}/{}.md'.format(args.dname, book[0]['title'])
         with open(fn, 'wb') as f:
             f.write(fmpost_txt.encode('utf-8'))
 
