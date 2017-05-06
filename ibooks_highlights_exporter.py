@@ -20,34 +20,88 @@ TEMPLATE_ENVIRONMENT = Environment(
     lstrip_blocks=False)
 
 
-asset_title_tab = {}
-base1 = "~/Library/Containers/com.apple.iBooksX/Data/Documents/AEAnnotation/"
-base1 = os.path.expanduser(base1)
-sqlite_file = glob(base1 + "*.sqlite")
+ANNOTATION_DB_PATH = (
+    "~/Library/Containers/com.apple.iBooksX/Data/Documents/AEAnnotation/")
+BOOK_DB_PATH = (
+    "~/Library/Containers/com.apple.iBooksX/Data/Documents/BKLibrary/")
 
-if not sqlite_file:
-    print("Couldn't find the iBooks database. Exiting.")
-    exit()
-else:
-    sqlite_file = sqlite_file[0]
 
-base2 = "~/Library/Containers/com.apple.iBooksX/Data/Documents/BKLibrary/"
-base2 = os.path.expanduser(base2)
-assets_file = glob(base2 + "*.sqlite")
+ATTACH_BOOKS_QUERY = """
+attach database ? as books
+"""
 
-if not assets_file:
-    print("Couldn't find the iBooks assets database. Exiting.")
-    exit()
-else:
-    assets_file = assets_file[0]
 
-db1 = sqlite3.connect(sqlite_file, check_same_thread=False)
-cur1 = db1.cursor()
-cur1.execute("""
-    attach database ? as books
-    """,
-    (assets_file,)
-)
+BOOK_LIST_QUERY = """
+select 
+ZANNOTATIONASSETID, 
+count(ZANNOTATIONSELECTEDTEXT), 
+books.ZBKLIBRARYASSET.ZTITLE, 
+books.ZBKLIBRARYASSET.ZAUTHOR 
+
+from ZAEANNOTATION
+
+left join books.ZBKLIBRARYASSET
+on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
+
+group by 1
+"""
+
+
+NOTE_LIST_QUERY = """
+select 
+ZANNOTATIONASSETID as assetid, 
+ZANNOTATIONREPRESENTATIVETEXT as represent_text, 
+ZANNOTATIONSELECTEDTEXT as selected_text, 
+ZFUTUREPROOFING5 as chapter, 
+ZANNOTATIONSTYLE as style, 
+ZANNOTATIONLOCATION as location,
+ZANNOTATIONNOTE as note,
+books.ZBKLIBRARYASSET.ZTITLE as title, 
+books.ZBKLIBRARYASSET.ZAUTHOR as author
+
+from ZAEANNOTATION
+
+left join books.ZBKLIBRARYASSET
+on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
+
+where ZANNOTATIONDELETED = 0
+
+order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
+"""
+
+def get_ibooks_database(_cache=[]):
+
+    if len(_cache) > 0:
+        return _cache[0]
+
+    asset_title_tab = {}
+    anno_db_path = os.path.expanduser(ANNOTATION_DB_PATH)
+    sqlite_file = glob(anno_db_path + "*.sqlite")
+
+    if not sqlite_file:
+        print("Couldn't find the iBooks database. Exiting.")
+        exit()
+    else:
+        sqlite_file = sqlite_file[0]
+
+    book_db_path = os.path.expanduser(BOOK_DB_PATH)
+    assets_file = glob(book_db_path + "*.sqlite")
+
+    if not assets_file:
+        print("Couldn't find the iBooks assets database. Exiting.")
+        exit()
+    else:
+        assets_file = assets_file[0]
+
+    db1 = sqlite3.connect(sqlite_file, check_same_thread=False)
+    cursor = db1.cursor()
+    cursor.execute(
+        ATTACH_BOOKS_QUERY,
+        (assets_file,)
+    )
+
+    _cache.append(cursor)
+    return cursor
 
 
 def parse_epubcfi(raw):
@@ -117,20 +171,8 @@ def cmp_to_key(mycmp):
 def do_book_list(args):
 
     #only prints a list of books with highlights and exists
-    res = cur1.execute("""
-        select 
-        ZANNOTATIONASSETID, 
-        count(ZANNOTATIONSELECTEDTEXT), 
-        books.ZBKLIBRARYASSET.ZTITLE, 
-        books.ZBKLIBRARYASSET.ZAUTHOR 
-
-        from ZAEANNOTATION
-
-        left join books.ZBKLIBRARYASSET
-        on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
-
-        group by 1
-    """)
+    cur = get_ibooks_database()
+    res = cur.execute(BOOK_LIST_QUERY)
     res = sorted(res, key=lambda x: x[1])
     for assetid, count, title, author in res:
         if count > 0:
@@ -151,27 +193,8 @@ def do_note_list(args):
         'author'
     ]
 
-    res = cur1.execute("""
-        select 
-        ZANNOTATIONASSETID as assetid, 
-        ZANNOTATIONREPRESENTATIVETEXT as represent_text, 
-        ZANNOTATIONSELECTEDTEXT as selected_text, 
-        ZFUTUREPROOFING5 as chapter, 
-        ZANNOTATIONSTYLE as style, 
-        ZANNOTATIONLOCATION as location,
-        ZANNOTATIONNOTE as note,
-        books.ZBKLIBRARYASSET.ZTITLE as title, 
-        books.ZBKLIBRARYASSET.ZAUTHOR as author
-
-        from ZAEANNOTATION
-
-        left join books.ZBKLIBRARYASSET
-        on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
-        
-        where ZANNOTATIONDELETED = 0
-
-        order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
-    """)
+    cur = get_ibooks_database()
+    res = cur.execute(NOTE_LIST_QUERY)
     res = res.fetchall()
     res = [dict(zip(fields, r)) for r in res]
 
