@@ -11,7 +11,7 @@ Simplest way to get your highlights:
 
 ```
 $ python setup.py install
-$ python scripts/ibooks-highlights.py
+$ ibooks-highlights.py
 $ ll books
 ```
 
@@ -20,5 +20,5 @@ $ ll books
 To get a list of available options, type this:
 
 ```
-$ python scripts/ibooks-highlights.py --help
+$ ibooks-highlights.py --help
 ```
