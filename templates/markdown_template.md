@@ -13,7 +13,7 @@ By {{author}}
 {% endif %}
 
 {# print the quote #}
-{{ h.selected_text }}{% if h.note is not none and h.note|length > 0 %}  _NOTE: {{ h.not }}_{% endif %}
+{{ h.selected_text }}{% if h.note is not none and h.note|length > 0 %}  _NOTE: {{ h.note }}_{% endif %}
 
 {% endif %}
 {% endfor %}

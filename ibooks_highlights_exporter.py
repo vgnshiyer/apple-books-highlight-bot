@@ -405,6 +405,7 @@ class BookList(object):
         for book in self.books.values():
             if not book.is_modified:
                continue
+            print('updating', book.title)
             book.write(path)
 
 
@@ -433,10 +434,14 @@ def write_book_notes(path):
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(description='iBooks Highlights Exporter')
-    parser.add_argument('-o', action="store", default="books", dest="dname",
-            help="Specify output directory (default: books)")
-    parser.add_argument('--list', action="store_true", help="Lists a books having highlights.")
+    parser = argparse.ArgumentParser(description='iBooks highlights exporter')
+    parser.add_argument(
+        '-o', action="store", default="books", dest="dname",
+        help="Specify output directory (default: books)")
+    parser.add_argument(
+        '--list', action="store_true", 
+        help="Lists a books having highlights.")
+
     args = parser.parse_args()
 
     book_list = BookList(args.dname)
