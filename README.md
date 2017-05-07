@@ -11,7 +11,7 @@ Simplest way to get your highlights:
 
 ```
 $ pip install -r requirements.txt
-$ python ibooks_highlights_exporter.py
+$ python ibooks-highlights.py
 $ ll books
 ```
 
@@ -20,6 +20,6 @@ $ ll books
 To get a list of available options, type this:
 
 ```
-$ python ibooks_highlights_exporter.py --help
+$ python ibooks-highlights.py --help
 ```
 
