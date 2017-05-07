@@ -10,8 +10,8 @@ Export your iBooks highlights and notes to markdown files.  Modified from [origi
 Simplest way to get your highlights:
 
 ```
-$ pip install -r requirements.txt
-$ python ibooks-highlights.py
+$ python setup.py install
+$ python scripts/ibooks-highlights.py
 $ ll books
 ```
 
@@ -20,6 +20,5 @@ $ ll books
 To get a list of available options, type this:
 
 ```
-$ python ibooks-highlights.py --help
+$ python scripts/ibooks-highlights.py --help
 ```
-

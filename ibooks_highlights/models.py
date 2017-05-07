@@ -1,172 +1,15 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import os
-import sqlite3
-import datetime
-import argparse
-import re
-import frontmatter
 import datetime as dt
-
+import os
+import re
 from glob import glob
-from jinja2 import Environment, FileSystemLoader
-from slugify import slugify
+
+import frontmatter
 from dateutil import parser as duparser
+from slugify import slugify
 
+from ibooks_highlights.util import (
+    cmp_to_key, query_compare_no_asset_id, TEMPLATE_ENVIRONMENT, NS_TIME_INTERVAL_SINCE_1970)
 
-PATH = os.path.dirname(os.path.abspath(__file__))
-TEMPLATE_ENVIRONMENT = Environment(
-    autoescape=False,
-    loader=FileSystemLoader(os.path.join(PATH, 'templates')),
-    trim_blocks=True,
-    lstrip_blocks=False)
-
-
-NS_TIME_INTERVAL_SINCE_1970 = 978307200
-
-
-ANNOTATION_DB_PATH = (
-    "~/Library/Containers/com.apple.iBooksX/Data/Documents/AEAnnotation/")
-BOOK_DB_PATH = (
-    "~/Library/Containers/com.apple.iBooksX/Data/Documents/BKLibrary/")
-
-
-ATTACH_BOOKS_QUERY = """
-attach database ? as books
-"""
-
-
-NOTE_LIST_FIELDS = [
-    'asset_id', 
-    'title', 
-    'author',
-    'location',
-    'selected_text', 
-    'note',
-    'represent_text', 
-    'chapter', 
-    'style', 
-    'modified_date'
-]
-
-NOTE_LIST_QUERY = """
-select 
-ZANNOTATIONASSETID as asset_id, 
-books.ZBKLIBRARYASSET.ZTITLE as title, 
-books.ZBKLIBRARYASSET.ZAUTHOR as author,
-ZANNOTATIONLOCATION as location,
-ZANNOTATIONSELECTEDTEXT as selected_text, 
-ZANNOTATIONNOTE as note,
-ZANNOTATIONREPRESENTATIVETEXT as represent_text, 
-ZFUTUREPROOFING5 as chapter, 
-ZANNOTATIONSTYLE as style,
-ZANNOTATIONMODIFICATIONDATE as modified_date
-
-from ZAEANNOTATION
-
-left join books.ZBKLIBRARYASSET
-on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
-
-where ZANNOTATIONDELETED = 0
-
-order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
-"""
-
-
-def get_ibooks_database(_cache=[]):
-
-    if len(_cache) > 0:
-        return _cache[0]
-
-    asset_title_tab = {}
-    anno_db_path = os.path.expanduser(ANNOTATION_DB_PATH)
-    sqlite_file = glob(anno_db_path + "*.sqlite")
-
-    if not sqlite_file:
-        print("Couldn't find the iBooks database. Exiting.")
-        exit()
-    else:
-        sqlite_file = sqlite_file[0]
-
-    book_db_path = os.path.expanduser(BOOK_DB_PATH)
-    assets_file = glob(book_db_path + "*.sqlite")
-
-    if not assets_file:
-        print("Couldn't find the iBooks assets database. Exiting.")
-        exit()
-    else:
-        assets_file = assets_file[0]
-
-    db1 = sqlite3.connect(sqlite_file, check_same_thread=False)
-    cursor = db1.cursor()
-    cursor.execute(
-        ATTACH_BOOKS_QUERY,
-        (assets_file,)
-    )
-
-    _cache.append(cursor)
-    return cursor
-
-
-def parse_epubcfi(raw):
-
-    if raw is None:
-        return []
-
-    parts = raw[8:-1].split(',')
-    cfistart = parts[0] + parts[1]
-
-    parts = cfistart.split(':')
-
-    path = parts[0]
-    offsets = [ 
-        int(x[1:]) 
-        for x in re.findall('(/\d+)', path) 
-    ]
-
-    if len(parts) > 1:
-        offsets.append(int(parts[1]))
-
-    return offsets
-
-
-def epubcfi_compare(x, y):
-    depth = min( len(x), len(y) )
-    for d in range(depth):
-        if x[d] == y[d]:
-            continue
-        else:
-            return x[d] - y[d]
-
-    return len(x) - len(y)
-
-
-def query_compare_no_asset_id(x, y):
-    return epubcfi_compare(
-        parse_epubcfi(x['location']), 
-        parse_epubcfi(y['location'])
-    )
-
-
-def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) < 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) > 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) <= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) >= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
 
 
 class Annotation(object):
@@ -179,7 +22,7 @@ class Annotation(object):
 
         self.location = location
         self.selected_text = selected_text
-        
+
         if represent_text is not None:
             represent_text = represent_text.strip()
         self.represent_text = represent_text
@@ -236,7 +79,7 @@ class Book(object):
         return '{asset_id} {mod} {len}\t{title}'.format(
             asset_id=self._asset_id.ljust(32),
             mod=mod,
-            len=self.num_annotations, 
+            len=self.num_annotations,
             title=self._title,
         )
 
@@ -250,6 +93,8 @@ class Book(object):
 
     @author.setter
     def author(self, value):
+        if value is None:
+            value = 'Unknown'
         self._author = self._yaml_str(value)
 
     @property
@@ -258,8 +103,13 @@ class Book(object):
 
     @title.setter
     def title(self, value):
+        if value is None:
+            value = 'Unknown'
         self._title = self._yaml_str(value)
-        self._filename = slugify(value) + '.md'
+        self._filename = '{slug}-{asset_id}.md'.format(
+            slug=slugify(value),
+            asset_id=self._asset_id[:5].lower()
+        )
 
     @property
     def asset_id(self):
@@ -316,7 +166,7 @@ class Book(object):
         mod_date = mod_date.isoformat()
 
         fmpost = frontmatter.Post(
-            self.content, 
+            self.content,
             asset_id=self._asset_id,
             title=self.title,
             author=self.author,
@@ -380,7 +230,7 @@ class BookList(object):
                 anno_group[asset_id] = []
 
             anno = Annotation(
-                location=r['location'], 
+                location=r['location'],
                 selected_text=r['selected_text'],
                 note=r['note'],
                 represent_text=r['represent_text'],
@@ -392,7 +242,7 @@ class BookList(object):
             anno_group[asset_id].append(anno)
 
         for asset_id, anno in anno_group.items():
-            self.books[asset_id].annotations = anno        
+            self.books[asset_id].annotations = anno
 
     def write_modified(self, path=None):
 
@@ -408,47 +258,3 @@ class BookList(object):
             print('updating', book.title)
             book.write(path)
 
-
-def fetch_annotations():
-
-    cur = get_ibooks_database()
-    res = cur.execute(NOTE_LIST_QUERY)
-    res = res.fetchall()
-    res = [dict(zip(NOTE_LIST_FIELDS, r)) for r in res]
-
-    return res
-
-
-def print_book_list(book_list):
-
-    books = book_list.books.values()
-    books = sorted(books, key=lambda b: b.title)
-
-    for book in books:
-        print(book)
-
-
-def write_book_notes(path):
-    book_list.write_modified(path)
-
-
-if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser(description='iBooks highlights exporter')
-    parser.add_argument(
-        '-o', action="store", default="books", dest="dname",
-        help="Specify output directory (default: books)")
-    parser.add_argument(
-        '--list', action="store_true", 
-        help="Lists a books having highlights.")
-
-    args = parser.parse_args()
-
-    book_list = BookList(args.dname)
-    annos = fetch_annotations()
-    book_list.populate_annotations(annos)
-
-    if args.list:
-        print_book_list(book_list)
-    else:
-        write_book_notes(args.dname)
