@@ -37,21 +37,6 @@ attach database ? as books
 """
 
 
-BOOK_LIST_QUERY = """
-select 
-ZANNOTATIONASSETID, 
-count(ZANNOTATIONSELECTEDTEXT), 
-books.ZBKLIBRARYASSET.ZTITLE, 
-books.ZBKLIBRARYASSET.ZAUTHOR 
-
-from ZAEANNOTATION
-
-left join books.ZBKLIBRARYASSET
-on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
-
-group by 1
-"""
-
 NOTE_LIST_FIELDS = [
     'asset_id', 
     'title', 
@@ -157,17 +142,6 @@ def epubcfi_compare(x, y):
     return len(x) - len(y)
 
 
-def query_compare(x, y):
-    if x['asset_id'] > y['asset_id']:
-        return 1
-    elif x['asset_id'] < y['asset_id']:
-        return -1
-    return epubcfi_compare(
-        parse_epubcfi(x['location']), 
-        parse_epubcfi(y['location'])
-    )
-
-
 def query_compare_no_asset_id(x, y):
     return epubcfi_compare(
         parse_epubcfi(x['location']), 
@@ -259,12 +233,11 @@ class Book(object):
         mod = ' '
         if self.is_modified:
             mod = '*'
-        return '{asset_id} {mod} {len}\t{title}, {author}'.format(
+        return '{asset_id} {mod} {len}\t{title}'.format(
             asset_id=self._asset_id.ljust(32),
             mod=mod,
             len=self.num_annotations, 
             title=self._title,
-            author=self._author
         )
 
     def _yaml_str(cls, txt):
@@ -435,19 +408,6 @@ class BookList(object):
             book.write(path)
 
 
-def load_markdown_books(args):
-
-    book_glob  = os.path.join(args.dname, '*.md')
-    book_files = glob(book_glob)
-
-    md_books = {}
-    for bf in book_files:
-        book = Book(filename=bf)
-        md_books[book.asset_id] = book
-
-    return md_books
-
-
 def fetch_annotations():
 
     cur = get_ibooks_database()
@@ -460,63 +420,15 @@ def fetch_annotations():
 
 def print_book_list(book_list):
 
-    for book in book_list.books.values():
+    books = book_list.books.values()
+    books = sorted(books, key=lambda b: b.title)
+
+    for book in books:
         print(book)
-        print(book.is_modified)
 
 
 def write_book_notes(path):
     book_list.write_modified(path)
-
-
-def do_note_list(args):
-
-    fields = [
-        'asset_id', 
-        'title', 
-        'author',
-        'location',
-        'selected_text', 
-        'note',
-        'represent_text', 
-        'chapter', 
-        'style', 
-    ]
-
-    cur = get_ibooks_database()
-    res = cur.execute(NOTE_LIST_QUERY)
-    res = res.fetchall()
-    res = [dict(zip(fields, r)) for r in res]
-
-    template = TEMPLATE_ENVIRONMENT.get_template("markdown_template.md")
-
-    books = {}
-    for r in res:
-        if r['selected_text'] is None and r['note'] is None:
-            continue
-        assetid = r['assetid']
-        if r['represent_text'] is not None:
-            r['represent_text'] = r['represent_text'].strip()
-        if assetid not in books:
-            books[assetid] = []
-        books[assetid].append(r)
-
-    for book in books.values():
-
-        book.sort(key=cmp_to_key(query_compare))
-
-        md = template.render(
-            title=book[0]['title'],
-            author=book[0]['author'],
-            highlights=book,
-        )
-
-        fmpost = frontmatter.Post(md, asset_id=book[0]['assetid'])
-        fmpost_txt = frontmatter.dumps(fmpost)
-
-        fn = '{}/{}.md'.format(args.dname, book[0]['title'])
-        with open(fn, 'wb') as f:
-            f.write(fmpost_txt.encode('utf-8'))
 
 
 if __name__ == '__main__':
