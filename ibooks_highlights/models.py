@@ -77,7 +77,7 @@ class Book(object):
         if self.is_modified:
             mod = '*'
         return '{asset_id} {mod} {len}\t{title}'.format(
-            asset_id=self._asset_id.ljust(32),
+            asset_id=self._asset_id[:8].ljust(8),
             mod=mod,
             len=self.num_annotations,
             title=self._title,
@@ -108,7 +108,7 @@ class Book(object):
         self._title = self._yaml_str(value)
         self._filename = '{slug}-{asset_id}.md'.format(
             slug=slugify(value),
-            asset_id=self._asset_id[:5].lower()
+            asset_id=self._asset_id[:8].lower()
         )
 
     @property

@@ -26,10 +26,23 @@ You can actually rename the file and the next run of the script will find and up
 
 ## Options
 
-To get a list of available options, type this:
+To get a list of books:
 
+```shell
+$ ibooks-highlights.py --list
+
+D36605A6   1	Bayesian Methods for Hackers
+80EE27E1   27	Dune
+E5875B57 * 30	Making of the Atomic Bomb
+7029A581   17	Meditations - Modern Library Translation
+547526C9   50	Musashi
+F6C97901   77	The Idea Factory
 ```
-$ ibooks-highlights.py --help
+
+To set output directory:
+
+```shell
+$ ibooks-highlights.py -o other-books
 ```
 
 ## TODO
