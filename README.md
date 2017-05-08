@@ -28,7 +28,7 @@ You can actually rename the file and the next run of the script will find and up
 
 To get a list of books:
 
-```shell
+```
 $ ibooks-highlights.py --list
 
 D36605A6   1	Bayesian Methods for Hackers
@@ -41,12 +41,11 @@ F6C97901   77	The Idea Factory
 
 To set output directory:
 
-```shell
+```
 $ ibooks-highlights.py -o other-books
 ```
 
 ## TODO
 
-- [ ] track changes in title, renaming files appropriately
 - [ ] prevent update from clobbering file contents, to allow user edits
 - [ ] `¯\_(ツ)_/¯`
