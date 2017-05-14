@@ -1,6 +1,12 @@
 # {{ title }}
 
 By {{author}}
+
+## My notes <a name="my_notes_dont_delete"></a>
+
+{{ reader_notes }}
+
+## iBooks notes <a name="ibooks_notes_dont_delete"></a>
 {% set vars={'last': none} %}
 {% for h in highlights %}
 {# found a new chapter, print its title #}
@@ -9,7 +15,7 @@ By {{author}}
 {# stupid hacky nonsense to get around assignment not holding in outer scope #}
 {% if vars.update({'last': h.chapter}) %}{% endif %}
 
-## {{ h.chapter }}
+### {{ h.chapter }}
 {% endif %}
 
 {# print the quote #}

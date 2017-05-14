@@ -57,6 +57,7 @@ class Book(object):
             self._author = None
             self._title = None
             self._prev_content = None
+            self._reader_notes = ''
 
         if file_present:
             self._process_file(filename)
@@ -78,6 +79,38 @@ class Book(object):
             self._modified_date = duparser.parse(book['modified_date'])
 
         self._prev_content = book.content
+
+        self._reader_notes = ''
+
+        reader_notes_start = None
+        ibooks_notes_start = None
+
+        prev_content_lines = self._prev_content.splitlines()
+
+        for i, line in enumerate(prev_content_lines):
+            if """<a name="my_notes_dont_delete"></a>""" in line:
+                reader_notes_start = i
+            if """<a name="ibooks_notes_dont_delete"></a>""" in line:
+                ibooks_notes_start = i
+
+        print('reader notes index:', reader_notes_start)
+        print('ibooks notes index:', ibooks_notes_start)
+
+        if reader_notes_start is None and ibooks_notes_start is None:
+            return
+
+        if reader_notes_start == ibooks_notes_start:
+            raise BookMetadataError('Note section identifiers on same line')
+
+        if reader_notes_start is None:
+            reader_lines = prev_content_lines[3:ibooks_notes_start]
+        elif reader_notes_start < ibooks_notes_start:
+            reader_lines = prev_content_lines[reader_notes_start+1:ibooks_notes_start]
+        else:
+            reader_lines = prev_content_lines[reader_notes_start+1:]
+
+        self._reader_notes = ''.join(reader_lines).strip()
+
 
     def __str__(self):
         mod = ' '
@@ -161,6 +194,7 @@ class Book(object):
             title=self._title,
             author=self._author,
             highlights=self.annotations,
+            reader_notes=self._reader_notes
         )
         return md
 
@@ -181,9 +215,6 @@ class Book(object):
         )
 
         fn = os.path.join(path, self._filename)
-
-        if os.path.exists(fn):
-            print('WARNING: {filename} exists'.format(self._filename))
 
         with open(fn, 'w') as f:
             frontmatter.dump(fmpost, f)
@@ -258,7 +289,7 @@ class BookList(object):
         for asset_id, anno in anno_group.items():
             self.books[asset_id].annotations = anno
 
-    def write_modified(self, path=None):
+    def write_modified(self, path=None, force=False):
 
         if path == None:
             path = self._path
@@ -267,7 +298,7 @@ class BookList(object):
             os.makedirs(path)
 
         for book in self.books.values():
-            if not book.is_modified:
+            if (not book.is_modified) and (not force):
                continue
             print('updating', book.title)
             book.write(path)
