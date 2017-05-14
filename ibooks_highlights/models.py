@@ -11,6 +11,9 @@ from ibooks_highlights.util import (
     cmp_to_key, query_compare_no_asset_id, TEMPLATE_ENVIRONMENT, NS_TIME_INTERVAL_SINCE_1970)
 
 
+class BookMetadataError(Exception):
+    pass
+
 
 class Annotation(object):
 
@@ -63,6 +66,10 @@ class Book(object):
         self._filename = os.path.split(filename)[-1]
 
         book = frontmatter.load(filename)
+
+        if 'asset_id' not in book.keys():
+            raise BookMetadataError('asset_id missing')
+
         self._asset_id = book['asset_id']
         self._author = book['author']
         self._title = book['title']
@@ -174,6 +181,10 @@ class Book(object):
         )
 
         fn = os.path.join(path, self._filename)
+
+        if os.path.exists(fn):
+            print('WARNING: {filename} exists'.format(self._filename))
+
         with open(fn, 'w') as f:
             frontmatter.dump(fmpost, f)
 
@@ -194,8 +205,11 @@ class BookList(object):
 
         md_books = {}
         for bf in book_files:
-            book = Book(filename=bf)
-            md_books[book.asset_id] = book
+            try:
+                book = Book(filename=bf)
+                md_books[book.asset_id] = book
+            except BookMetadataError:
+                pass
 
         return md_books
 
