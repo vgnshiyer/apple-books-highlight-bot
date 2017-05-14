@@ -51,6 +51,7 @@ class Book(object):
 
         self._modified_date = None
         self._annotations = []
+        self._sync_notes = True
 
         if args_present:
             self._asset_id = asset_id
@@ -78,6 +79,9 @@ class Book(object):
         if 'modified_date' in book.keys():
             self._modified_date = duparser.parse(book['modified_date'])
 
+        if 'sync_notes' in book.keys():
+            self._sync_notes = bool(book['sync_notes'])
+
         self._prev_content = book.content
 
         self._reader_notes = ''
@@ -93,15 +97,15 @@ class Book(object):
             if """<a name="ibooks_notes_dont_delete"></a>""" in line:
                 ibooks_notes_start = i
 
-        print('reader notes index:', reader_notes_start)
-        print('ibooks notes index:', ibooks_notes_start)
-
+        # if not present, abort
         if reader_notes_start is None and ibooks_notes_start is None:
             return
 
+        # if same line, that's not good
         if reader_notes_start == ibooks_notes_start:
             raise BookMetadataError('Note section identifiers on same line')
 
+        # if different line, select the appropriate portion of the content
         if reader_notes_start is None:
             reader_lines = prev_content_lines[3:ibooks_notes_start]
         elif reader_notes_start < ibooks_notes_start:
@@ -109,7 +113,7 @@ class Book(object):
         else:
             reader_lines = prev_content_lines[reader_notes_start+1:]
 
-        self._reader_notes = ''.join(reader_lines).strip()
+        self._reader_notes = '\n'.join(reader_lines).strip()
 
 
     def __str__(self):
@@ -190,6 +194,8 @@ class Book(object):
     def content(self):
         template = TEMPLATE_ENVIRONMENT.get_template("markdown_template.md")
 
+        print(self._reader_notes[:1000])
+
         md = template.render(
             title=self._title,
             author=self._author,
@@ -199,6 +205,12 @@ class Book(object):
         return md
 
     def write(self, path):
+
+        if not self._sync_notes:
+            print('sync locked for', self._title)
+            return
+        
+        print('updating', self._title)
 
         mod_date = max([
             anno.modified_date
@@ -300,6 +312,5 @@ class BookList(object):
         for book in self.books.values():
             if (not book.is_modified) and (not force):
                continue
-            print('updating', book.title)
             book.write(path)
 
