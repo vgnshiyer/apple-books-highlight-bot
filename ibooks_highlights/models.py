@@ -8,7 +8,8 @@ from dateutil import parser as duparser
 from slugify import slugify
 
 from ibooks_highlights.util import (
-    cmp_to_key, query_compare_no_asset_id, TEMPLATE_ENVIRONMENT, NS_TIME_INTERVAL_SINCE_1970)
+    cmp_to_key, query_compare_no_asset_id, TEMPLATE_ENVIRONMENT,
+    NS_TIME_INTERVAL_SINCE_1970)
 
 
 class BookMetadataError(Exception):
