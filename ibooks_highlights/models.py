@@ -291,13 +291,22 @@ class BookList(object):
             if asset_id not in anno_group:
                 anno_group[asset_id] = []
 
+            location = str(r['location']) if r['location'] else None
+            selected_text = (
+                str(r['selected_text']) if r['selected_text'] else None)
+            note = str(r['note']) if r['note'] else None
+            represent_text = (
+                str(r['represent_text']) if r['represent_text'] else None)
+            chapter = str(r['chapter']) if r['chapter'] else None
+            style = str(r['style']) if r['style'] else None
+
             anno = Annotation(
-                location=r['location'],
-                selected_text=r['selected_text'],
-                note=r['note'],
-                represent_text=r['represent_text'],
-                chapter=r['chapter'],
-                style=r['style'],
+                location=location,
+                selected_text=selected_text,
+                note=note,
+                represent_text=represent_text,
+                chapter=chapter,
+                style=style,
                 modified_date=dt.datetime.fromtimestamp(
                     NS_TIME_INTERVAL_SINCE_1970 + int(r['modified_date'])),
             )
