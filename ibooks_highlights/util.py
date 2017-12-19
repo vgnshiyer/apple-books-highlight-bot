@@ -4,8 +4,6 @@ import re
 from typing import (List, Dict, Optional, Union, Any, Callable)
 from jinja2 import Environment, FileSystemLoader
 
-from ibooks_highlights.models import Annotation
-
 NS_TIME_INTERVAL_SINCE_1970 = 978307200
 
 
@@ -50,7 +48,7 @@ def epubcfi_compare(x: List[int], y: List[int]) -> int:
     return len(x) - len(y)
 
 
-def query_compare_no_asset_id(x: Annotation, y: Annotation) -> int:
+def query_compare_no_asset_id(x: Dict[str, str], y: Dict[str, str]) -> int:
     return epubcfi_compare(
         parse_epubcfi(x['location']),
         parse_epubcfi(y['location'])
