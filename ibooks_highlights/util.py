@@ -1,7 +1,10 @@
 import os
 import re
 
+from typing import (List, Dict, Optional, Union, Any, Callable)
 from jinja2 import Environment, FileSystemLoader
+
+from ibooks_highlights.models import Annotation
 
 NS_TIME_INTERVAL_SINCE_1970 = 978307200
 
@@ -14,7 +17,7 @@ TEMPLATE_ENVIRONMENT = Environment(
     lstrip_blocks=False)
 
 
-def parse_epubcfi(raw):
+def parse_epubcfi(raw: str) -> List[int]:
 
     if raw is None:
         return []
@@ -36,8 +39,8 @@ def parse_epubcfi(raw):
     return offsets
 
 
-def epubcfi_compare(x, y):
-    depth = min( len(x), len(y) )
+def epubcfi_compare(x: List[int], y: List[int]) -> int:
+    depth = min(len(x), len(y))
     for d in range(depth):
         if x[d] == y[d]:
             continue
@@ -47,28 +50,34 @@ def epubcfi_compare(x, y):
     return len(x) - len(y)
 
 
-def query_compare_no_asset_id(x, y):
+def query_compare_no_asset_id(x: Annotation, y: Annotation) -> int:
     return epubcfi_compare(
         parse_epubcfi(x['location']),
         parse_epubcfi(y['location'])
     )
 
 
-def cmp_to_key(mycmp):
+def cmp_to_key(mycmp: Callable) -> Any:
     'Convert a cmp= function into a key= function'
     class K:
-        def __init__(self, obj, *args):
+        def __init__(self, obj: Any, *args: Any) -> None:
             self.obj = obj
-        def __lt__(self, other):
+
+        def __lt__(self, other: Any) -> Any:
             return mycmp(self.obj, other.obj) < 0
-        def __gt__(self, other):
+
+        def __gt__(self, other: Any) -> Any:
             return mycmp(self.obj, other.obj) > 0
-        def __eq__(self, other):
+
+        def __eq__(self, other: Any) -> Any:
             return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
+
+        def __le__(self, other: Any) -> Any:
             return mycmp(self.obj, other.obj) <= 0
-        def __ge__(self, other):
+
+        def __ge__(self, other: Any) -> Any:
             return mycmp(self.obj, other.obj) >= 0
-        def __ne__(self, other):
+
+        def __ne__(self, other: Any) -> Any:
             return mycmp(self.obj, other.obj) != 0
     return K

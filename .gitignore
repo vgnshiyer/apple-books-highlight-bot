@@ -63,3 +63,4 @@ books
 # PyCharm, Visual Studio, etc...
 .idea
 .mypy_cache
+.vscode/settings.json

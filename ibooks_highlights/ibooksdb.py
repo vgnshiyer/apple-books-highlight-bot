@@ -2,7 +2,10 @@ import os
 import sqlite3
 
 from glob import glob
+from typing import (List, Dict, Optional, Union, Callable)
 
+
+SqliteQueryType = List[Dict[str, Union[str, int]]]
 
 ANNOTATION_DB_PATH = (
     "~/Library/Containers/com.apple.iBooksX/Data/Documents/AEAnnotation/")
@@ -52,28 +55,28 @@ order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
 """
 
 
-def get_ibooks_database(_cache=[]):
+def get_ibooks_database(_cache: list=[]) -> sqlite3.Cursor:
 
     if len(_cache) > 0:
         return _cache[0]
 
     anno_db_path = os.path.expanduser(ANNOTATION_DB_PATH)
-    sqlite_file = glob(anno_db_path + "*.sqlite")
+    sqlite_files = glob(anno_db_path + "*.sqlite")
 
-    if not sqlite_file:
+    if not sqlite_files:
         print("Couldn't find the iBooks database. Exiting.")
         exit()
     else:
-        sqlite_file = sqlite_file[0]
+        sqlite_file = sqlite_files[0]
 
     book_db_path = os.path.expanduser(BOOK_DB_PATH)
-    assets_file = glob(book_db_path + "*.sqlite")
+    assets_files = glob(book_db_path + "*.sqlite")
 
-    if not assets_file:
+    if not assets_files:
         print("Couldn't find the iBooks assets database. Exiting.")
         exit()
     else:
-        assets_file = assets_file[0]
+        assets_file = assets_files[0]
 
     db1 = sqlite3.connect(sqlite_file, check_same_thread=False)
     cursor = db1.cursor()
@@ -86,11 +89,11 @@ def get_ibooks_database(_cache=[]):
     return cursor
 
 
-def fetch_annotations():
+def fetch_annotations() -> SqliteQueryType:
 
     cur = get_ibooks_database()
-    res = cur.execute(NOTE_LIST_QUERY)
-    res = res.fetchall()
-    res = [dict(zip(NOTE_LIST_FIELDS, r)) for r in res]
+    exe = cur.execute(NOTE_LIST_QUERY)
+    res = exe.fetchall()
+    annos = [dict(zip(NOTE_LIST_FIELDS, r)) for r in res]
 
-    return res
+    return annos

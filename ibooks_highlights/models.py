@@ -4,12 +4,14 @@ import re
 from glob import glob
 
 import frontmatter
+from typing import (List, Dict, Optional, Union, Any, Callable)
 from dateutil import parser as duparser
 from slugify import slugify
 
 from ibooks_highlights.util import (
     cmp_to_key, query_compare_no_asset_id, TEMPLATE_ENVIRONMENT,
     NS_TIME_INTERVAL_SINCE_1970)
+from ibooks_highlights.ibooksdb import SqliteQueryType
 
 
 class BookMetadataError(Exception):
@@ -18,8 +20,9 @@ class BookMetadataError(Exception):
 
 class Annotation(object):
 
-    def __init__(self, location, selected_text=None, note=None,
-        represent_text=None, chapter=None, style=None, modified_date=None):
+    def __init__(self, location: str, selected_text: str=None, 
+                 note: str=None, represent_text: str=None, chapter: str=None, 
+                 style: str=None, modified_date: dt.datetime=None) -> None:
 
         if (selected_text is None) and (note is None):
             raise ValueError('specify either selected_text or note')
@@ -36,13 +39,13 @@ class Annotation(object):
         self.note = note
         self.modified_date = modified_date
 
-    def __getitem__(self, key):
+    def __getitem__(self, key: str) -> Any:
         return getattr(self, key)
 
 
 class Book(object):
 
-    def __init__(self, asset_id=None, filename=None):
+    def __init__(self, asset_id: str=None, filename: str=None) -> None:
 
         args_present = asset_id is not None
         file_present = filename is not None
@@ -50,21 +53,21 @@ class Book(object):
         if args_present == file_present:
             raise ValueError('specify either asset_id or filename')
 
-        self._modified_date = None
-        self._annotations = []
+        self._modified_date: Optional[dt.datetime] = None
+        self._annotations: List[Annotation] = []
         self._sync_notes = True
 
         if args_present:
             self._asset_id = asset_id
-            self._author = None
-            self._title = None
-            self._prev_content = None
+            self._author: Optional[str] = None
+            self._title: Optional[str] = None
+            self._prev_content: Optional[str] = None
             self._reader_notes = ''
 
         if file_present:
             self._process_file(filename)
 
-    def _process_file(self, filename):
+    def _process_file(self, filename: str) -> None:
 
         self._filename = os.path.split(filename)[-1]
 
@@ -110,14 +113,14 @@ class Book(object):
         if reader_notes_start is None:
             reader_lines = prev_content_lines[3:ibooks_notes_start]
         elif reader_notes_start < ibooks_notes_start:
-            reader_lines = prev_content_lines[reader_notes_start+1:ibooks_notes_start]
+            reader_lines = prev_content_lines[
+                reader_notes_start+1:ibooks_notes_start]
         else:
             reader_lines = prev_content_lines[reader_notes_start+1:]
 
         self._reader_notes = '\n'.join(reader_lines).strip()
 
-
-    def __str__(self):
+    def __str__(self) -> str:
         mod = ' '
         if self.is_modified:
             mod = '*'
@@ -128,26 +131,26 @@ class Book(object):
             title=self._title,
         )
 
-    def _yaml_str(cls, txt):
+    def _yaml_str(cls, txt: str) -> str:
         exp = '[^A-Za-z0-9 ]+'
         return re.sub(exp, '', txt)
 
     @property
-    def author(self):
+    def author(self) -> str:
         return self._author
 
     @author.setter
-    def author(self, value):
+    def author(self, value: str) -> None:
         if value is None:
             value = 'Unknown'
         self._author = self._yaml_str(value)
 
     @property
-    def title(self):
+    def title(self) -> str:
         return self._title
 
     @title.setter
-    def title(self, value):
+    def title(self, value: str) -> None:
         if value is None:
             value = 'Unknown'
         self._title = self._yaml_str(value)
@@ -157,11 +160,11 @@ class Book(object):
         )
 
     @property
-    def asset_id(self):
+    def asset_id(self) -> str:
         return self._asset_id
 
     @property
-    def is_modified(self):
+    def is_modified(self) -> bool:
         if self._modified_date is None:
             if self.num_annotations > 0:
                 return True
@@ -175,24 +178,24 @@ class Book(object):
         return anno_max > self._modified_date
 
     @property
-    def annotations(self):
+    def annotations(self) -> List[Annotation]:
         return self._annotations
 
     @annotations.setter
-    def annotations(self, anno):
+    def annotations(self, anno: List[Annotation]) -> None:
         self._annotations = anno
         self._annotations.sort(key=cmp_to_key(query_compare_no_asset_id))
 
     @property
-    def num_annotations(self):
+    def num_annotations(self) -> int:
         return len(self._annotations)
 
     @property
-    def prev_content(self):
+    def prev_content(self) -> str:
         return self._prev_content
 
     @property
-    def content(self):
+    def content(self) -> str:
         template = TEMPLATE_ENVIRONMENT.get_template("markdown_template.md")
 
         # print(self._reader_notes[:1000])
@@ -205,7 +208,7 @@ class Book(object):
         )
         return md
 
-    def write(self, path):
+    def write(self, path: str) -> None:
 
         if not self._sync_notes:
             print('sync locked for', self._title)
@@ -217,14 +220,14 @@ class Book(object):
             anno.modified_date
             for anno in self._annotations
         ])
-        mod_date = mod_date.isoformat()
+        mod_date_str = mod_date.isoformat()
 
         fmpost = frontmatter.Post(
             self.content,
             asset_id=self._asset_id,
             title=self.title,
             author=self.author,
-            modified_date=mod_date
+            modified_date=mod_date_str
         )
 
         fn = os.path.join(path, self._filename)
@@ -236,16 +239,16 @@ class Book(object):
 
 class BookList(object):
 
-    def __init__(self, path):
+    def __init__(self, path: str) -> None:
 
         self._path = path
-        self.books = {}
+        self.books: dict = {}
 
         if os.path.exists(self._path):
             self.books = self._load_books(self._path)
 
-    def _load_books(self, path):
-        book_glob  = os.path.join(path, '*.md')
+    def _load_books(self, path: str) -> Dict[str, Book]:
+        book_glob = os.path.join(path, '*.md')
         book_files = glob(book_glob)
 
         md_books = {}
@@ -258,7 +261,7 @@ class BookList(object):
 
         return md_books
 
-    def _get_create_book(self, asset_id):
+    def _get_create_book(self, asset_id: str) -> Book:
 
         if asset_id not in self.books:
             book = Book(asset_id=asset_id)
@@ -266,7 +269,7 @@ class BookList(object):
 
         return self.books[asset_id]
 
-    def populate_annotations(self, annos):
+    def populate_annotations(self, annos: SqliteQueryType) -> None:
 
         res = [
             r
@@ -276,15 +279,15 @@ class BookList(object):
         ]
 
         for r in res:
-            book = self._get_create_book(r['asset_id'])
+            book = self._get_create_book(str(r['asset_id']))
             if book.title is None:
-                book.title = r['title']
+                book.title = str(r['title'])
             if book.author is None:
-                book.author = r['author']
+                book.author = str(r['author'])
 
-        anno_group = {}
+        anno_group: Dict[str, List[Annotation]] = {}
         for r in res:
-            asset_id = r['asset_id']
+            asset_id = str(r['asset_id'])
             if asset_id not in anno_group:
                 anno_group[asset_id] = []
 
@@ -296,16 +299,16 @@ class BookList(object):
                 chapter=r['chapter'],
                 style=r['style'],
                 modified_date=dt.datetime.fromtimestamp(
-                    NS_TIME_INTERVAL_SINCE_1970 + r['modified_date']),
+                    NS_TIME_INTERVAL_SINCE_1970 + int(r['modified_date'])),
             )
             anno_group[asset_id].append(anno)
 
-        for asset_id, anno in anno_group.items():
-            self.books[asset_id].annotations = anno
+        for asset_id, anno_itr in anno_group.items():
+            self.books[asset_id].annotations = anno_itr
 
-    def write_modified(self, path=None, force=False):
+    def write_modified(self, path: str=None, force: bool=False) -> None:
 
-        if path == None:
+        if path is None:
             path = self._path
 
         if not os.path.exists(path):
@@ -313,6 +316,6 @@ class BookList(object):
 
         for book in self.books.values():
             if (not book.is_modified) and (not force):
-               continue
+                continue
             book.write(path)
 

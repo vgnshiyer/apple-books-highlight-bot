@@ -7,17 +7,16 @@ from ibooks_highlights.models import BookList
 from ibooks_highlights import ibooksdb
 
 
+def print_book_list(book_list: BookList) -> None:
 
-def print_book_list(book_list):
-
-    books = book_list.books.values()
+    books = list(book_list.books.values())
     books = sorted(books, key=lambda b: b.title)
 
     for book in books:
         print(book)
 
 
-def write_book_notes(path, force=False):
+def write_book_notes(path: str, force: bool=False) -> None:
     book_list.write_modified(path, force)
 
 
