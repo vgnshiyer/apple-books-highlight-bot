@@ -195,7 +195,7 @@ class Book(object):
     def content(self):
         template = TEMPLATE_ENVIRONMENT.get_template("markdown_template.md")
 
-        print(self._reader_notes[:1000])
+        # print(self._reader_notes[:1000])
 
         md = template.render(
             title=self._title,
@@ -230,7 +230,8 @@ class Book(object):
         fn = os.path.join(path, self._filename)
 
         with open(fn, 'w') as f:
-            frontmatter.dump(fmpost, f)
+            s = frontmatter.dumps(fmpost)
+            f.write(s)
 
 
 class BookList(object):

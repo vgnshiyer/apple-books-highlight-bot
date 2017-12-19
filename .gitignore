@@ -59,3 +59,7 @@ target/
 # my system output
 output.html
 books
+
+# PyCharm, Visual Studio, etc...
+.idea
+.mypy_cache
