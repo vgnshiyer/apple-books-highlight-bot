@@ -121,15 +121,11 @@ class Book(object):
         self._reader_notes = '\n'.join(reader_lines).strip()
 
     def __str__(self) -> str:
+        asset_id = self._asset_id[:8].ljust(8)
         mod = ' '
         if self.is_modified:
             mod = '*'
-        return '{asset_id} {mod} {len}\t{title}'.format(
-            asset_id=self._asset_id[:8].ljust(8),
-            mod=mod,
-            len=self.num_annotations,
-            title=self._title,
-        )
+        return f'{asset_id} {mod} {self.num_annotations}\t{self._title}'
 
     def _yaml_str(cls, txt: str) -> str:
         exp = '[^A-Za-z0-9 ]+'
@@ -151,13 +147,14 @@ class Book(object):
 
     @title.setter
     def title(self, value: str) -> None:
+
         if value is None:
             value = 'Unknown'
         self._title = self._yaml_str(value)
-        self._filename = '{slug}-{asset_id}.md'.format(
-            slug=slugify(value),
-            asset_id=self._asset_id[:8].lower()
-        )
+
+        slug = slugify(value)
+        asset_id = self._asset_id[:8].lower()
+        self._filename = f'{slug}-{asset_id}.md'
 
     @property
     def asset_id(self) -> str:
