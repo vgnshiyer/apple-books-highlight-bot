@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import argparse
 import pathlib
 import click
 
@@ -49,42 +48,5 @@ def sync(ctx, force):
     bl.write_modified(bookdir, force)
 
 
-
-# def print_book_list(book_list: BookList) -> None:
-
-#     books = list(book_list.books.values())
-#     books = sorted(books, key=lambda b: b.title)
-
-#     for book in books:
-#         print(book)
-
-
-# def write_book_notes(path: pathlib.Path, force: bool=False) -> None:
-#     book_list.write_modified(path, force)
-
-
 if __name__ == '__main__':
     cli(obj={})
-
-    # parser = argparse.ArgumentParser(description='iBooks highlights exporter')
-    # parser.add_argument(
-    #     '-d', action='store', default='.', dest='bookdir',
-    #     help='Specify output directory (default: .)')
-    # parser.add_argument(
-    #     '--list', action='store_true', 
-    #     help='Lists titles of books with highlights')
-    # parser.add_argument(
-    #     '--force', action='store_true',
-    #     help='Forces update of books')
-
-    # args = parser.parse_args()
-    # bookdir = pathlib.Path(args.bookdir)
-
-    # book_list = BookList(bookdir)
-    # annos = ibooksdb.fetch_annotations()
-    # book_list.populate_annotations(annos)
-
-    # if args.list:
-    #     print_book_list(book_list)
-    # else:
-    #     write_book_notes(bookdir, args.force)
