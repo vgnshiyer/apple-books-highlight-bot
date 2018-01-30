@@ -31,7 +31,7 @@ def list(ctx):
     bookdir = ctx.obj['BOOKDIR']
     bl = get_booklist(bookdir)
 
-    books = bl.books.values()
+    books = [b for b in bl.books.values()]
     books = sorted(books, key=lambda b: b.title)
     for book in books:
         print(book)

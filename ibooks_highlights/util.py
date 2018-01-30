@@ -1,5 +1,6 @@
 import os
 import re
+import pathlib
 
 from typing import (List, Dict, Optional, Union, Any, Callable)
 from jinja2 import Environment, FileSystemLoader
@@ -7,12 +8,13 @@ from jinja2 import Environment, FileSystemLoader
 NS_TIME_INTERVAL_SINCE_1970 = 978307200
 
 
-PATH = os.path.dirname(os.path.abspath(__file__))
+PATH = pathlib.Path(__file__).resolve().parent / 'templates'
 TEMPLATE_ENVIRONMENT = Environment(
     autoescape=False,
-    loader=FileSystemLoader(os.path.join(PATH, 'templates')),
+    loader=FileSystemLoader(str(PATH)),
     trim_blocks=True,
-    lstrip_blocks=False)
+    lstrip_blocks=False
+)
 
 
 def parse_epubcfi(raw: str) -> List[int]:
