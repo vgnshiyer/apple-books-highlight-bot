@@ -321,11 +321,11 @@ class BookList(object):
     def write_modified(self, path: pathlib.Path=None, 
                        force: bool=False) -> None:
 
-        if not path.is_dir():
-            raise NotADirectoryError(f'{str(path)} is not a directory')
-
         if path is None:
             path = self._path
+
+        if not path.is_dir():
+            raise NotADirectoryError(f'{str(path)} is not a directory')
 
         path.mkdir(parents=True, exist_ok=True)
 
