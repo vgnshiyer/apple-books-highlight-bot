@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import pathlib
 
 from ibooks_highlights.models import BookList
 from ibooks_highlights import ibooksdb
@@ -16,7 +17,7 @@ def print_book_list(book_list: BookList) -> None:
         print(book)
 
 
-def write_book_notes(path: str, force: bool=False) -> None:
+def write_book_notes(path: pathlib.Path, force: bool=False) -> None:
     book_list.write_modified(path, force)
 
 
@@ -34,12 +35,13 @@ if __name__ == '__main__':
         help='Forces update of books')
 
     args = parser.parse_args()
+    bookdir = pathlib.Path(args.bookdir)
 
-    book_list = BookList(args.bookdir)
+    book_list = BookList(bookdir)
     annos = ibooksdb.fetch_annotations()
     book_list.populate_annotations(annos)
 
     if args.list:
         print_book_list(book_list)
     else:
-        write_book_notes(args.bookdir, args.force)
+        write_book_notes(bookdir, args.force)

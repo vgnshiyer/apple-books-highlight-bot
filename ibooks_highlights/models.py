@@ -1,7 +1,6 @@
-import datetime as dt
-import os
 import re
-from glob import glob
+import pathlib
+import datetime as dt
 
 import frontmatter
 from typing import (List, Dict, Optional, Union, Any, Callable)
@@ -45,7 +44,8 @@ class Annotation(object):
 
 class Book(object):
 
-    def __init__(self, asset_id: str=None, filename: str=None) -> None:
+    def __init__(self, asset_id: str=None, 
+                 filename: pathlib.Path=None) -> None:
 
         args_present = asset_id is not None
         file_present = filename is not None
@@ -67,9 +67,9 @@ class Book(object):
         if file_present:
             self._process_file(filename)
 
-    def _process_file(self, filename: str) -> None:
+    def _process_file(self, filename: pathlib.Path) -> None:
 
-        self._filename = os.path.split(filename)[-1]
+        self._filename = filename.name
 
         book = frontmatter.load(filename)
 
@@ -205,7 +205,10 @@ class Book(object):
         )
         return md
 
-    def write(self, path: str) -> None:
+    def write(self, path: pathlib.Path) -> None:
+
+        if not path.is_dir():
+            raise NotADirectoryError(f'{str(path)} is not a directory')
 
         if not self._sync_notes:
             print('sync locked for', self._title)
@@ -227,7 +230,7 @@ class Book(object):
             modified_date=mod_date_str
         )
 
-        fn = os.path.join(path, self._filename)
+        fn = path / self._filename
 
         with open(fn, 'w') as f:
             s = frontmatter.dumps(fmpost)
@@ -236,17 +239,20 @@ class Book(object):
 
 class BookList(object):
 
-    def __init__(self, path: str) -> None:
+    def __init__(self, path: pathlib.Path) -> None:
+
+        if not path.is_dir():
+            raise NotADirectoryError(f'{str(path)} is not a directory')
 
         self._path = path
         self.books: dict = {}
 
-        if os.path.exists(self._path):
+        if self._path.exists():
             self.books = self._load_books(self._path)
 
-    def _load_books(self, path: str) -> Dict[str, Book]:
-        book_glob = os.path.join(path, '*.md')
-        book_files = glob(book_glob)
+    def _load_books(self, path: pathlib.Path) -> Dict[str, Book]:
+
+        book_files = path.glob('*.md')
 
         md_books = {}
         for bf in book_files:
@@ -312,16 +318,18 @@ class BookList(object):
         for asset_id, anno_itr in anno_group.items():
             self.books[asset_id].annotations = anno_itr
 
-    def write_modified(self, path: str=None, force: bool=False) -> None:
+    def write_modified(self, path: pathlib.Path=None, 
+                       force: bool=False) -> None:
+
+        if not path.is_dir():
+            raise NotADirectoryError(f'{str(path)} is not a directory')
 
         if path is None:
             path = self._path
 
-        if not os.path.exists(path):
-            os.makedirs(path)
+        path.mkdir(parents=True, exist_ok=True)
 
         for book in self.books.values():
             if (not book.is_modified) and (not force):
                 continue
             book.write(path)
-

@@ -83,7 +83,7 @@ def get_ibooks_database(_cache: list=[]) -> sqlite3.Cursor:
     cursor = db1.cursor()
     cursor.execute(
         ATTACH_BOOKS_QUERY,
-        (assets_file,)
+        (str(assets_file),)
     )
 
     _cache.append(cursor)
