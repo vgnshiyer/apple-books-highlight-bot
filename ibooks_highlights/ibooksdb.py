@@ -1,8 +1,7 @@
-import os
 import pathlib
 import sqlite3
+import functools
 
-from glob import glob
 from typing import (List, Dict, Optional, Union, Callable)
 
 
@@ -60,21 +59,19 @@ order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
 """
 
 
-def get_ibooks_database(_cache: list=[]) -> sqlite3.Cursor:
-
-    if len(_cache) > 0:
-        return _cache[0]
+@functools.lru_cache(maxsize=1)
+def get_ibooks_database() -> sqlite3.Cursor:
 
     sqlite_files = list(ANNOTATION_DB_PATH.glob("*.sqlite"))
 
-    if not sqlite_files:
+    if len(sqlite_files) is 0:
         raise FileNotFoundError("iBooks database not found")
     else:
         sqlite_file = sqlite_files[0]
 
     assets_files = list(BOOK_DB_PATH.glob("*.sqlite"))
 
-    if not assets_files:
+    if len(assets_files) is 0:
         raise FileNotFoundError("iBooks assets database not found")
     else:
         assets_file = assets_files[0]
@@ -86,7 +83,6 @@ def get_ibooks_database(_cache: list=[]) -> sqlite3.Cursor:
         (str(assets_file),)
     )
 
-    _cache.append(cursor)
     return cursor
 
 
