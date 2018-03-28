@@ -49,6 +49,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
 
     # What does your project relate to?
@@ -72,6 +73,7 @@ setup(
         'python-dateutil>=2.5.3',
         'python-frontmatter>=0.3.1',
         'python-slugify>=1.2.4',
+        'click>=6.7'
     ],
 
     # List additional groups of dependencies here (e.g. development
@@ -87,7 +89,7 @@ setup(
     # installed, specify them here.  If using Python 2.6 or less, then these
     # have to be included in MANIFEST.in as well.
     package_data={
-        'ibooks_highlights': ['*.md'],
+        'ibooks_highlights': ['templates/*.md'],
     },
 
     # Although 'package_data' is the preferred approach, in some case you may
