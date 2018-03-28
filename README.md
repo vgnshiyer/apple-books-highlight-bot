@@ -43,9 +43,14 @@ By REISNER MARC
 
 ### Introduction
 
-Westerners call what they have established out here a civilization, but it would be more accurate to call it a beachhead. And if history is any guide, the odds that we can sustain it would have to be regarded as low.
+Westerners call what they have established out here a civilization, but it would
+be more accurate to call it a beachhead. And if history is any guide, the odds
+that we can sustain it would have to be regarded as low.
 
-Everything depends on the manipulation of water—on capturing it behind dams, storing it, and rerouting it in concrete rivers over distances of hundreds of miles. Were it not for a century and a half of messianic effort toward that end, the West as we know it would not exist.
+Everything depends on the manipulation of water—on capturing it behind dams,
+storing it, and rerouting it in concrete rivers over distances of hundreds of
+miles. Were it not for a century and a half of messianic effort toward that end,
+the West as we know it would not exist.
 ```
 
 ## Options
