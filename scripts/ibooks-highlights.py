@@ -17,11 +17,16 @@ def get_booklist(path: pathlib.Path) -> BookList:
 
 
 @click.group()
-@click.option('--bookdir', '-b', type=click.Path(exists=True), 
-              envvar='IBOOKS_HIGHLIGHT_DIRECTORY')
+@click.option('--bookdir', '-b', type=click.Path(), 
+              envvar='IBOOKS_HIGHLIGHT_DIRECTORY', default='./books')
 @click.pass_context
 def cli(ctx, bookdir):
-    ctx.obj['BOOKDIR'] = pathlib.Path(bookdir)
+
+    # create directory if it doesn't exist
+    p = pathlib.Path(bookdir)
+    p.mkdir(parents=True, exist_ok=True)
+
+    ctx.obj['BOOKDIR'] = p
 
 
 @cli.command()
