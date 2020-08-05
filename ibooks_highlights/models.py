@@ -44,8 +44,11 @@ class Annotation(object):
 
 class Book(object):
 
-    def __init__(self, asset_id: str=None, 
-                 filename: pathlib.Path=None) -> None:
+    def __init__(
+        self, asset_id: str=None, 
+        filename: pathlib.Path=None,
+        root: pathlib.Path=None
+    ) -> None:
 
         args_present = asset_id is not None
         file_present = filename is not None
@@ -65,11 +68,14 @@ class Book(object):
             self._reader_notes = ''
 
         if file_present:
-            self._process_file(filename)
+            self._process_file(filename, root)
 
-    def _process_file(self, filename: pathlib.Path) -> None:
+    def _process_file(self, filename: pathlib.Path, root: pathlib.Path) -> None:
 
-        self._filename = filename.name
+        if root is not None:
+            self._filename = filename.relative_to(root)
+        else:
+            self._filename = filename.name
 
         book = frontmatter.load(filename)
 
@@ -168,7 +174,7 @@ class Book(object):
             else:
                 return False
 
-        if len(self._annotations) is 0:
+        if len(self._annotations) == 0:
             return False
 
         anno_max = max([
@@ -235,6 +241,9 @@ class Book(object):
 
         fn = path / self._filename
 
+        # make necessary subdirs
+        fn.parent.mkdir(parents=True, exist_ok=True)
+
         with open(fn, 'w') as f:
             s = frontmatter.dumps(fmpost)
             f.write(s)
@@ -242,25 +251,27 @@ class Book(object):
 
 class BookList(object):
 
+    path: pathlib.Path
+    books: Dict[str, Book] = {}
+
     def __init__(self, path: pathlib.Path) -> None:
 
         if not path.is_dir():
             raise NotADirectoryError(f'{str(path)} is not a directory')
 
         self._path = path
-        self.books: dict = {}
 
         if self._path.exists():
             self.books = self._load_books(self._path)
 
     def _load_books(self, path: pathlib.Path) -> Dict[str, Book]:
 
-        book_files = path.glob('*.md')
+        book_files = path.glob('**/*.md')
 
         md_books = {}
         for bf in book_files:
             try:
-                book = Book(filename=bf)
+                book = Book(filename=bf, root=path)
                 md_books[book.asset_id] = book
             except BookMetadataError:
                 pass
