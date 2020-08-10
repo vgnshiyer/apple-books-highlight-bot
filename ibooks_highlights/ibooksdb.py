@@ -5,7 +5,7 @@ import functools
 from typing import (List, Dict, Optional, Union, Callable)
 
 
-SqliteQueryType = List[Dict[str, Union[str, int]]]
+SqliteQueryType = List[Dict[str, Union[str, int, bool]]]
 
 ANNOTATION_DB_PATH = (
     pathlib.Path.home() /
@@ -32,7 +32,8 @@ NOTE_LIST_FIELDS = [
     'represent_text',
     'chapter',
     'style',
-    'modified_date'
+    'modified_date',
+    'is_deleted',
 ]
 
 NOTE_LIST_QUERY = """
@@ -46,14 +47,15 @@ ZANNOTATIONNOTE as note,
 ZANNOTATIONREPRESENTATIVETEXT as represent_text, 
 ZFUTUREPROOFING5 as chapter, 
 ZANNOTATIONSTYLE as style,
-ZANNOTATIONMODIFICATIONDATE as modified_date
+ZANNOTATIONMODIFICATIONDATE as modified_date,
+ZANNOTATIONDELETED as is_deleted
 
 from ZAEANNOTATION
 
 left join books.ZBKLIBRARYASSET
 on ZAEANNOTATION.ZANNOTATIONASSETID = books.ZBKLIBRARYASSET.ZASSETID
 
-where ZANNOTATIONDELETED = 0
+-- where ZANNOTATIONDELETED = 0
 
 order by ZANNOTATIONASSETID, ZPLLOCATIONRANGESTART;
 """
@@ -64,14 +66,14 @@ def get_ibooks_database() -> sqlite3.Cursor:
 
     sqlite_files = list(ANNOTATION_DB_PATH.glob("*.sqlite"))
 
-    if len(sqlite_files) is 0:
+    if len(sqlite_files) == 0:
         raise FileNotFoundError("iBooks database not found")
     else:
         sqlite_file = sqlite_files[0]
 
     assets_files = list(BOOK_DB_PATH.glob("*.sqlite"))
 
-    if len(assets_files) is 0:
+    if len(assets_files) == 0:
         raise FileNotFoundError("iBooks assets database not found")
     else:
         assets_file = assets_files[0]

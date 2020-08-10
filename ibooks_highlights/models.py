@@ -21,9 +21,11 @@ class Annotation(object):
 
     def __init__(self, location: str, selected_text: str=None, 
                  note: str=None, represent_text: str=None, chapter: str=None, 
-                 style: str=None, modified_date: dt.datetime=None) -> None:
+                 style: str=None, modified_date: dt.datetime=None,
+                 is_deleted: bool = False) -> None:
 
-        if (selected_text is None) and (note is None):
+        # require non-deleted annotations to have selected text or be a note
+        if not is_deleted and (selected_text is None) and (note is None):
             raise ValueError('specify either selected_text or note')
 
         self.location = location
@@ -37,6 +39,7 @@ class Annotation(object):
         self.style = style
         self.note = note
         self.modified_date = modified_date
+        self.is_deleted = is_deleted
 
     def __getitem__(self, key: str) -> Any:
         return getattr(self, key)
@@ -206,10 +209,17 @@ class Book(object):
 
         # print(self._reader_notes[:1000])
 
+        # filter deleted annotations
+        annotations = [
+            anno 
+            for anno in self.annotations 
+            if not anno.is_deleted
+        ]
+
         md = template.render(
             title=self._title,
             author=self._author,
-            highlights=self.annotations,
+            highlights=annotations,
             reader_notes=self._reader_notes
         )
         return md
@@ -316,6 +326,7 @@ class BookList(object):
                 str(r['represent_text']) if r['represent_text'] else None)
             chapter = str(r['chapter']) if r['chapter'] else None
             style = str(r['style']) if r['style'] else None
+            is_deleted = bool(r['is_deleted'])
 
             anno = Annotation(
                 location=location,
@@ -326,9 +337,10 @@ class BookList(object):
                 style=style,
                 modified_date=dt.datetime.fromtimestamp(
                     NS_TIME_INTERVAL_SINCE_1970 + int(r['modified_date'])),
+                is_deleted=is_deleted,
             )
             anno_group[asset_id].append(anno)
-
+        
         for asset_id, anno_itr in anno_group.items():
             self.books[asset_id].annotations = anno_itr
 
