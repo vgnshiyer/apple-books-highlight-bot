@@ -1,19 +1,17 @@
+import functools
 import pathlib
 import sqlite3
-import functools
-
-from typing import (List, Dict, Optional, Union, Callable)
-
+from typing import Dict, List, Union
 
 SqliteQueryType = List[Dict[str, Union[str, int, bool]]]
 
 ANNOTATION_DB_PATH = (
-    pathlib.Path.home() /
-    "Library/Containers/com.apple.iBooksX/Data/Documents/AEAnnotation/"
+    pathlib.Path.home()
+    / "Library/Containers/com.apple.iBooksX/Data/Documents/AEAnnotation/"
 )
 BOOK_DB_PATH = (
-    pathlib.Path.home() /
-    "Library/Containers/com.apple.iBooksX/Data/Documents/BKLibrary/"
+    pathlib.Path.home()
+    / "Library/Containers/com.apple.iBooksX/Data/Documents/BKLibrary/"
 )
 
 
@@ -23,17 +21,17 @@ attach database ? as books
 
 
 NOTE_LIST_FIELDS = [
-    'asset_id',
-    'title',
-    'author',
-    'location',
-    'selected_text',
-    'note',
-    'represent_text',
-    'chapter',
-    'style',
-    'modified_date',
-    'is_deleted',
+    "asset_id",
+    "title",
+    "author",
+    "location",
+    "selected_text",
+    "note",
+    "represent_text",
+    "chapter",
+    "style",
+    "modified_date",
+    "is_deleted",
 ]
 
 NOTE_LIST_QUERY = """
@@ -80,10 +78,7 @@ def get_ibooks_database() -> sqlite3.Cursor:
 
     db1 = sqlite3.connect(str(sqlite_file), check_same_thread=False)
     cursor = db1.cursor()
-    cursor.execute(
-        ATTACH_BOOKS_QUERY,
-        (str(assets_file),)
-    )
+    cursor.execute(ATTACH_BOOKS_QUERY, (str(assets_file),))
 
     return cursor
 

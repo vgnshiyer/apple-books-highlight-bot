@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import pathlib
+
 import click
 
-from ibooks_highlights.models import BookList
 from ibooks_highlights import ibooksdb
+from ibooks_highlights.models import BookList
 
 
 def get_booklist(path: pathlib.Path) -> BookList:
@@ -17,23 +17,28 @@ def get_booklist(path: pathlib.Path) -> BookList:
 
 
 @click.group()
-@click.option('--bookdir', '-b', type=click.Path(), 
-              envvar='IBOOKS_HIGHLIGHT_DIRECTORY', default='./books')
+@click.option(
+    "--bookdir",
+    "-b",
+    type=click.Path(),
+    envvar="IBOOKS_HIGHLIGHT_DIRECTORY",
+    default="./books",
+)
 @click.pass_context
-def cli(ctx, bookdir):
+def cli(ctx: click.Context, bookdir: str):
 
     # create directory if it doesn't exist
     p = pathlib.Path(bookdir)
     p.mkdir(parents=True, exist_ok=True)
 
-    ctx.obj['BOOKDIR'] = p
+    ctx.obj["BOOKDIR"] = p
 
 
 @cli.command()
 @click.pass_context
-def list(ctx):
+def list(ctx: click.Context):
 
-    bookdir = ctx.obj['BOOKDIR']
+    bookdir = ctx.obj["BOOKDIR"]
     bl = get_booklist(bookdir)
 
     books = [b for b in bl.books.values()]
@@ -43,15 +48,15 @@ def list(ctx):
 
 
 @cli.command()
-@click.option('--force', '-f', is_flag=True)
+@click.option("--force", "-f", is_flag=True)
 @click.pass_context
-def sync(ctx, force):
+def sync(ctx: click.Context, force: bool):
 
-    bookdir = ctx.obj['BOOKDIR']
+    bookdir = ctx.obj["BOOKDIR"]
     bl = get_booklist(bookdir)
 
     bl.write_modified(bookdir, force)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     cli(obj={})

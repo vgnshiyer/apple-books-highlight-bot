@@ -1,16 +1,16 @@
-import re
-import pathlib
 import datetime as dt
+import pathlib
+import re
+from typing import Any, Dict, List, Optional
 
 import frontmatter
-from typing import (List, Dict, Optional, Union, Any, Callable)
 from dateutil import parser as duparser
 from slugify import slugify
 
-from ibooks_highlights.util import (
-    cmp_to_key, query_compare_no_asset_id, TEMPLATE_ENVIRONMENT,
-    NS_TIME_INTERVAL_SINCE_1970)
 from ibooks_highlights.ibooksdb import SqliteQueryType
+from ibooks_highlights.util import (NS_TIME_INTERVAL_SINCE_1970,
+                                    TEMPLATE_ENVIRONMENT, cmp_to_key,
+                                    query_compare_no_asset_id)
 
 
 class BookMetadataError(Exception):
@@ -18,15 +18,21 @@ class BookMetadataError(Exception):
 
 
 class Annotation(object):
-
-    def __init__(self, location: str, selected_text: str=None, 
-                 note: str=None, represent_text: str=None, chapter: str=None, 
-                 style: str=None, modified_date: dt.datetime=None,
-                 is_deleted: bool = False) -> None:
+    def __init__(
+        self,
+        location: str,
+        selected_text: str = None,
+        note: str = None,
+        represent_text: str = None,
+        chapter: str = None,
+        style: str = None,
+        modified_date: dt.datetime = None,
+        is_deleted: bool = False,
+    ) -> None:
 
         # require non-deleted annotations to have selected text or be a note
         if not is_deleted and (selected_text is None) and (note is None):
-            raise ValueError('specify either selected_text or note')
+            raise ValueError("specify either selected_text or note")
 
         self.location = location
         self.selected_text = selected_text
@@ -46,18 +52,18 @@ class Annotation(object):
 
 
 class Book(object):
-
     def __init__(
-        self, asset_id: str=None, 
-        filename: pathlib.Path=None,
-        root: pathlib.Path=None
+        self,
+        asset_id: str = None,
+        filename: pathlib.Path = None,
+        root: pathlib.Path = None,
     ) -> None:
 
         args_present = asset_id is not None
         file_present = filename is not None
 
         if args_present == file_present:
-            raise ValueError('specify either asset_id or filename')
+            raise ValueError("specify either asset_id or filename")
 
         self._modified_date: Optional[dt.datetime] = None
         self._annotations: List[Annotation] = []
@@ -68,7 +74,7 @@ class Book(object):
             self._author: Optional[str] = None
             self._title: Optional[str] = None
             self._prev_content: Optional[str] = None
-            self._reader_notes = ''
+            self._reader_notes = ""
 
         if file_present:
             self._process_file(filename, root)
@@ -82,22 +88,22 @@ class Book(object):
 
         book = frontmatter.load(filename)
 
-        if 'asset_id' not in book.keys():
-            raise BookMetadataError('asset_id missing')
+        if "asset_id" not in book.keys():
+            raise BookMetadataError("asset_id missing")
 
-        self._asset_id = book['asset_id']
-        self._author = book['author']
-        self._title = book['title']
+        self._asset_id = book["asset_id"]
+        self._author = book["author"]
+        self._title = book["title"]
 
-        if 'modified_date' in book.keys():
-            self._modified_date = duparser.parse(book['modified_date'])
+        if "modified_date" in book.keys():
+            self._modified_date = duparser.parse(book["modified_date"])
 
-        if 'sync_notes' in book.keys():
-            self._sync_notes = bool(book['sync_notes'])
+        if "sync_notes" in book.keys():
+            self._sync_notes = bool(book["sync_notes"])
 
         self._prev_content = book.content
 
-        self._reader_notes = ''
+        self._reader_notes = ""
 
         reader_notes_start = None
         ibooks_notes_start = None
@@ -116,29 +122,30 @@ class Book(object):
 
         # if same line, that's not good
         if reader_notes_start == ibooks_notes_start:
-            raise BookMetadataError('Note section identifiers on same line')
+            raise BookMetadataError("Note section identifiers on same line")
 
         # if different line, select the appropriate portion of the content
         if reader_notes_start is None:
             reader_lines = prev_content_lines[3:ibooks_notes_start]
         elif reader_notes_start < ibooks_notes_start:
             reader_lines = prev_content_lines[
-                reader_notes_start+1:ibooks_notes_start]
+                reader_notes_start + 1 : ibooks_notes_start
+            ]
         else:
-            reader_lines = prev_content_lines[reader_notes_start+1:]
+            reader_lines = prev_content_lines[reader_notes_start + 1 :]
 
-        self._reader_notes = '\n'.join(reader_lines).strip()
+        self._reader_notes = "\n".join(reader_lines).strip()
 
     def __str__(self) -> str:
         asset_id = self._asset_id[:8].ljust(8)
-        mod = ' '
+        mod = " "
         if self.is_modified:
-            mod = '*'
-        return f'{asset_id} {mod} {self.num_annotations}\t{self._title}'
+            mod = "*"
+        return f"{asset_id} {mod} {self.num_annotations}\t{self._title}"
 
     def _yaml_str(cls, txt: str) -> str:
-        exp = '[^A-Za-z0-9 ]+'
-        return re.sub(exp, '', txt)
+        exp = "[^A-Za-z0-9 ]+"
+        return re.sub(exp, "", txt)
 
     @property
     def author(self) -> str:
@@ -147,7 +154,7 @@ class Book(object):
     @author.setter
     def author(self, value: str) -> None:
         if value is None:
-            value = 'Unknown'
+            value = "Unknown"
         self._author = self._yaml_str(value)
 
     @property
@@ -158,12 +165,12 @@ class Book(object):
     def title(self, value: str) -> None:
 
         if value is None:
-            value = 'Unknown'
+            value = "Unknown"
         self._title = self._yaml_str(value)
 
         slug = slugify(value)
         asset_id = self._asset_id[:8].lower()
-        self._filename = f'{slug}-{asset_id}.md'
+        self._filename = f"{slug}-{asset_id}.md"
 
     @property
     def asset_id(self) -> str:
@@ -180,10 +187,7 @@ class Book(object):
         if len(self._annotations) == 0:
             return False
 
-        anno_max = max([
-            anno.modified_date
-            for anno in self._annotations
-        ])
+        anno_max = max([anno.modified_date for anno in self._annotations])
         return anno_max > self._modified_date
 
     @property
@@ -210,35 +214,28 @@ class Book(object):
         # print(self._reader_notes[:1000])
 
         # filter deleted annotations
-        annotations = [
-            anno 
-            for anno in self.annotations 
-            if not anno.is_deleted
-        ]
+        annotations = [anno for anno in self.annotations if not anno.is_deleted]
 
         md = template.render(
             title=self._title,
             author=self._author,
             highlights=annotations,
-            reader_notes=self._reader_notes
+            reader_notes=self._reader_notes,
         )
         return md
 
     def write(self, path: pathlib.Path) -> None:
 
         if not path.is_dir():
-            raise NotADirectoryError(f'{str(path)} is not a directory')
+            raise NotADirectoryError(f"{str(path)} is not a directory")
 
         if not self._sync_notes:
-            print('sync locked for', self._title)
+            print("sync locked for", self._title)
             return
-        
-        print('updating', self._title)
 
-        mod_date = max([
-            anno.modified_date
-            for anno in self._annotations
-        ])
+        print("updating", self._title)
+
+        mod_date = max([anno.modified_date for anno in self._annotations])
         mod_date_str = mod_date.isoformat()
 
         fmpost = frontmatter.Post(
@@ -246,7 +243,7 @@ class Book(object):
             asset_id=self._asset_id,
             title=self.title,
             author=self.author,
-            modified_date=mod_date_str
+            modified_date=mod_date_str,
         )
 
         fn = path / self._filename
@@ -254,7 +251,7 @@ class Book(object):
         # make necessary subdirs
         fn.parent.mkdir(parents=True, exist_ok=True)
 
-        with open(fn, 'w') as f:
+        with open(fn, "w") as f:
             s = frontmatter.dumps(fmpost)
             f.write(s)
 
@@ -267,7 +264,7 @@ class BookList(object):
     def __init__(self, path: pathlib.Path) -> None:
 
         if not path.is_dir():
-            raise NotADirectoryError(f'{str(path)} is not a directory')
+            raise NotADirectoryError(f"{str(path)} is not a directory")
 
         self._path = path
 
@@ -276,7 +273,7 @@ class BookList(object):
 
     def _load_books(self, path: pathlib.Path) -> Dict[str, Book]:
 
-        book_files = path.glob('**/*.md')
+        book_files = path.glob("**/*.md")
 
         md_books = {}
         for bf in book_files:
@@ -301,32 +298,30 @@ class BookList(object):
         res = [
             r
             for r in annos
-            if r['asset_id'] is not None and
-            ((r['selected_text'] is not None) or (r['note'] is not None))
+            if r["asset_id"] is not None
+            and ((r["selected_text"] is not None) or (r["note"] is not None))
         ]
 
         for r in res:
-            book = self._get_create_book(str(r['asset_id']))
+            book = self._get_create_book(str(r["asset_id"]))
             if book.title is None:
-                book.title = str(r['title'])
+                book.title = str(r["title"])
             if book.author is None:
-                book.author = str(r['author'])
+                book.author = str(r["author"])
 
         anno_group: Dict[str, List[Annotation]] = {}
         for r in res:
-            asset_id = str(r['asset_id'])
+            asset_id = str(r["asset_id"])
             if asset_id not in anno_group:
                 anno_group[asset_id] = []
 
-            location = str(r['location']) if r['location'] else None
-            selected_text = (
-                str(r['selected_text']) if r['selected_text'] else None)
-            note = str(r['note']) if r['note'] else None
-            represent_text = (
-                str(r['represent_text']) if r['represent_text'] else None)
-            chapter = str(r['chapter']) if r['chapter'] else None
-            style = str(r['style']) if r['style'] else None
-            is_deleted = bool(r['is_deleted'])
+            location = str(r["location"]) if r["location"] else None
+            selected_text = str(r["selected_text"]) if r["selected_text"] else None
+            note = str(r["note"]) if r["note"] else None
+            represent_text = str(r["represent_text"]) if r["represent_text"] else None
+            chapter = str(r["chapter"]) if r["chapter"] else None
+            style = str(r["style"]) if r["style"] else None
+            is_deleted = bool(r["is_deleted"])
 
             anno = Annotation(
                 location=location,
@@ -336,22 +331,22 @@ class BookList(object):
                 chapter=chapter,
                 style=style,
                 modified_date=dt.datetime.fromtimestamp(
-                    NS_TIME_INTERVAL_SINCE_1970 + int(r['modified_date'])),
+                    NS_TIME_INTERVAL_SINCE_1970 + int(r["modified_date"])
+                ),
                 is_deleted=is_deleted,
             )
             anno_group[asset_id].append(anno)
-        
+
         for asset_id, anno_itr in anno_group.items():
             self.books[asset_id].annotations = anno_itr
 
-    def write_modified(self, path: pathlib.Path=None, 
-                       force: bool=False) -> None:
+    def write_modified(self, path: pathlib.Path = None, force: bool = False) -> None:
 
         if path is None:
             path = self._path
 
         if not path.is_dir():
-            raise NotADirectoryError(f'{str(path)} is not a directory')
+            raise NotADirectoryError(f"{str(path)} is not a directory")
 
         path.mkdir(parents=True, exist_ok=True)
 
