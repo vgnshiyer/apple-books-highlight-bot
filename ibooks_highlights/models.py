@@ -1,6 +1,7 @@
 import datetime as dt
 import pathlib
 import re
+import yaml
 from typing import Any, Dict, List, Optional
 
 import frontmatter
@@ -86,7 +87,10 @@ class Book(object):
         else:
             self._filename = filename.name
 
-        book = frontmatter.load(filename)
+        try:
+            book = frontmatter.load(filename)
+        except yaml.YAMLError:
+            raise BookMetadataError("no frontmatter present")
 
         if "asset_id" not in book.keys():
             raise BookMetadataError("asset_id missing")
