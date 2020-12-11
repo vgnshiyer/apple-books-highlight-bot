@@ -18,7 +18,7 @@ class BookMetadataError(Exception):
     pass
 
 
-class Annotation(object):
+class Annotation:
     def __init__(
         self,
         location: str,
@@ -48,11 +48,14 @@ class Annotation(object):
         self.modified_date = modified_date
         self.is_deleted = is_deleted
 
+    def __repr__(self) -> str:
+        return f"<Annotation:{self.selected_text[:70]}>"
+
     def __getitem__(self, key: str) -> Any:
         return getattr(self, key)
 
 
-class Book(object):
+class Book:
     def __init__(
         self,
         asset_id: str = None,
@@ -79,6 +82,9 @@ class Book(object):
 
         if file_present:
             self._process_file(filename, root)
+
+    def __repr__(self) -> str:
+        return f"<Book:{self.asset_id} {self.title}>"
 
     def _process_file(self, filename: pathlib.Path, root: pathlib.Path) -> None:
 
@@ -260,7 +266,7 @@ class Book(object):
             f.write(s)
 
 
-class BookList(object):
+class BookList:
 
     path: pathlib.Path
     books: Dict[str, Book] = {}
@@ -270,10 +276,13 @@ class BookList(object):
         if not path.is_dir():
             raise NotADirectoryError(f"{str(path)} is not a directory")
 
-        self._path = path
+        self.path = path
 
-        if self._path.exists():
-            self.books = self._load_books(self._path)
+        if self.path.exists():
+            self.books = self._load_books(self.path)
+
+    def __repr__(self) -> str:
+        return f"<BookList:{str(self.path)}>"
 
     def _load_books(self, path: pathlib.Path) -> Dict[str, Book]:
 
@@ -347,7 +356,7 @@ class BookList(object):
     def write_modified(self, path: pathlib.Path = None, force: bool = False) -> None:
 
         if path is None:
-            path = self._path
+            path = self.path
 
         if not path.is_dir():
             raise NotADirectoryError(f"{str(path)} is not a directory")
