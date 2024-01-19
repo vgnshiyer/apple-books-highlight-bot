@@ -18,17 +18,17 @@ def get_booklist(path: pathlib.Path) -> BookList:
 
 @click.group()
 @click.option(
-    "--bookdir",
-    "-b",
+    "--export-dir",
+    "-e",
     type=click.Path(),
     envvar="IBOOKS_HIGHLIGHT_DIRECTORY",
-    default="./books",
+    default="./highlights_data",
 )
 @click.pass_context
-def cli(ctx: click.Context, bookdir: str):
+def cli(ctx: click.Context, export_dir: str):
 
     # create directory if it doesn't exist
-    p = pathlib.Path(bookdir)
+    p = pathlib.Path(export_dir)
     p.mkdir(parents=True, exist_ok=True)
 
     ctx.obj["BOOKDIR"] = p
@@ -38,8 +38,8 @@ def cli(ctx: click.Context, bookdir: str):
 @click.pass_context
 def list(ctx: click.Context):
 
-    bookdir = ctx.obj["BOOKDIR"]
-    bl = get_booklist(bookdir)
+    export_dir = ctx.obj["BOOKDIR"]
+    bl = get_booklist(export_dir)
 
     books = [b for b in bl.books.values()]
     books = sorted(books, key=lambda b: b.title)
@@ -52,10 +52,10 @@ def list(ctx: click.Context):
 @click.pass_context
 def sync(ctx: click.Context, force: bool):
 
-    bookdir = ctx.obj["BOOKDIR"]
-    bl = get_booklist(bookdir)
+    export_dir = ctx.obj["BOOKDIR"]
+    bl = get_booklist(export_dir)
 
-    bl.write_modified(bookdir, force)
+    bl.write_modified(export_dir, force)
 
 
 if __name__ == "__main__":
