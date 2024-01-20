@@ -43,8 +43,7 @@ def list(ctx: click.Context):
 @click.pass_context
 def sync(ctx: click.Context, force: bool):
     exporter = ctx.obj["EXPORTER"]
-    bl = get_booklist(export_dir)
-    bl.write_modified(export_dir, force)
+    exporter.write_modified()
 
 
 if __name__ == "__main__":
