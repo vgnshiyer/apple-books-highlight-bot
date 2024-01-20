@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema#",
+    "type": "object",
+    "title": "Book",
+    "properties": {
+        "asset_id": {
+            "type": "string",
+            "description": "The unique identifier for a book."
+        },
+        "title": {
+            "type": "string",
+            "description": "The title of the book."
+        },
+        "description": {
+            "type": "string",
+            "description": "The description of the book."
+        },
+        "author": {
+            "type": "string",
+            "description": "The author of the book."
+        },
+        "highlights": {
+            "type": "array",
+            "description": "The highlights of the book.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "highlight_id": {
+                        "type": "string",
+                        "description": "The unique identifier for a highlight."
+                    },
+                    "is_deleted": {
+                        "type": "boolean",
+                        "description": "Whether the highlight is deleted."
+                    },
+                    "representative_text": {
+                        "type": "string",
+                        "description": "The representative text of the highlight."
+                    },
+                    "selected_text": {
+                        "type": "string",
+                        "description": "The selected text of the highlight."
+                    },
+                    "note": {
+                        "type": "string",
+                        "description": "The note of the highlight."
+                    },
+                    "chapter": {
+                        "type": "string",
+                        "description": "The chapter of the highlight."
+                    }
+                }
+            }
+        }
+    }
+}
