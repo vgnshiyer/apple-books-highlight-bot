@@ -1,0 +1,33 @@
+<html>
+<head>
+    <style>
+        .highlight {
+            background-color: {{ highlight_color }};
+        }
+    </style>
+</head>
+<body>
+<p>Good morning,</p>
+<h3>Here is today's Highlight of the day.:</h3>
+<p><b>Title:</b> {{ book_title }}</p>
+{% if chapter %}
+    <p>
+        <b>Chapter:</b> {{ chapter }}
+    </p>
+{% endif %}
+<p><b>Highlight:</b> 
+    {% if representative_text %}
+        {{ representative_text | replace(selected_text, '<span class="highlight">' + selected_text + '</span>') | safe }}
+    {% else %}
+        <span class="highlight">{{ selected_text }}</span>
+    {% endif %}
+</p>
+{% if note %}
+    <p>
+        <b>Note:</b> {{ note }}
+    </p>
+{% endif %}
+<br>
+<p>Best,<br>Your Name</p>
+</body>
+</html>

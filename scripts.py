@@ -1,6 +1,5 @@
 from py_apple_books import PyAppleBooks
-import json, pathlib, logging
-from templates import book_schema
+import json, pathlib, logging, book_schema
 from utils import object_to_dict
 
 logger = logging.getLogger(__name__)
