@@ -3026,6 +3026,78 @@
             "color": "yellow",
             "note": null,
             "chapter": null
+        },
+        {
+            "id": 1259,
+            "is_deleted": false,
+            "representative_text": "A system is Byzantine fault-tolerant if it continues to operate correctly even if some of the\nnodes are malfunctioning and not obeying the protocol, or if malicious attackers are interfering\nwith the network. ",
+            "selected_text": "A system is Byzantine fault-tolerant if it continues to operate correctly even if some of the\nnodes are malfunctioning and not obeying the protocol, or if malicious attackers are interfering\nwith the network",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1262,
+            "is_deleted": false,
+            "representative_text": "However, with liveness properties we are allowed to make caveats: for example, we could say that a\nrequest needs to receive a response only if a majority of nodes have not crashed, and only if the\nnetwork eventually recovers from an outage. ",
+            "selected_text": "However, with liveness properties we are allowed to make caveats: for example, we could say that a\nrequest needs to receive a response only if a majority of nodes have not crashed, and only if the\nnetwork eventually recovers from an outage",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1267,
+            "is_deleted": false,
+            "representative_text": "requires that eventually the system returns to a synchronous state\u2014that is, any period of network\ninterruption lasts only for a finite duration and is then repaired.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "selected_text": "that is, any period of network\ninterruption lasts only for a finite duration and is then repaired",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1268,
+            "is_deleted": false,
+            "representative_text": "This is a realistic model of many\nsystems: most of the time, networks and processes are quite well behaved\u2014otherwise we would never\nbe able to get anything done\u2014but we have to reckon with the fact that any timing assumptions\nmay be shattered occasionally. ",
+            "selected_text": "This is a realistic model of many\nsystems: most of the time, networks and processes are quite well behaved\u2014otherwise we would never\nbe able to get anything done\u2014but we have to reckon with the fact that any timing assumptions\nmay be shattered occasionally",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1270,
+            "is_deleted": false,
+            "representative_text": "For modeling real systems, the partially synchronous model with crash-recovery faults is generally\nthe most useful model. ",
+            "selected_text": "For modeling real systems, the partially synchronous model with crash-recovery faults is generally\nthe most useful model",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1275,
+            "is_deleted": false,
+            "representative_text": "(And yes, you guessed it\u2014eventual consistency is a\nliveness property [89].)\n\n",
+            "selected_text": "eventual consistency is a\nliveness property",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1278,
+            "is_deleted": false,
+            "representative_text": "Safety is often informally defined as nothing bad happens, and liveness as something good\neventually happens. ",
+            "selected_text": "Safety is often informally defined as nothing bad happens, and liveness as something good\neventually happens",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1279,
+            "is_deleted": false,
+            "representative_text": "That is, even if all nodes crash, or\nthe entire network fails, the algorithm must nevertheless ensure that it does not return a wrong\nresult (i.e., that the safety properties remain satisfied).\n\n",
+            "selected_text": "That is, even if all nodes crash, or\nthe entire network fails, the algorithm must nevertheless ensure that it does not return a wrong\nresult (i.e., that the safety properties remain satisfied",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
         }
     ]
 }

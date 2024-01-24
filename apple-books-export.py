@@ -45,7 +45,7 @@ def list(ctx: click.Context):
 @cli.command()
 @click.pass_context
 def sync(ctx: click.Context):
-    logger.info("Syncing highlights" + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    logger.info("Syncing highlights -- " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     exporter = ctx.obj["EXPORTER"]
     exporter.write_modified()
 

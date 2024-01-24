@@ -1,9 +1,13 @@
-import pathlib, json, logging, random
+import pathlib, json, logging, random, datetime
 from jinja2 import Template
 
 logging.basicConfig(
     format="%(asctime)s %(levelname)s %(name)s %(message)s",
-    level=logging.DEBUG
+    level=logging.DEBUG,
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler("../logs/highlight_generator.log", mode="w")
+    ]
 )
 logger = logging.getLogger(__name__)
 
@@ -53,7 +57,7 @@ def generate_daily_highlights_email():
     )
 
 if __name__ == "__main__":
-    logger.info("Getting random highlight")
+    logger.info("Getting random highlight -- " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     email = generate_daily_highlights_email()
     logger.info("Email generated")
 
