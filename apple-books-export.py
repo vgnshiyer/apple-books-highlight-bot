@@ -1,15 +1,15 @@
-import click, pathlib
-from main import Exporter
+import click, pathlib, logging, datetime
+from scripts import Exporter
 
-from ibooks_highlights import ibooksdb
-from ibooks_highlights.models import BookList
-
-
-def get_booklist(path: pathlib.Path) -> BookList:
-    book_list = BookList(path)
-    annos = ibooksdb.fetch_annotations()
-    book_list.populate_annotations(annos)
-    return book_list
+logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+        handlers=[
+            logging.StreamHandler(),
+            logging.FileHandler(f"./logs/apple-books-export.log", mode="w")
+        ],
+    )
+logger = logging.getLogger(__name__)
 
 
 @click.group()
@@ -22,8 +22,10 @@ def get_booklist(path: pathlib.Path) -> BookList:
 )
 @click.pass_context
 def cli(ctx: click.Context, export_dir: str):
+    logger.info(f"Exporting to {export_dir}")
     # create directory if it doesn't exist
     p = pathlib.Path(export_dir)
+    logger.debug(f"Creating directory {p}")
     p.mkdir(parents=True, exist_ok=True)
     ctx.obj["EXPORTER"] = Exporter(export_dir)
 
@@ -33,6 +35,8 @@ def cli(ctx: click.Context, export_dir: str):
 def list(ctx: click.Context):
     exporter = ctx.obj["EXPORTER"]
     books = exporter.list_books()
+    logger.info(f"Found {len(books)} books")
+    logger.debug("Sorting books by title")
     books = sorted(books, key=lambda b: b.title)
     for book in books:
         print(f"{book.id} - {book.title}")
