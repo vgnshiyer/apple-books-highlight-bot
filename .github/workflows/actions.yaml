@@ -1,0 +1,38 @@
+name: Send highlight of the day
+
+on:
+  schedule:
+    - cron: '0 16 * * *'
+
+jobs:
+  send_highlight:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    - name: prepare email
+      run: |
+        python ../highlight_generator.py
+
+    - name: check output
+      run: |
+        cat ../output.html
+
+    # - name: send email
+    #   uses: dawidd6/action-send-mail@v3
+    #   with:
+    #     server_address: smtp.gmail.com
+    #     server_port: 465
+    #     username: ${{ secrets.EMAIL }}
+    #     password: ${{ secrets.PASSWORD }}
+    #     subject: Highlight of the day
+    #     html_body: file://../output.html
+    #     to: ${{ secrets.EMAIL }}
+    #     from: ${{ secrets.EMAIL }}
+    #     content_type: text/html
