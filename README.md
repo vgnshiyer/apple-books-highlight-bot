@@ -1,85 +1,72 @@
-# iBooks highlights export
+# Apple Books - Highlight of the Day
 
-Export your iBooks highlights and notes to markdown files.  Modified from [original][] by [shrsv][].
+Modified from [original](https://github.com/matttrent/ibooks-highlights).
 
-[original]: https://github.com/shrsv/ibooks_highlights_export
-[shrsv]:    https://github.com/shrsv
+<!-- Badges -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![](https://img.shields.io/badge/Follow-vgnshiyer-0A66C2?logo=linkedin)](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=vgnshiyer)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-yellow.svg?logo=buymeacoffee)](https://www.buymeacoffee.com/vgnshiyer)
 
-## What it does
+## Description
 
-The scripts reads the local sqlite database that iBooks uses to track annotations.  It proceeds to generate a markdown file corresponding to each book in the database, and populate it with the associated highlights and notes.
+A Github Actions workflow to get daily Highlight of the day from the books you read.
 
-It preserves each book's identifier (and some other data) in the YAML header of the markdown file. You can actually rename the file and the next run of the script will find and update the appropriate file.  Additionally, it creates a **My notes** section for additional free-form notes that it won't overwrite on subsequent updates.
+## Getting Started
 
-## Usage
+[Fork this project.](https://github.com/vgnshiyer/apple-books-highlight-bot/fork)
 
-Simplest way to get your highlights:
+### Dependencies
 
-```
-$ python setup.py install
-$ ibooks-highlights.py sync
-$ ll books
-```
+Install dependencies using `pip` package manager.
 
-What you get per book:
+`pip install -r requirements.txt`
 
-```
----
-asset_id: 3AB4BC5DE2CAAEE41EBF569B5CD1B70F
-author: REISNER MARC
-modified_date: '2017-09-02T14:18:36'
-title: Cadillac Desert
----
+### Usage
 
-# Cadillac Desert
+Update your apple books data using the below command.
 
-By REISNER MARC
+`python apple-books-export.py sync`
 
-## My notes <a name="my_notes_dont_delete"></a>
+### Configure your actions.yaml
 
+I recommend using your test email credentials.
 
+* Go to your GitHub repository and click on the Settings tab.
+* In the left sidebar, click on Secrets.
+* Click on New repository secret.
+* Enter the Name of the secret. For example, EMAIL or EMAILPASSWORD.
+* Enter the Value of the secret. This should be the actual secret data you want to store.
+* Click on Add secret to save the secret.
+* Configure env variable `To` in `./github/workflows/actions.yaml` with the email you want to receive your updates.
+* Change the `schedule` cron expression according to your timezone and your preferences.
 
-## iBooks notes <a name="ibooks_notes_dont_delete"></a>
+#### Receive the daily highlights in your inbox every morning.
 
-### Introduction
+## Contributing
 
-Westerners call what they have established out here a civilization, but it would
-be more accurate to call it a beachhead. And if history is any guide, the odds
-that we can sustain it would have to be regarded as low.
+Thank you for considering contributing to this project! Your help is greatly appreciated.
 
-Everything depends on the manipulation of water—on capturing it behind dams,
-storing it, and rerouting it in concrete rivers over distances of hundreds of
-miles. Were it not for a century and a half of messianic effort toward that end,
-the West as we know it would not exist.
-```
+To contribute to this project, please follow these guidelines:
 
-## Options
+### Opening Issues
+If you encounter a bug, have a feature request, or want to discuss something related to the project, please open an issue on the GitHub repository. When opening an issue, please provide:
 
-To get a list of books (asterisk means there's unsynced highlights):
+**Bug Reports**: Describe the issue in detail. Include steps to reproduce the bug if possible, along with any error messages or screenshots.
 
-```
-$ ibooks-highlights.py list
+**Feature Requests**: Clearly explain the new feature you'd like to see added to the project. Provide context on why this feature would be beneficial.
 
-D36605A6   1	Bayesian Methods for Hackers
-80EE27E1   27	Dune
-E5875B57 * 30	Making of the Atomic Bomb
-7029A581   17	Meditations - Modern Library Translation
-547526C9   50	Musashi
-F6C97901   77	The Idea Factory
-```
+**General Discussions**: Feel free to start discussions on broader topics related to the project.
 
-To set output directory:
+### Steps
 
-```
-$ ibooks-highlights.py -b other-books sync
-```
+1️⃣ Fork the GitHub repository https://github.com/vgnshiyer/apple-books-highlight-bot \
+2️⃣ Create a new branch for your changes (git checkout -b feature/my-new-feature). \
+3️⃣ Make your changes and test them thoroughly. \
+4️⃣ Push your changes and open a Pull Request to `main`.
 
-Change default output directory via environment variable:
+*Please provide a clear title and description of your changes.*
 
-```
-export IBOOKS_HIGHLIGHT_DIRECTORY=some/other/folder
-```
+## License
 
-## TODO
+This project is licensed under the MIT License.
 
-- [ ] `¯\_(ツ)_/¯`

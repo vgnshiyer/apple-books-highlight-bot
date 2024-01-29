@@ -3098,6 +3098,231 @@
             "color": "yellow",
             "note": null,
             "chapter": null
+        },
+        {
+            "id": 1285,
+            "is_deleted": false,
+            "representative_text": "They don\u2019t come for free: systems with stronger guarantees may have worse performance or be less\nfault-tolerant than systems with weaker guarantees. ",
+            "selected_text": "systems with stronger guarantees may have worse performance or be less\nfault-tolerant than systems with weaker guarantees",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1286,
+            "is_deleted": false,
+            "representative_text": "But while there is some overlap, they are mostly independent concerns: transaction isolation is\nprimarily about avoiding race conditions due to concurrently executing transactions, whereas\ndistributed consistency is mostly about coordinating the state of replicas in the face of delays and\nfaults.\n\n",
+            "selected_text": "transaction isolation is\nprimarily about avoiding race conditions due to concurrently executing transactions, whereas\ndistributed consistency is mostly about coordinating the state of replicas in the face of delays and\nfaults.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1288,
+            "is_deleted": false,
+            "representative_text": "The simplest\nway of handling such faults is to simply let the entire service fail, and show the user an error\nmessage. ",
+            "selected_text": "The simplest\nway of handling such faults is to simply let the entire service fail, and show the user an error\nmessage",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1289,
+            "is_deleted": false,
+            "representative_text": "But the basic idea is to make a system appear as if there were only one copy of the data,\nand all operations on it are atomic. ",
+            "selected_text": "the basic idea is to make a system appear as if there were only one copy of the data,\nand all operations on it are atomic",
+            "color": "yellow",
+            "note": "Liberalizability",
+            "chapter": null
+        },
+        {
+            "id": 1290,
+            "is_deleted": false,
+            "representative_text": "This is because the customers with the slowest requests are often those who have\nthe most data on their accounts because they have made many purchases\u2014that is, they\u2019re the most\nvaluable customers\n[19].\nIt\u2019s important to keep those customers happy by ensuring the website is fast for them: Amazon has\nalso observed that a 100\u00a0ms increase in response time reduces sales by 1%\n[20],\nand others report that a 1-second slowdown reduces a customer satisfaction metric by 16%\n[21,\n22].\n\n",
+            "selected_text": "This is because the customers with the slowest requests are often those who have\nthe most data on their accounts because they have made many purchases\u2014that is, they\u2019re the most\nvaluable customers\n[19].\nIt\u2019s important to keep those customers happy by ensuring the website is fast for them:",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1291,
+            "is_deleted": false,
+            "representative_text": "At times when the network is working correctly, a system can provide both consistency\n(linearizability) and total availability. When a network fault occurs, you have to choose between\neither linearizability or total availability. ",
+            "selected_text": "At times when the network is working correctly, a system can provide both consistency\n(linearizability) and total availability. When a network fault occurs, you have to choose between\neither linearizability or total availability",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1292,
+            "is_deleted": false,
+            "representative_text": "In this case, when the resizer fetches the image (step 5), it might see an old version of\nthe image, or nothing at all. ",
+            "selected_text": "In this case, when the resizer fetches the image (step 5), it might see an old version of\nthe image, or nothing at all",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1293,
+            "is_deleted": false,
+            "representative_text": "This requirement ensures the recency guarantee we\ndiscussed earlier: once a new value has been written or read, all subsequent reads see the value\nthat was written, until it is overwritten again.\n\n\n",
+            "selected_text": "This requirement ensures the recency guarantee we\ndiscussed earlier: once a new value has been written or read, all subsequent reads see the value\nthat was written, until it is overwritten again",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1294,
+            "is_deleted": false,
+            "representative_text": "If your application requires linearizability, and some replicas are disconnected from the other\nreplicas due to a network problem, then some replicas cannot process requests while they are\ndisconnected: they must either wait until the network problem is fixed, or return an error (either\nway, they become unavailable).\n\n\nIf your application does not require linearizability, then it can be written in a way that each\nreplica can process requests independently, even if it is disconnected from other replicas (e.g.,\nmulti-leader). In this case, the application can remain available in the face of a network\nproblem, but its behavior is not linearizable.\n\n\n\n",
+            "selected_text": "If your application requires linearizability, and some replicas are disconnected from the other\nreplicas due to a network problem, then some replicas cannot process requests while they are\ndisconnected: they must either wait until the network problem is fixed, or return an error (either\nway, they become unavailable).\n\n\nIf your application does not require linearizability, then it can be written in a way that each\nreplica can process requests independently, even if it is disconnected from other replicas (e.g.,\nmulti-leader). In this case, the application can remain available in the face of a network\nproblem, but its behavior is not linearizable.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1295,
+            "is_deleted": false,
+            "representative_text": "either Consistent or Available when Partitioned\n[39]. ",
+            "selected_text": "either Consistent or Available when Partitioned",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1298,
+            "is_deleted": false,
+            "representative_text": "Linearizability is a recency guarantee on reads and writes of a register (an individual object).\nIt doesn\u2019t group operations together into transactions, so it does not prevent problems such as\nwrite skew (see \u201cWrite Skew and Phantoms\u201d), unless you take additional measures such as\nmaterializing conflicts (see \u201cMaterializing conflicts\u201d).\n\n\n\n\n\n\n",
+            "selected_text": "Linearizability is a recency guarantee on reads and writes of a register (an individual object).\nIt doesn\u2019t group operations together into transactions, so it does not prevent problems such as\nwrite skew",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1299,
+            "is_deleted": false,
+            "representative_text": "The requirement of linearizability is that the lines joining up the operation markers always move\nforward in time (from left to right), never backward. ",
+            "selected_text": "The requirement of linearizability is that the lines joining up the operation markers always move\nforward in time (from left to right), never backward",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1301,
+            "is_deleted": false,
+            "representative_text": "If the network between datacenters is interrupted in a single-leader setup, clients connected to\nfollower datacenters cannot contact the leader, so they cannot make any writes to the database, nor\nany linearizable reads. They can still make reads from the follower, but they might be stale\n(nonlinearizable). ",
+            "selected_text": "If the network between datacenters is interrupted in a single-leader setup, clients connected to\nfollower datacenters cannot contact the leader, so they cannot make any writes to the database, nor\nany linearizable reads. They can still make reads from the follower, but they might be stale\n(nonlinearizable)",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1302,
+            "is_deleted": false,
+            "representative_text": "These constraints all require there to\nbe a single up-to-date value (the account balance, the stock level, the seat occupancy) that all\nnodes agree on.\n\n",
+            "selected_text": "These constraints all require there to\nbe a single up-to-date value (the account balance, the stock level, the seat occupancy) that all\nnodes agree on.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1303,
+            "is_deleted": false,
+            "representative_text": "error), you need linearizability.\n\n\n",
+            "selected_text": "you need linearizability.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1304,
+            "is_deleted": false,
+            "representative_text": "Thus, if one\nclient\u2019s read returns the new value 1, all subsequent reads must also return the new value, even if\nthe write operation has not yet completed.\n\n",
+            "selected_text": "Thus, if one\nclient\u2019s read returns the new value 1, all subsequent reads must also return the new value, even if\nthe write operation has not yet completed.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1305,
+            "is_deleted": false,
+            "representative_text": "Systems with multi-leader replication are generally not linearizable, because they concurrently\nprocess writes on multiple nodes and asynchronously replicate them to other nodes. ",
+            "selected_text": "Systems with multi-leader replication are generally not linearizable, because they concurrently\nprocess writes on multiple nodes and asynchronously replicate them to other nodes",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1307,
+            "is_deleted": false,
+            "representative_text": "Since linearizability essentially means \u201cbehave as though there is only a single copy of the data,\nand all operations on it are atomic,\u201d the simplest answer would be to really only use a single copy\nof the data. ",
+            "selected_text": "linearizability essentially means \u201cbehave as though there is only a single copy of the data,\nand all operations on it are atomic",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1309,
+            "is_deleted": false,
+            "representative_text": "Serializability is an isolation property of transactions, where every transaction may read and\nwrite multiple objects (rows, documents, records)\u2014see \u201cSingle-Object and Multi-Object Operations\u201d. It\nguarantees that transactions behave the same as if they had executed in some serial order (each\ntransaction running to completion before the next transaction starts). ",
+            "selected_text": "Serializability is an isolation property of transactions, where every transaction may read and\nwrite multiple objects (rows, documents, records)\u2014see \u201cSingle-Object and Multi-Object Operations\u201d. It\nguarantees that transactions behave the same as if they had executed in some serial order (each\ntransaction running to completion before the next transaction starts)",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1310,
+            "is_deleted": false,
+            "representative_text": "One way of electing a leader is to use a lock: every node that starts up\ntries to acquire the lock, and the one that succeeds becomes the leader\n[14]. No matter how this\nlock is implemented, it must be linearizable: all nodes must agree which node owns the lock;\notherwise it is useless.\n\n\n\n\n\n",
+            "selected_text": "One way of electing a leader is to use a lock: every node that starts up\ntries to acquire the lock, and the one that succeeds becomes the leader\n[14]. No matter how this\nlock is implemented, it must be linearizable: all nodes must agree which node owns the lock;\notherwise it is useless.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1311,
+            "is_deleted": false,
+            "representative_text": "If you want to enforce this constraint as the data is written (such that if two people\ntry to concurrently create a user or a file with the same name, one of them will be returned an\nerror), you need linearizability.\n\n\n",
+            "selected_text": "If you want to enforce this constraint as the data is written",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1312,
+            "is_deleted": false,
+            "representative_text": "images in the file storage become permanently inconsistent.\n\n",
+            "selected_text": "storage become permanently inconsistent",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1315,
+            "is_deleted": false,
+            "representative_text": "It is\npossible (though computationally expensive) to test whether a system\u2019s behavior is linearizable by\nrecording the timings of all requests and responses, and checking whether they can be arranged into\na valid sequential order [11].\n\n\n",
+            "selected_text": "It is\npossible (though computationally expensive) to test whether a system\u2019s behavior is linearizable by\nrecording the timings of all requests and responses, and checking whether they can be arranged into\na valid sequential order [11].",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1316,
+            "is_deleted": false,
+            "representative_text": "Thus, applications that don\u2019t require linearizability can be more tolerant of network problems. ",
+            "selected_text": "Thus, applications that don\u2019t require linearizability can be more tolerant of network problems",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1317,
+            "is_deleted": false,
+            "representative_text": "Even though crashes, race conditions, and disk failures do occur, the transaction abstraction hides\nthose problems so that the application doesn\u2019t need to worry about them.\n\n\n",
+            "selected_text": "Even though crashes, race conditions, and disk failures do occur, the transaction abstraction hides\nthose problems so that the application doesn\u2019t need to worry about them.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
         }
     ]
 }
