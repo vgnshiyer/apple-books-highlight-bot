@@ -1,6 +1,9 @@
 import click, pathlib, logging, datetime
 from scripts import Exporter
 
+log_dir = pathlib.Path("./logs")
+log_dir.mkdir(parents=True, exist_ok=True)
+
 logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(message)s",

@@ -1,6 +1,6 @@
 from py_apple_books import PyAppleBooks
 import json, pathlib, logging, book_schema
-from utils import object_to_dict
+from utils import object_to_dict, replace_unicode_characters
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -21,6 +21,17 @@ class Exporter:
 
     def _remove_empty_highlights(self, book_data: dict):
         book_data["highlights"] = [h for h in book_data["highlights"] if h["selected_text"] != None]
+        book_data["highlights"] = [h for h in book_data["highlights"] if h["representative_text"] != None]
+        return book_data
+
+    def _preprocess_text_fields(self, book_data: dict):
+        for h in book_data["highlights"]:
+            h["representative_text"] = replace_unicode_characters(h["representative_text"])
+            h["selected_text"] = replace_unicode_characters(h["selected_text"])
+            if h["note"] != None:
+                h["note"] = replace_unicode_characters(h["note"])
+        book_data["title"] = replace_unicode_characters(book_data["title"])
+        book_data["author"] = replace_unicode_characters(book_data["author"])
         return book_data
 
     def write_modified(self):
@@ -38,6 +49,7 @@ class Exporter:
 
             book_path = pathlib.Path(self.export_dir) / f"{book.id}.json"
             book_data = self._remove_empty_highlights(book_data)
+            book_data = self._preprocess_text_fields(book_data)
 
             book_has_highlights = len(book_data["highlights"]) > 0
             if not book_has_highlights:
@@ -46,4 +58,3 @@ class Exporter:
                 with open(book_path, "w") as f:
                     json.dump(book_data, f, indent=4)
                     logger.info(f"Exported {book.title} to {book_path}")
-            

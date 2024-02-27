@@ -6,8 +6,8 @@
         {
             "id": 535,
             "is_deleted": false,
-            "representative_text": "When changes happen in different parts of a file, Git can merge\n            them automatically.  Sometimes it can\u2019t work out what was supposed to\n            happen, so it errs on the side of caution and tells you there\u2019s\n            a conflict.",
-            "selected_text": "When changes happen in different parts of a file, Git can merge\n            them automatically.  Sometimes it can\u2019t work out what was supposed to\n            happen, so it errs on the side of caution and tells you there\u2019s\n            a conflict.",
+            "representative_text": "When changes happen in different parts of a file, Git can merge them automatically. Sometimes it can't work out what was supposed to happen, so it errs on the side of caution and tells you there's a conflict.",
+            "selected_text": "When changes happen in different parts of a file, Git can merge them automatically. Sometimes it can't work out what was supposed to happen, so it errs on the side of caution and tells you there's a conflict.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -15,8 +15,8 @@
         {
             "id": 536,
             "is_deleted": false,
-            "representative_text": "Either way, you need to keep track of what state\n            your repository was in when you passed that milestone.  Tags\n            give us the tool to do that.  They mark a certain point\n            in the history of the repository so you can easily reference\n            them later.\n        \n\n            A tag is simply a name that you can use to mark some specific\n            point in the repository\u2019s history.  It can be a major milestone\n            such as a public release or something much more routine like\n            the point at which a bug was fixed in your repository.",
-            "selected_text": "Either way, you need to keep track of what state\n            your repository was in when you passed that milestone.  Tags\n            give us the tool to do that.  They mark a certain point\n            in the history of the repository so you can easily reference\n            them later.\n        \n\n            A tag is simply a name that you can use to mark some specific\n            point in the repository\u2019s history.  It can be a major milestone\n            such as a public release or something much more routine like\n            the point at which a bug was fixed in your repository.",
+            "representative_text": "Either way, you need to keep track of what state your repository was in when you passed that milestone. Tags give us the tool to do that. They mark a certain point in the history of the repository so you can easily reference them later. A tag is simply a name that you can use to mark some specific point in the repository's history. It can be a major milestone such as a public release or something much more routine like the point at which a bug was fixed in your repository.",
+            "selected_text": "Either way, you need to keep track of what state your repository was in when you passed that milestone. Tags give us the tool to do that. They mark a certain point in the history of the repository so you can easily reference them later. A tag is simply a name that you can use to mark some specific point in the repository's history. It can be a major milestone such as a public release or something much more routine like the point at which a bug was fixed in your repository.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -24,8 +24,8 @@
         {
             "id": 539,
             "is_deleted": false,
-            "representative_text": "The branch can exist for the rest of the project or for just a few hours.\n            It can be merged into another branch, but there\u2019s no hard rule\n            saying a branch has to be merged.\n        \n\n            Sometimes, you don\u2019t even want them to merge.  It might be a\n            branch to track an older major version of your project, or\n            it could be an experimental branch that may end up getting\n            deleted.",
-            "selected_text": "The branch can exist for the rest of the project or for just a few hours.\n            It can be merged into another branch, but there\u2019s no hard rule\n            saying a branch has to be merged.\n        \n\n            Sometimes, you don\u2019t even want them to merge.  It might be a\n            branch to track an older major version of your project, or\n            it could be an experimental branch that may end up getting\n            deleted.",
+            "representative_text": "The branch can exist for the rest of the project or for just a few hours. It can be merged into another branch, but there's no hard rule saying a branch has to be merged. Sometimes, you don't even want them to merge. It might be a branch to track an older major version of your project, or it could be an experimental branch that may end up getting deleted.",
+            "selected_text": "The branch can exist for the rest of the project or for just a few hours. It can be merged into another branch, but there's no hard rule saying a branch has to be merged. Sometimes, you don't even want them to merge. It might be a branch to track an older major version of your project, or it could be an experimental branch that may end up getting deleted.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -33,8 +33,8 @@
         {
             "id": 540,
             "is_deleted": false,
-            "representative_text": " You can experiment with changes and then share\n            them when they\u2019re something worth sharing or quietly delete them if\n            the experiment didn\u2019t work out.",
-            "selected_text": " You can experiment with changes and then share\n            them when they\u2019re something worth sharing or quietly delete them if\n            the experiment didn\u2019t work out.",
+            "representative_text": " You can experiment with changes and then share them when they're something worth sharing or quietly delete them if the experiment didn't work out.",
+            "selected_text": " You can experiment with changes and then share them when they're something worth sharing or quietly delete them if the experiment didn't work out.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -42,8 +42,8 @@
         {
             "id": 541,
             "is_deleted": false,
-            "representative_text": "Say you and another developer on your team modify the same line\n            of code but in different ways.  Git sees this and can\u2019t programmatically\n            determine which one is correct, so it flags them as a conflict\n            and waits for you to tell it which change is correct.\n\n            ",
-            "selected_text": "Say you and another developer on your team modify the same line\n            of code but in different ways.  Git sees this and can\u2019t programmatically\n            determine which one is correct, so it flags them as a conflict\n            and waits for you to tell it which change is correct.\n\n            ",
+            "representative_text": "Say you and another developer on your team modify the same line of code but in different ways. Git sees this and can't programmatically determine which one is correct, so it flags them as a conflict and waits for you to tell it which change is correct. ",
+            "selected_text": "Say you and another developer on your team modify the same line of code but in different ways. Git sees this and can't programmatically determine which one is correct, so it flags them as a conflict and waits for you to tell it which change is correct. ",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -51,8 +51,8 @@
         {
             "id": 548,
             "is_deleted": false,
-            "representative_text": "            Instead of tracking a models.py file,\n            Git tracks the content\u2014the individual characters and lines\n            that make up the variables, functions, and so on\u2014of\n            models.py, and Git adds\n            metadata to it such as the name, file mode, and whether the file is a symlink.\n            It\u2019s a nuanced difference, but it\u2019s an important one.",
-            "selected_text": "            Instead of tracking a models.py file,\n            Git tracks the content\u2014the individual characters and lines\n            that make up the variables, functions, and so on\u2014of\n            models.py, and Git adds\n            metadata to it such as the name, file mode, and whether the file is a symlink.\n            It\u2019s a nuanced difference, but it\u2019s an important one.",
+            "representative_text": " Instead of tracking a models.py file, Git tracks the content--the individual characters and lines that make up the variables, functions, and so on--of models.py, and Git adds metadata to it such as the name, file mode, and whether the file is a symlink. It's a nuanced difference, but it's an important one.",
+            "selected_text": " Instead of tracking a models.py file, Git tracks the content--the individual characters and lines that make up the variables, functions, and so on--of models.py, and Git adds metadata to it such as the name, file mode, and whether the file is a symlink. It's a nuanced difference, but it's an important one.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -60,8 +60,8 @@
         {
             "id": 549,
             "is_deleted": false,
-            "representative_text": "There are two steps to retrieving changes from a remote Git repository.\n            First, you fetch them.  That creates a copy of the remote repository\u2019s\n            changes for you.  This step is sort of like the reverse of pushing.\n            Instead of sending changes to another repository, you ask the remote\n            repository to send you the changes it has.\n        \n\n            Next, you merge those changes into your local history.  Git\n            provides tools that help you merge changes.  Since you normally want to\n            fetch and merge changes at the same time, Git provides a way to do both\n            in one step through a process called pulling.\n            Pulling is similar to an update command in Subversion or CVS.\n        \n\n            ",
-            "selected_text": "There are two steps to retrieving changes from a remote Git repository.\n            First, you fetch them.  That creates a copy of the remote repository\u2019s\n            changes for you.  This step is sort of like the reverse of pushing.\n            Instead of sending changes to another repository, you ask the remote\n            repository to send you the changes it has.\n        \n\n            Next, you merge those changes into your local history.  Git\n            provides tools that help you merge changes.  Since you normally want to\n            fetch and merge changes at the same time, Git provides a way to do both\n            in one step through a process called pulling.\n            Pulling is similar to an update command in Subversion or CVS.\n        \n\n            ",
+            "representative_text": "There are two steps to retrieving changes from a remote Git repository. First, you fetch them. That creates a copy of the remote repository's changes for you. This step is sort of like the reverse of pushing. Instead of sending changes to another repository, you ask the remote repository to send you the changes it has. Next, you merge those changes into your local history. Git provides tools that help you merge changes. Since you normally want to fetch and merge changes at the same time, Git provides a way to do both in one step through a process called pulling. Pulling is similar to an update command in Subversion or CVS. ",
+            "selected_text": "There are two steps to retrieving changes from a remote Git repository. First, you fetch them. That creates a copy of the remote repository's changes for you. This step is sort of like the reverse of pushing. Instead of sending changes to another repository, you ask the remote repository to send you the changes it has. Next, you merge those changes into your local history. Git provides tools that help you merge changes. Since you normally want to fetch and merge changes at the same time, Git provides a way to do both in one step through a process called pulling. Pulling is similar to an update command in Subversion or CVS. ",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -69,8 +69,8 @@
         {
             "id": 550,
             "is_deleted": false,
-            "representative_text": "Tags help you keep track of the history of your repository by\n            assigning an easy-to-remember name to a certain revision. ",
-            "selected_text": "Tags help you keep track of the history of your repository by\n            assigning an easy-to-remember name to a certain revision",
+            "representative_text": "Tags help you keep track of the history of your repository by assigning an easy-to-remember name to a certain revision. ",
+            "selected_text": "Tags help you keep track of the history of your repository by assigning an easy-to-remember name to a certain revision",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -78,8 +78,8 @@
         {
             "id": 552,
             "is_deleted": false,
-            "representative_text": "That highlights one of the biggest advantages of a DVCS, which is the model that Git follows.  Instead of having one\n            central repository that you and everyone else on your team sends changes\n            to, you each have your own repository that has the entire history of the project.\n            Making a commit doesn\u2019t involve connecting to a remote repository; the change\n            is recorded in your local repository.",
-            "selected_text": "That highlights one of the biggest advantages of a DVCS, which is the model that Git follows.  Instead of having one\n            central repository that you and everyone else on your team sends changes\n            to, you each have your own repository that has the entire history of the project.\n            Making a commit doesn\u2019t involve connecting to a remote repository; the change\n            is recorded in your local repository.",
+            "representative_text": "That highlights one of the biggest advantages of a DVCS, which is the model that Git follows. Instead of having one central repository that you and everyone else on your team sends changes to, you each have your own repository that has the entire history of the project. Making a commit doesn't involve connecting to a remote repository; the change is recorded in your local repository.",
+            "selected_text": "That highlights one of the biggest advantages of a DVCS, which is the model that Git follows. Instead of having one central repository that you and everyone else on your team sends changes to, you each have your own repository that has the entire history of the project. Making a commit doesn't involve connecting to a remote repository; the change is recorded in your local repository.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -87,8 +87,8 @@
         {
             "id": 556,
             "is_deleted": false,
-            "representative_text": "This is where branches come in.  You can create a branch that\n            marks a point where the files in the\n            repository diverged.  Each branch keeps track of the changes\n            made to its content separately from other branches so you\n            can create alternate histories.\n        \n\n            ",
-            "selected_text": "This is where branches come in.  You can create a branch that\n            marks a point where the files in the\n            repository diverged.  Each branch keeps track of the changes\n            made to its content separately from other branches so you\n            can create alternate histories.\n        \n\n            ",
+            "representative_text": "This is where branches come in. You can create a branch that marks a point where the files in the repository diverged. Each branch keeps track of the changes made to its content separately from other branches so you can create alternate histories. ",
+            "selected_text": "This is where branches come in. You can create a branch that marks a point where the files in the repository diverged. Each branch keeps track of the changes made to its content separately from other branches so you can create alternate histories. ",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -96,8 +96,8 @@
         {
             "id": 558,
             "is_deleted": false,
-            "representative_text": "            First, you have only the latest version of the code.  To look at\n            the history of changes, you have to ask the repository for that information.\n        \n\n            That brings up the second problem.  You have to be able to access the remote\n            repository\u2014normally over a network.",
-            "selected_text": "            First, you have only the latest version of the code.  To look at\n            the history of changes, you have to ask the repository for that information.\n        \n\n            That brings up the second problem.  You have to be able to access the remote\n            repository\u2014normally over a network.",
+            "representative_text": " First, you have only the latest version of the code. To look at the history of changes, you have to ask the repository for that information. That brings up the second problem. You have to be able to access the remote repository--normally over a network.",
+            "selected_text": " First, you have only the latest version of the code. To look at the history of changes, you have to ask the repository for that information. That brings up the second problem. You have to be able to access the remote repository--normally over a network.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -105,8 +105,8 @@
         {
             "id": 559,
             "is_deleted": false,
-            "representative_text": "            talked about repositories and your working tree\u2014your current\n            view of the repository\u2014but we haven\u2019t talked about those\n            changes yet. ",
-            "selected_text": "working tree\u2014your current\n            view of the repository",
+            "representative_text": " talked about repositories and your working tree--your current view of the repository--but we haven't talked about those changes yet. ",
+            "selected_text": "working tree--your current view of the repository",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -114,8 +114,8 @@
         {
             "id": 562,
             "is_deleted": false,
-            "representative_text": "Most branches need to be merged with other branches to keep them\n            up-to-date. ",
-            "selected_text": "Most branches need to be merged with other branches to keep them\n            up-to-date.",
+            "representative_text": "Most branches need to be merged with other branches to keep them up-to-date. ",
+            "selected_text": "Most branches need to be merged with other branches to keep them up-to-date.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -123,8 +123,8 @@
         {
             "id": 563,
             "is_deleted": false,
-            "representative_text": "Determining what to include is easy. Ask yourself, \u201cIf I didn\u2019t\n            have X, could I do my work on this project?\u201d If the answer is no, \n            you couldn\u2019t, then it should be included.",
-            "selected_text": "Determining what to include is easy. Ask yourself, \u201cIf I didn\u2019t\n            have X, could I do my work on this project?\u201d If the answer is no, \n            you couldn\u2019t, then it should be included.",
+            "representative_text": "Determining what to include is easy. Ask yourself, \"If I didn't have X, could I do my work on this project?\" If the answer is no, you couldn't, then it should be included.",
+            "selected_text": "Determining what to include is easy. Ask yourself, \"If I didn't have X, could I do my work on this project?\" If the answer is no, you couldn't, then it should be included.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -132,8 +132,8 @@
         {
             "id": 566,
             "is_deleted": false,
-            "representative_text": " Your repository in Git is\n            stored right alongside your working tree in a directory called\n            .git.",
-            "selected_text": " Your repository in Git is\n            stored right alongside your working tree in a directory called\n            .git",
+            "representative_text": " Your repository in Git is stored right alongside your working tree in a directory called .git.",
+            "selected_text": " Your repository in Git is stored right alongside your working tree in a directory called .git",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -141,8 +141,8 @@
         {
             "id": 568,
             "is_deleted": false,
-            "representative_text": "SHA stands for Secure Hash Algorithm.  It\u2019s an algorithm developed by the \n                U.S. National Security Agency (NSA) to produce shorter strings,\n                or message digests, of known data with little possibility\n                of a \u201ccollision\u201d with another hash.\n            \n\n                ",
-            "selected_text": "SHA stands for Secure Hash Algorithm.  It\u2019s an algorithm developed by the \n                U.S. National Security Agency (NSA) to produce shorter strings,\n                or message digests, of known data with little possibility\n                of a \u201ccollision\u201d with another hash.\n            \n\n                ",
+            "representative_text": "SHA stands for Secure Hash Algorithm. It's an algorithm developed by the U.S. National Security Agency (NSA) to produce shorter strings, or message digests, of known data with little possibility of a \"collision\" with another hash. ",
+            "selected_text": "SHA stands for Secure Hash Algorithm. It's an algorithm developed by the U.S. National Security Agency (NSA) to produce shorter strings, or message digests, of known data with little possibility of a \"collision\" with another hash. ",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -150,8 +150,8 @@
         {
             "id": 569,
             "is_deleted": false,
-            "representative_text": "The alternative that most VCSs and all DVCSs use is called\n            optimistic locking.[",
-            "selected_text": "The alternative that most VCSs and all DVCSs use is called\n            optimistic locking",
+            "representative_text": "The alternative that most VCSs and all DVCSs use is called optimistic locking.[",
+            "selected_text": "The alternative that most VCSs and all DVCSs use is called optimistic locking",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -159,8 +159,8 @@
         {
             "id": 570,
             "is_deleted": false,
-            "representative_text": "Joe\u2019s attempt will be rejected, because Git detects that there\n            has been a change on the server after he got his copy.  Joe\n            has to pull those changes from the repository, handle conflicts\n            if there are any, and then push his change back to the server.",
-            "selected_text": "Joe\u2019s attempt will be rejected, because Git detects that there\n            has been a change on the server after he got his copy.  Joe\n            has to pull those changes from the repository, handle conflicts\n            if there are any, and then push his change back to the server.",
+            "representative_text": "Joe's attempt will be rejected, because Git detects that there has been a change on the server after he got his copy. Joe has to pull those changes from the repository, handle conflicts if there are any, and then push his change back to the server.",
+            "selected_text": "Joe's attempt will be rejected, because Git detects that there has been a change on the server after he got his copy. Joe has to pull those changes from the repository, handle conflicts if there are any, and then push his change back to the server.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -168,8 +168,8 @@
         {
             "id": 574,
             "is_deleted": false,
-            "representative_text": "It works like this: Joe and Alice both create clones of the\n            repository they share and start making changes.  They both\n            make changes to the same file but in different areas of it.\n            Alice pushes her change back to their shared repository;\n            then Joe attempts to push his.",
-            "selected_text": "It works like this: Joe and Alice both create clones of the\n            repository they share and start making changes.  They both\n            make changes to the same file but in different areas of it.\n            Alice pushes her change back to their shared repository;\n            then Joe attempts to push his.",
+            "representative_text": "It works like this: Joe and Alice both create clones of the repository they share and start making changes. They both make changes to the same file but in different areas of it. Alice pushes her change back to their shared repository; then Joe attempts to push his.",
+            "selected_text": "It works like this: Joe and Alice both create clones of the repository they share and start making changes. They both make changes to the same file but in different areas of it. Alice pushes her change back to their shared repository; then Joe attempts to push his.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -177,8 +177,8 @@
         {
             "id": 575,
             "is_deleted": false,
-            "representative_text": " Since it is distributed, there\u2019s\n            no central repository to ask what your name or email address is.\n            You can tell Git this information by using the\n            git config command.",
-            "selected_text": " Since it is distributed, there\u2019s\n            no central repository to ask what your name or email address is.\n            You can tell Git this information by using the\n            git config command.",
+            "representative_text": " Since it is distributed, there's no central repository to ask what your name or email address is. You can tell Git this information by using the git config command.",
+            "selected_text": " Since it is distributed, there's no central repository to ask what your name or email address is. You can tell Git this information by using the git config command.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -186,8 +186,8 @@
         {
             "id": 654,
             "is_deleted": false,
-            "representative_text": " There are three places in\n            Git where your code can be stored.  First, the one you work with directly\n            when editing files is the working tree.",
-            "selected_text": " There are three places in\n            Git where your code can be stored.  First, the one you work with directly\n            when editing files is the working tree.",
+            "representative_text": " There are three places in Git where your code can be stored. First, the one you work with directly when editing files is the working tree.",
+            "selected_text": " There are three places in Git where your code can be stored. First, the one you work with directly when editing files is the working tree.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -195,8 +195,8 @@
         {
             "id": 655,
             "is_deleted": false,
-            "representative_text": "Second is the index, which I\u2019ll refer to as the staging area.\n            The staging area is a buffer\n            between your working tree and what is stored in the repository, the third and final area\n            in Git. ",
-            "selected_text": "Second is the index, which I\u2019ll refer to as the staging area.\n            The staging area is a buffer\n            between your working tree and what is stored in the repository, the third and final area\n            in Git",
+            "representative_text": "Second is the index, which I'll refer to as the staging area. The staging area is a buffer between your working tree and what is stored in the repository, the third and final area in Git. ",
+            "selected_text": "Second is the index, which I'll refer to as the staging area. The staging area is a buffer between your working tree and what is stored in the repository, the third and final area in Git",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -204,8 +204,8 @@
         {
             "id": 656,
             "is_deleted": false,
-            "representative_text": "Staging a commit prepares it to be committed.  There are three places in\n            Git where your code can be stored.  First, the one you work with directly\n            when editing files is the working tree.",
-            "selected_text": "Staging a commit prepares it to be committed.  There are three places in\n            Git where your code can be stored.  First, the one you work with directly\n            when editing files is the working tree.",
+            "representative_text": "Staging a commit prepares it to be committed. There are three places in Git where your code can be stored. First, the one you work with directly when editing files is the working tree.",
+            "selected_text": "Staging a commit prepares it to be committed. There are three places in Git where your code can be stored. First, the one you work with directly when editing files is the working tree.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -213,8 +213,8 @@
         {
             "id": 657,
             "is_deleted": false,
-            "representative_text": "Second is the index, which I\u2019ll refer to as the staging area.\n            The staging area is a buffer\n            between your working tree and what is stored in the repository, the third and final area\n            in Git. ",
-            "selected_text": "Second is the index, which I\u2019ll refer to as the staging area.\n            The staging area is a buffer\n            between your working tree and what is stored in the repository, the third and final area\n            in Git",
+            "representative_text": "Second is the index, which I'll refer to as the staging area. The staging area is a buffer between your working tree and what is stored in the repository, the third and final area in Git. ",
+            "selected_text": "Second is the index, which I'll refer to as the staging area. The staging area is a buffer between your working tree and what is stored in the repository, the third and final area in Git",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -222,8 +222,8 @@
         {
             "id": 658,
             "is_deleted": false,
-            "representative_text": "Spend a minute or two with each commit you make, and summarize the changes the same way\n                you would as if you were explaining them to another developer sitting next to you.\n                A great rule of thumb is to write a simple, one-line sentence that tersely explains\n                the commit and then spend another few sentences fully explaining your commit.\n            \n\n                ",
-            "selected_text": "Spend a minute or two with each commit you make, and summarize the changes the same way\n                you would as if you were explaining them to another developer sitting next to you.\n                A great rule of thumb is to write a simple, one-line sentence that tersely explains\n                the commit and then spend another few sentences fully explaining your commit.\n            \n\n                ",
+            "representative_text": "Spend a minute or two with each commit you make, and summarize the changes the same way you would as if you were explaining them to another developer sitting next to you. A great rule of thumb is to write a simple, one-line sentence that tersely explains the commit and then spend another few sentences fully explaining your commit. ",
+            "selected_text": "Spend a minute or two with each commit you make, and summarize the changes the same way you would as if you were explaining them to another developer sitting next to you. A great rule of thumb is to write a simple, one-line sentence that tersely explains the commit and then spend another few sentences fully explaining your commit. ",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -231,8 +231,8 @@
         {
             "id": 708,
             "is_deleted": false,
-            "representative_text": " It won\u2019t add new, untracked files, however\u2014only files\n            that are already being tracked.",
-            "selected_text": " It won\u2019t add new, untracked files",
+            "representative_text": " It won't add new, untracked files, however--only files that are already being tracked.",
+            "selected_text": " It won't add new, untracked files",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -240,8 +240,8 @@
         {
             "id": 709,
             "is_deleted": false,
-            "representative_text": "~N: The tilde and a number operator subtracts N\n                from the commit name. ",
-            "selected_text": "The tilde and a number operator subtracts N\n                from the commit name",
+            "representative_text": "~N: The tilde and a number operator subtracts N from the commit name. ",
+            "selected_text": "The tilde and a number operator subtracts N from the commit name",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -249,8 +249,8 @@
         {
             "id": 710,
             "is_deleted": false,
-            "representative_text": "You can use Git\u2019s interactive add mode to\n            select which files or parts of files to stage for a commit.  \n            You start it by adding the -i option.",
-            "selected_text": "You can use Git\u2019s interactive add mode to\n            select which files or parts of files to stage for a commit.  \n            You start it by adding the -i option.",
+            "representative_text": "You can use Git's interactive add mode to select which files or parts of files to stage for a commit. You start it by adding the -i option.",
+            "selected_text": "You can use Git's interactive add mode to select which files or parts of files to stage for a commit. You start it by adding the -i option.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -258,8 +258,8 @@
         {
             "id": 711,
             "is_deleted": false,
-            "representative_text": " Two types\n            of branches are  useful: different versions of a project\n            in different branches and topic branches that deal with a specific\n            feature. ",
-            "selected_text": " Two types\n            of branches are  useful: different versions of a project\n            in different branches and topic branches that deal with a specific\n            feature",
+            "representative_text": " Two types of branches are useful: different versions of a project in different branches and topic branches that deal with a specific feature. ",
+            "selected_text": " Two types of branches are useful: different versions of a project in different branches and topic branches that deal with a specific feature",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -267,8 +267,8 @@
         {
             "id": 712,
             "is_deleted": false,
-            "representative_text": "HEAD is a keyword that refers to the most\n                recent commit to the branch you\u2019re in. ",
-            "selected_text": "HEAD is a keyword that refers to the most\n                recent commit to the branch you\u2019re in",
+            "representative_text": "HEAD is a keyword that refers to the most recent commit to the branch you're in. ",
+            "selected_text": "HEAD is a keyword that refers to the most recent commit to the branch you're in",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -276,8 +276,8 @@
         {
             "id": 713,
             "is_deleted": false,
-            "representative_text": "One of the hardest parts of branches is figuring out when to create\n            a branch. ",
-            "selected_text": "One of the hardest parts of branches is figuring out when to create\n            a branch",
+            "representative_text": "One of the hardest parts of branches is figuring out when to create a branch. ",
+            "selected_text": "One of the hardest parts of branches is figuring out when to create a branch",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -285,8 +285,8 @@
         {
             "id": 714,
             "is_deleted": false,
-            "representative_text": "You can move a file in Git by typing \n            git mv <original-file> <new-file>.\n            The command tells Git to create new-file with the existing\n            file\u2019s content, and it keeps the history and removes \n            original-filename.",
-            "selected_text": "You can move a file in Git by typing \n            git mv <original-file> <new-file>.\n            The command tells Git to create new-file with the existing\n            file\u2019s content, and it keeps the history and removes \n            original-filename.",
+            "representative_text": "You can move a file in Git by typing git mv <original-file> <new-file>. The command tells Git to create new-file with the existing file's content, and it keeps the history and removes original-filename.",
+            "selected_text": "You can move a file in Git by typing git mv <original-file> <new-file>. The command tells Git to create new-file with the existing file's content, and it keeps the history and removes original-filename.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -294,8 +294,8 @@
         {
             "id": 715,
             "is_deleted": false,
-            "representative_text": "So, how do you handle creating patches to the 1.0.x branch if you don\u2019t\n            keep the release branch around?  That\u2019s easy\u2014create a branch off the tag you created.",
-            "selected_text": "So, how do you handle creating patches to the 1.0.x branch if you don\u2019t\n            keep the release branch around?  That\u2019s easy\u2014create a branch off the tag you created.",
+            "representative_text": "So, how do you handle creating patches to the 1.0.x branch if you don't keep the release branch around? That's easy--create a branch off the tag you created.",
+            "selected_text": "So, how do you handle creating patches to the 1.0.x branch if you don't keep the release branch around? That's easy--create a branch off the tag you created.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -303,8 +303,8 @@
         {
             "id": 716,
             "is_deleted": false,
-            "representative_text": "Fetching changes updates your remote branches.  You can see your\n            local branches when you run git branch.\n            If you add the -r parameter, Git\n            shows you the remote branches:",
-            "selected_text": "Fetching changes updates your remote branches.  You can see your\n            local branches when you run git branch.\n            If you add the -r parameter, Git\n            shows you the remote branches:",
+            "representative_text": "Fetching changes updates your remote branches. You can see your local branches when you run git branch. If you add the -r parameter, Git shows you the remote branches:",
+            "selected_text": "Fetching changes updates your remote branches. You can see your local branches when you run git branch. If you add the -r parameter, Git shows you the remote branches:",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -312,7 +312,7 @@
         {
             "id": 717,
             "is_deleted": false,
-            "representative_text": "            our purposes right now, it takes one parameter: the name of the branch you want to rebase against.",
+            "representative_text": " our purposes right now, it takes one parameter: the name of the branch you want to rebase against.",
             "selected_text": "it takes one parameter: the name of the branch you want to rebase against.",
             "color": "yellow",
             "note": null,
@@ -321,8 +321,8 @@
         {
             "id": 718,
             "is_deleted": false,
-            "representative_text": "The final option is --hard, and it should\n\t\t\t\tbe used with care.  It removes the commit from your repository and\n\t\t\t\tfrom your working tree.  It\u2019s the equivalent of a delete button on your\n\t\t\t\trepository with no \u201cundo.\u201d",
-            "selected_text": "The final option is --hard, and it should\n\t\t\t\tbe used with care.  It removes the commit from your repository and\n\t\t\t\tfrom your working tree.  It\u2019s the equivalent of a delete button on your\n\t\t\t\trepository with no \u201cundo.\u201d",
+            "representative_text": "The final option is --hard, and it should be used with care. It removes the commit from your repository and from your working tree. It's the equivalent of a delete button on your repository with no \"undo.\"",
+            "selected_text": "The final option is --hard, and it should be used with care. It removes the commit from your repository and from your working tree. It's the equivalent of a delete button on your repository with no \"undo.\"",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -330,8 +330,8 @@
         {
             "id": 719,
             "is_deleted": false,
-            "representative_text": "            from your local branches.  origin is the default\n            remote repository name assigned to a repository that you create\n            a clone from.",
-            "selected_text": " origin is the default\n            remote repository name assigned to a repository that you create\n            a clone from.",
+            "representative_text": " from your local branches. origin is the default remote repository name assigned to a repository that you create a clone from.",
+            "selected_text": " origin is the default remote repository name assigned to a repository that you create a clone from.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -339,8 +339,8 @@
         {
             "id": 720,
             "is_deleted": false,
-            "representative_text": "Normally Git commits the reversal immediately, but you can add the\n            -n parameter to tell Git not to\n            commit.  This is useful when you need to revert multiple commits.\n            Just run multiple git revert commands\n            with the -n parameter, and Git\n            stages all the changes and waits for you to commit them.",
-            "selected_text": "Normally Git commits the reversal immediately, but you can add the\n            -n parameter to tell Git not to\n            commit.  This is useful when you need to revert multiple commits.\n            Just run multiple git revert commands\n            with the -n parameter, and Git\n            stages all the changes and waits for you to commit them.",
+            "representative_text": "Normally Git commits the reversal immediately, but you can add the -n parameter to tell Git not to commit. This is useful when you need to revert multiple commits. Just run multiple git revert commands with the -n parameter, and Git stages all the changes and waits for you to commit them.",
+            "selected_text": "Normally Git commits the reversal immediately, but you can add the -n parameter to tell Git not to commit. This is useful when you need to revert multiple commits. Just run multiple git revert commands with the -n parameter, and Git stages all the changes and waits for you to commit them.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -348,8 +348,8 @@
         {
             "id": 721,
             "is_deleted": false,
-            "representative_text": "                for a release, you can create a branch to track your changes\n                to that bug. ",
-            "selected_text": "you can create a branch to track your changes\n                to that bug",
+            "representative_text": " for a release, you can create a branch to track your changes to that bug. ",
+            "selected_text": "you can create a branch to track your changes to that bug",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -357,8 +357,8 @@
         {
             "id": 723,
             "is_deleted": false,
-            "representative_text": "You can name the file anything you want,\n                but most people start the file\u2019s name with a period (.) because\n                most applications ignore files that begin with a period.",
-            "selected_text": "You can name the file anything you want,\n                but most people start the file\u2019s name with a period (.) because\n                most applications ignore files that begin with a period.",
+            "representative_text": "You can name the file anything you want, but most people start the file's name with a period (.) because most applications ignore files that begin with a period.",
+            "selected_text": "You can name the file anything you want, but most people start the file's name with a period (.) because most applications ignore files that begin with a period.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -366,8 +366,8 @@
         {
             "id": 724,
             "is_deleted": false,
-            "representative_text": "One of the values of completely distributed development is that you\n                 share only what is ready. ",
-            "selected_text": "One of the values of completely distributed development is that you\n                 share only what is ready.",
+            "representative_text": "One of the values of completely distributed development is that you share only what is ready. ",
+            "selected_text": "One of the values of completely distributed development is that you share only what is ready.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -375,7 +375,7 @@
         {
             "id": 725,
             "is_deleted": false,
-            "representative_text": "^: A caret acts like a minus one.\n                18f822e^ translates into the revision that\n                comes before the revision that matches 18f822e.\n",
+            "representative_text": "^: A caret acts like a minus one. 18f822e^ translates into the revision that comes before the revision that matches 18f822e. ",
             "selected_text": "A caret acts like a minus one.",
             "color": "yellow",
             "note": null,
@@ -384,8 +384,8 @@
         {
             "id": 726,
             "is_deleted": false,
-            "representative_text": "Release branches are a place to prepare code for a release.\n            Teams normally use them to segregate code for a release.  What\n            segregate means depends on the team.",
-            "selected_text": "Release branches are a place to prepare code for a release.\n            Teams normally use them to segregate code for a release.  What\n            segregate means depends on the team",
+            "representative_text": "Release branches are a place to prepare code for a release. Teams normally use them to segregate code for a release. What segregate means depends on the team.",
+            "selected_text": "Release branches are a place to prepare code for a release. Teams normally use them to segregate code for a release. What segregate means depends on the team",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -393,8 +393,8 @@
         {
             "id": 727,
             "is_deleted": false,
-            "representative_text": "                View the differences in the staging area and the repository\n                by adding --cached to the call:",
-            "selected_text": "                View the differences in the staging area and the repository\n                by adding --cached to the call:",
+            "representative_text": " View the differences in the staging area and the repository by adding --cached to the call:",
+            "selected_text": " View the differences in the staging area and the repository by adding --cached to the call:",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -402,8 +402,8 @@
         {
             "id": 728,
             "is_deleted": false,
-            "representative_text": "            To add a new named remote repository, use\n            git remote add <name> <repo-url>.\n            This command adds Erin\u2019s repository:\n\n\n\n\u00a0\n\n\n\n\u200b\u200bprompt> git remote add erin git://ourcompany.com/dev-erin.git\u200b\u200b\n\n\n\n\n            Now, you can use erin instead\n            of the full repository any time you need to\n            push or pull\n            some changes. ",
-            "selected_text": "            To add a new named remote repository, use\n            git remote add <name> <repo-url>.\n            This command adds Erin\u2019s repository:\n\n\n\n\u00a0\n\n\n\n\u200b\u200bprompt> git remote add erin git://ourcompany.com/dev-erin.git\u200b\u200b\n\n\n",
+            "representative_text": " To add a new named remote repository, use git remote add <name> <repo-url>. This command adds Erin's repository: \u200b\u200bprompt> git remote add erin git://ourcompany.com/dev-erin.git\u200b\u200b Now, you can use erin instead of the full repository any time you need to push or pull some changes. ",
+            "selected_text": " To add a new named remote repository, use git remote add <name> <repo-url>. This command adds Erin's repository: \u200b\u200bprompt> git remote add erin git://ourcompany.com/dev-erin.git\u200b\u200b ",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -411,8 +411,8 @@
         {
             "id": 729,
             "is_deleted": false,
-            "representative_text": "Calling git diff with no parameters shows you\n                the changes in your working tree that you haven\u2019t staged or committed yet.",
-            "selected_text": "Calling git diff with no parameters shows you\n                the changes in your working tree that you haven\u2019t staged or committed yet.",
+            "representative_text": "Calling git diff with no parameters shows you the changes in your working tree that you haven't staged or committed yet.",
+            "selected_text": "Calling git diff with no parameters shows you the changes in your working tree that you haven't staged or committed yet.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -420,8 +420,8 @@
         {
             "id": 730,
             "is_deleted": false,
-            "representative_text": "            with this definition: a release branch is created when a project\n            is feature complete\u2014that is, it has everything it needs to\n            satisfy this release\u2014but hasn\u2019t been fully vetted yet.",
-            "selected_text": "a release branch is created when a project\n            is feature complete\u2014that is, it has everything it needs to\n            satisfy this release\u2014but hasn\u2019t been fully vetted yet.",
+            "representative_text": " with this definition: a release branch is created when a project is feature complete--that is, it has everything it needs to satisfy this release--but hasn't been fully vetted yet.",
+            "selected_text": "a release branch is created when a project is feature complete--that is, it has everything it needs to satisfy this release--but hasn't been fully vetted yet.",
             "color": "blue",
             "note": null,
             "chapter": null
@@ -429,8 +429,8 @@
         {
             "id": 731,
             "is_deleted": false,
-            "representative_text": "All the revision ranges and modifiers are the same as\n            git log.  The only difference is that Git\n            shows you the changes mashed together instead of incrementally.",
-            "selected_text": "All the revision ranges and modifiers are the same as\n            git log.  The only difference is that Git\n            shows you the changes mashed together instead of incrementally.",
+            "representative_text": "All the revision ranges and modifiers are the same as git log. The only difference is that Git shows you the changes mashed together instead of incrementally.",
+            "selected_text": "All the revision ranges and modifiers are the same as git log. The only difference is that Git shows you the changes mashed together instead of incrementally.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -438,8 +438,8 @@
         {
             "id": 732,
             "is_deleted": false,
-            "representative_text": "\u200b\u200bprompt> git branch -d about\u200b\u200b\n\n\n\n\n\u00a0\n\n\n\n\u200b\u200berror: The branch 'about' is not an ancestor of your current HEAD.\u200b\u200b\n\n\n\n\n\u00a0\n\n\n\n\u200b\u200bIf you are sure you want to delete it, run 'git branch -D about'.\u200b\u200b\n\n\n\n\n            ",
-            "selected_text": "prompt> git branch -d about\u200b\u200b\n\n\n\n\n\u00a0\n\n\n\n\u200b\u200berror: The branch 'about' is not an ancestor of your current HEAD.\u200b\u200b\n\n\n\n\n\u00a0\n\n\n\n\u200b\u200bIf you are sure you want to delete it, run 'git branch -D about'.\u200b",
+            "representative_text": "\u200b\u200bprompt> git branch -d about\u200b\u200b \u200b\u200berror: The branch 'about' is not an ancestor of your current HEAD.\u200b\u200b \u200b\u200bIf you are sure you want to delete it, run 'git branch -D about'.\u200b\u200b ",
+            "selected_text": "prompt> git branch -d about\u200b\u200b \u200b\u200berror: The branch 'about' is not an ancestor of your current HEAD.\u200b\u200b \u200b\u200bIf you are sure you want to delete it, run 'git branch -D about'.\u200b",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -447,8 +447,8 @@
         {
             "id": 733,
             "is_deleted": false,
-            "representative_text": "You can check out those branches like a normal branch, but\n            you should not change them.  If you want to make a change to them,\n            create a local branch from them first, and then make your change.",
-            "selected_text": "You can check out those branches like a normal branch, but\n            you should not change them.  If you want to make a change to them,\n            create a local branch from them first, and then make your change.",
+            "representative_text": "You can check out those branches like a normal branch, but you should not change them. If you want to make a change to them, create a local branch from them first, and then make your change.",
+            "selected_text": "You can check out those branches like a normal branch, but you should not change them. If you want to make a change to them, create a local branch from them first, and then make your change.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -456,7 +456,7 @@
         {
             "id": 734,
             "is_deleted": false,
-            "representative_text": "git rebase in interactive mode is the tool to use to rewrite history.\n",
+            "representative_text": "git rebase in interactive mode is the tool to use to rewrite history. ",
             "selected_text": "git rebase in interactive mode is the tool to use to rewrite history",
             "color": "yellow",
             "note": null,
@@ -465,8 +465,8 @@
         {
             "id": 735,
             "is_deleted": false,
-            "representative_text": "The staging area is just that, a place where you can set up\n            commits prior to committing to your repository.",
-            "selected_text": "The staging area is just that, a place where you can set up\n            commits prior to committing to your repository",
+            "representative_text": "The staging area is just that, a place where you can set up commits prior to committing to your repository.",
+            "selected_text": "The staging area is just that, a place where you can set up commits prior to committing to your repository",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -474,8 +474,8 @@
         {
             "id": 736,
             "is_deleted": false,
-            "representative_text": "            about a particular block of code.  git blame\n            prefixes every line with the commit name, committer, and timestamp.",
-            "selected_text": " git blame\n            prefixes every line with the commit name, committer, and timestamp.",
+            "representative_text": " about a particular block of code. git blame prefixes every line with the commit name, committer, and timestamp.",
+            "selected_text": " git blame prefixes every line with the commit name, committer, and timestamp.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -483,8 +483,8 @@
         {
             "id": 737,
             "is_deleted": false,
-            "representative_text": "First, you have to start by switching to the branch you\n                want to use as your target for the merge. ",
-            "selected_text": "First, you have to start by switching to the branch you\n                want to use as your target for the merge.",
+            "representative_text": "First, you have to start by switching to the branch you want to use as your target for the merge. ",
+            "selected_text": "First, you have to start by switching to the branch you want to use as your target for the merge.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -492,8 +492,8 @@
         {
             "id": 738,
             "is_deleted": false,
-            "representative_text": "            to be able to share changes between branches.  This is done through\n            merging.",
-            "selected_text": "share changes between branches.  This is done through\n            merging.",
+            "representative_text": " to be able to share changes between branches. This is done through merging.",
+            "selected_text": "share changes between branches. This is done through merging.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -501,8 +501,8 @@
         {
             "id": 739,
             "is_deleted": false,
-            "representative_text": " Staged\nchanges\n            are simply changes in your working tree\n            that you want to tell your repository about.  When you\n            stage a change, it updates what Git refers to as its\n            index.  A lot of people, myself included, refer to it\n            as the staging area.",
-            "selected_text": " Staged\nchanges\n            are simply changes in your working tree\n            that you want to tell your repository about.  When you\n            stage a change, it updates what Git refers to as its\n            index.  A lot of people, myself included, refer to it\n            as the staging area.",
+            "representative_text": " Staged changes are simply changes in your working tree that you want to tell your repository about. When you stage a change, it updates what Git refers to as its index. A lot of people, myself included, refer to it as the staging area.",
+            "selected_text": " Staged changes are simply changes in your working tree that you want to tell your repository about. When you stage a change, it updates what Git refers to as its index. A lot of people, myself included, refer to it as the staging area.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -510,8 +510,8 @@
         {
             "id": 740,
             "is_deleted": false,
-            "representative_text": "            A hunk is a change within the file.  Consecutive changes are treated\n            as one hunk.  Each different area in a file is treated as its own hunk.",
-            "selected_text": "            A hunk is a change within the file.  Consecutive changes are treated\n            as one hunk.  Each different area in a file is treated as its own hunk.",
+            "representative_text": " A hunk is a change within the file. Consecutive changes are treated as one hunk. Each different area in a file is treated as its own hunk.",
+            "selected_text": " A hunk is a change within the file. Consecutive changes are treated as one hunk. Each different area in a file is treated as its own hunk.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -519,8 +519,8 @@
         {
             "id": 741,
             "is_deleted": false,
-            "representative_text": "The prefix and suffix lines tell you two things.  First, any code that is\n            preceded by \u201c<<<<<<<\u201d is\n            the code in your current branch, and any code suffixed with \u201c>>>>>>>\u201d\n            is from the other branch. ",
-            "selected_text": "The prefix and suffix lines tell you two things.  First, any code that is\n            preceded by \u201c<<<<<<<\u201d is\n            the code in your current branch, and any code suffixed with \u201c>>>>>>>\u201d\n            is from the other branch.",
+            "representative_text": "The prefix and suffix lines tell you two things. First, any code that is preceded by \"<<<<<<<\" is the code in your current branch, and any code suffixed with \">>>>>>>\" is from the other branch. ",
+            "selected_text": "The prefix and suffix lines tell you two things. First, any code that is preceded by \"<<<<<<<\" is the code in your current branch, and any code suffixed with \">>>>>>>\" is from the other branch.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -528,8 +528,8 @@
         {
             "id": 742,
             "is_deleted": false,
-            "representative_text": "git mv is a convenience.  Git can detect the movement of a file, but\n            more steps are involved.  You have to move the file and then call\n            git add on the new file and\n            git rm\u2014the command to remove a file from\n            the repository\u2014on the old file.",
-            "selected_text": "git mv is a convenience.  Git can detect the movement of a file, but\n            more steps are involved.  You have to move the file and then call\n            git add on the new file and\n            git rm\u2014the command to remove a file from\n            the repository\u2014on the old file.",
+            "representative_text": "git mv is a convenience. Git can detect the movement of a file, but more steps are involved. You have to move the file and then call git add on the new file and git rm--the command to remove a file from the repository--on the old file.",
+            "selected_text": "git mv is a convenience. Git can detect the movement of a file, but more steps are involved. You have to move the file and then call git add on the new file and git rm--the command to remove a file from the repository--on the old file.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -537,8 +537,8 @@
         {
             "id": 743,
             "is_deleted": false,
-            "representative_text": "Git stores changes that were made in what it calls deltas.\n            git gc compresses those deltas when it\n            runs by itself, but it doesn\u2019t recalculate them.  Adding\n            --aggressive tells Git to recalculate\n            those deltas from scratch when it runs its optimization.",
-            "selected_text": "Git stores changes that were made in what it calls deltas.\n            git gc compresses those deltas when it\n            runs by itself, but it doesn\u2019t recalculate them.  Adding\n            --aggressive tells Git to recalculate\n            those deltas from scratch when it runs its optimization.",
+            "representative_text": "Git stores changes that were made in what it calls deltas. git gc compresses those deltas when it runs by itself, but it doesn't recalculate them. Adding --aggressive tells Git to recalculate those deltas from scratch when it runs its optimization.",
+            "selected_text": "Git stores changes that were made in what it calls deltas. git gc compresses those deltas when it runs by itself, but it doesn't recalculate them. Adding --aggressive tells Git to recalculate those deltas from scratch when it runs its optimization.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -546,8 +546,8 @@
         {
             "id": 744,
             "is_deleted": false,
-            "representative_text": " You don\u2019t always need to distribute\n            the history of your project with your releases.  Often, a tarball or zip\n            file of it at the point you tag is enough. ",
-            "selected_text": " You don\u2019t always need to distribute\n            the history of your project with your releases.  Often, a tarball or zip\n            file of it at the point you tag is enough",
+            "representative_text": " You don't always need to distribute the history of your project with your releases. Often, a tarball or zip file of it at the point you tag is enough. ",
+            "selected_text": " You don't always need to distribute the history of your project with your releases. Often, a tarball or zip file of it at the point you tag is enough",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -555,7 +555,7 @@
         {
             "id": 745,
             "is_deleted": false,
-            "representative_text": "Bug fixes: Whether it\u2019s a fix to a bug in code\n                that hasn\u2019t been released or code that has already been tagged\n                for a release, you can create a branch to track your changes\n                to that bug. ",
+            "representative_text": "Bug fixes: Whether it's a fix to a bug in code that hasn't been released or code that has already been tagged for a release, you can create a branch to track your changes to that bug. ",
             "selected_text": "Bug fixes:",
             "color": "yellow",
             "note": null,
@@ -564,8 +564,8 @@
         {
             "id": 746,
             "is_deleted": false,
-            "representative_text": " If the changes\n                of a branch represent one individual change, then it\u2019s a\n                candidate for squashing.",
-            "selected_text": " If the changes\n                of a branch represent one individual change, then it\u2019s a\n                candidate for squashing.",
+            "representative_text": " If the changes of a branch represent one individual change, then it's a candidate for squashing.",
+            "selected_text": " If the changes of a branch represent one individual change, then it's a candidate for squashing.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -573,8 +573,8 @@
         {
             "id": 747,
             "is_deleted": false,
-            "representative_text": " Tagging code in Git marks a specific point in the history of\n            the repository so you can refer to it easily. ",
-            "selected_text": "Git marks a specific point in the history of\n            the repository so you can refer to it easily",
+            "representative_text": " Tagging code in Git marks a specific point in the history of the repository so you can refer to it easily. ",
+            "selected_text": "Git marks a specific point in the history of the repository so you can refer to it easily",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -582,8 +582,8 @@
         {
             "id": 748,
             "is_deleted": false,
-            "representative_text": " You can\n        quickly find old versions of the software and look through\n        the history of a file to figure out how it got to its\n        current state.",
-            "selected_text": " You can\n        quickly find old versions of the software and look through\n        the history of a file to figure out how it got to its\n        current state.",
+            "representative_text": " You can quickly find old versions of the software and look through the history of a file to figure out how it got to its current state.",
+            "selected_text": " You can quickly find old versions of the software and look through the history of a file to figure out how it got to its current state.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -591,8 +591,8 @@
         {
             "id": 749,
             "is_deleted": false,
-            "representative_text": " You can compare\n                everything that\u2019s in your working tree\u2014including your staged changes\u2014against what\u2019s in your repository.\n                To do that, execute git diff, and add\n                HEAD to the end:",
-            "selected_text": " You can compare\n                everything that\u2019s in your working tree\u2014including your staged changes\u2014against what\u2019s in your repository.\n                To do that, execute git diff, and add\n                HEAD to the end:",
+            "representative_text": " You can compare everything that's in your working tree--including your staged changes--against what's in your repository. To do that, execute git diff, and add HEAD to the end:",
+            "selected_text": " You can compare everything that's in your working tree--including your staged changes--against what's in your repository. To do that, execute git diff, and add HEAD to the end:",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -600,8 +600,8 @@
         {
             "id": 751,
             "is_deleted": false,
-            "representative_text": "\u200b\u200bprompt> git branch -m mymaster master\u200b\u200b\n\n\n\n\n            Since everything is considered a branch in Git, they\u2019re \u201ccheap.\u201d\n",
-            "selected_text": "prompt> git branch -m mymaster master\u200b\u200b\n\n\n\n\n            ",
+            "representative_text": "\u200b\u200bprompt> git branch -m mymaster master\u200b\u200b Since everything is considered a branch in Git, they're \"cheap.\" ",
+            "selected_text": "prompt> git branch -m mymaster master\u200b\u200b ",
             "color": "yellow",
             "note": "Rename a branch",
             "chapter": null
@@ -609,8 +609,8 @@
         {
             "id": 752,
             "is_deleted": false,
-            "representative_text": "Correcting these small problems with Git is simple.  Make the correction,\n            stage the change, and add --amend when\n            you commit.",
-            "selected_text": "Correcting these small problems with Git is simple.  Make the correction,\n            stage the change, and add --amend when\n            you commit.",
+            "representative_text": "Correcting these small problems with Git is simple. Make the correction, stage the change, and add --amend when you commit.",
+            "selected_text": "Correcting these small problems with Git is simple. Make the correction, stage the change, and add --amend when you commit.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -618,8 +618,8 @@
         {
             "id": 753,
             "is_deleted": false,
-            "representative_text": "That command introduces a new option to git commit,\n            -C.  This option tells Git to use the\n            log message from the commit specified\u2014in this case HEAD,\n            but it could have been any valid commit name as well\u2014instead of\n            explicitly providing a new message. ",
-            "selected_text": "That command introduces a new option to git commit,\n            -C.  This option tells Git to use the\n            log message from the commit specified\u2014in this case HEAD",
+            "representative_text": "That command introduces a new option to git commit, -C. This option tells Git to use the log message from the commit specified--in this case HEAD, but it could have been any valid commit name as well--instead of explicitly providing a new message. ",
+            "selected_text": "That command introduces a new option to git commit, -C. This option tells Git to use the log message from the commit specified--in this case HEAD",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -627,8 +627,8 @@
         {
             "id": 754,
             "is_deleted": false,
-            "representative_text": "The simplest way to revert an existing commit is the\n            git revert command.  It \u201creverts\u201d a\n            commit by creating a new commit in your repository that reverses\n            all the changes made by the original commit.",
-            "selected_text": "The simplest way to revert an existing commit is the\n            git revert command.  It \u201creverts\u201d a\n            commit by creating a new commit in your repository that reverses\n            all the changes made by the original commit.",
+            "representative_text": "The simplest way to revert an existing commit is the git revert command. It \"reverts\" a commit by creating a new commit in your repository that reverses all the changes made by the original commit.",
+            "selected_text": "The simplest way to revert an existing commit is the git revert command. It \"reverts\" a commit by creating a new commit in your repository that reverses all the changes made by the original commit.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -636,8 +636,8 @@
         {
             "id": 755,
             "is_deleted": false,
-            "representative_text": " You can add\n            -1 to the log command to limit the log to\n            one commit, -2 to limit it to two\n            commits, and so on. ",
-            "selected_text": " You can add\n            -1 to the log command to limit the log to\n            one commit, -2 to limit it to two\n            commits, and so on",
+            "representative_text": " You can add -1 to the log command to limit the log to one commit, -2 to limit it to two commits, and so on. ",
+            "selected_text": " You can add -1 to the log command to limit the log to one commit, -2 to limit it to two commits, and so on",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -645,8 +645,8 @@
         {
             "id": 756,
             "is_deleted": false,
-            "representative_text": "Add --soft when you want to stage all\n\t\t\t\tthe previous commits but not commit them.  This gives you a chance\n\t\t\t\tto modify the previous commit by adding to or taking away from it.",
-            "selected_text": "Add --soft when you want to stage all\n\t\t\t\tthe previous commits but not commit them.  This gives you a chance\n\t\t\t\tto modify the previous commit by adding to or taking away from it.",
+            "representative_text": "Add --soft when you want to stage all the previous commits but not commit them. This gives you a chance to modify the previous commit by adding to or taking away from it.",
+            "selected_text": "Add --soft when you want to stage all the previous commits but not commit them. This gives you a chance to modify the previous commit by adding to or taking away from it.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -654,7 +654,7 @@
         {
             "id": 757,
             "is_deleted": false,
-            "representative_text": "New features: Every time you start working on a new\n                feature, create a new branch.  ",
+            "representative_text": "New features: Every time you start working on a new feature, create a new branch. ",
             "selected_text": "New features:",
             "color": "yellow",
             "note": null,
@@ -663,8 +663,8 @@
         {
             "id": 758,
             "is_deleted": false,
-            "representative_text": "                You can use this when you want to pull the entire history of one\n                branch into another.\n",
-            "selected_text": "                You can use this when you want to pull the entire history of one\n                branch into another",
+            "representative_text": " You can use this when you want to pull the entire history of one branch into another. ",
+            "selected_text": " You can use this when you want to pull the entire history of one branch into another",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -672,8 +672,8 @@
         {
             "id": 760,
             "is_deleted": false,
-            "representative_text": "                you\u2019re done, either with the full history or through a squashed\n                commit. ",
-            "selected_text": "either with the full history or through a squashed\n                commit",
+            "representative_text": " you're done, either with the full history or through a squashed commit. ",
+            "selected_text": "either with the full history or through a squashed commit",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -681,8 +681,8 @@
         {
             "id": 761,
             "is_deleted": false,
-            "representative_text": "They are \u201csquashed\u201d because Git takes all the history of\n                one branch and compresses it into one commit in the other branch.\n",
-            "selected_text": "They are \u201csquashed\u201d because Git takes all the history of\n                one branch and compresses it into one commit in the other branch",
+            "representative_text": "They are \"squashed\" because Git takes all the history of one branch and compresses it into one commit in the other branch. ",
+            "selected_text": "They are \"squashed\" because Git takes all the history of one branch and compresses it into one commit in the other branch",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -690,8 +690,8 @@
         {
             "id": 762,
             "is_deleted": false,
-            "representative_text": " They allow you to track\n            changes with different histories.",
-            "selected_text": " They allow you to track\n            changes with different histories",
+            "representative_text": " They allow you to track changes with different histories.",
+            "selected_text": " They allow you to track changes with different histories",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -699,8 +699,8 @@
         {
             "id": 763,
             "is_deleted": false,
-            "representative_text": "                Adding the --squash option tells\n                git merge to take all the commits from\n                the other branch and squash them into one commit:",
-            "selected_text": "                Adding the --squash option tells\n                git merge to take all the commits from\n                the other branch and squash them into one commit:",
+            "representative_text": " Adding the --squash option tells git merge to take all the commits from the other branch and squash them into one commit:",
+            "selected_text": " Adding the --squash option tells git merge to take all the commits from the other branch and squash them into one commit:",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -708,8 +708,8 @@
         {
             "id": 764,
             "is_deleted": false,
-            "representative_text": "The most common use of tags is to mark when the code in your\n            project is released. ",
-            "selected_text": "The most common use of tags is to mark when the code in your\n            project is released",
+            "representative_text": "The most common use of tags is to mark when the code in your project is released. ",
+            "selected_text": "The most common use of tags is to mark when the code in your project is released",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -717,8 +717,8 @@
         {
             "id": 765,
             "is_deleted": false,
-            "representative_text": "If each smaller project, or component, is only ever released\n                as part of the larger project, then sharing the same history\n                might be a good idea.  This makes sure that all the history\n                in the repository revolves around one project.",
-            "selected_text": "If each smaller project, or component, is only ever released\n                as part of the larger project, then sharing the same history\n                might be a good idea.  This makes sure that all the history\n                in the repository revolves around one project.",
+            "representative_text": "If each smaller project, or component, is only ever released as part of the larger project, then sharing the same history might be a good idea. This makes sure that all the history in the repository revolves around one project.",
+            "selected_text": "If each smaller project, or component, is only ever released as part of the larger project, then sharing the same history might be a good idea. This makes sure that all the history in the repository revolves around one project.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -726,8 +726,8 @@
         {
             "id": 767,
             "is_deleted": false,
-            "representative_text": "Using git diff with tags is a great way to get\n            statistics between releases. ",
-            "selected_text": "Using git diff with tags is a great way to get\n            statistics between releases",
+            "representative_text": "Using git diff with tags is a great way to get statistics between releases. ",
+            "selected_text": "Using git diff with tags is a great way to get statistics between releases",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -735,8 +735,8 @@
         {
             "id": 768,
             "is_deleted": false,
-            "representative_text": "            The add in a bio link is now placed\n            after the final commit in the RB_1.0 branch.",
-            "selected_text": "add in a bio link is now placed\n            after the final commit in the RB_1.0 branch.",
+            "representative_text": " The add in a bio link is now placed after the final commit in the RB_1.0 branch.",
+            "selected_text": "add in a bio link is now placed after the final commit in the RB_1.0 branch.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -744,8 +744,8 @@
         {
             "id": 769,
             "is_deleted": false,
-            "representative_text": "You can override this behavior by changing the\n            -m option to the -M option.\n            The uppercase M tells Git to force an overwrite\n            if the other branch exists.  Use this with care.",
-            "selected_text": "You can override this behavior by changing the\n            -m option to the -M option.\n            The uppercase M tells Git to force an overwrite\n            if the other branch exists.  Use this with care.",
+            "representative_text": "You can override this behavior by changing the -m option to the -M option. The uppercase M tells Git to force an overwrite if the other branch exists. Use this with care.",
+            "selected_text": "You can override this behavior by changing the -m option to the -M option. The uppercase M tells Git to force an overwrite if the other branch exists. Use this with care.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -753,8 +753,8 @@
         {
             "id": 770,
             "is_deleted": false,
-            "representative_text": "With the commit name\u2014321d76f\u2014in hand, you\n                can cherry-pick it anywhere.  Remember,\n                the commit names are universally unique, so your commit name will be\n                different from the one I created.  Let\u2019s bring it\n                over to the master branch:",
-            "selected_text": "With the commit name\u2014321d76f\u2014in hand, you\n                can cherry-pick it anywhere.  Remember,\n                the commit names are universally unique, so your commit name will be\n                different from the one I created.  Let\u2019s bring it\n                over to the master branch:",
+            "representative_text": "With the commit name--321d76f--in hand, you can cherry-pick it anywhere. Remember, the commit names are universally unique, so your commit name will be different from the one I created. Let's bring it over to the master branch:",
+            "selected_text": "With the commit name--321d76f--in hand, you can cherry-pick it anywhere. Remember, the commit names are universally unique, so your commit name will be different from the one I created. Let's bring it over to the master branch:",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -762,17 +762,17 @@
         {
             "id": 771,
             "is_deleted": false,
-            "representative_text": "Squashing Commits\n\n                ",
+            "representative_text": "Squashing Commits ",
             "selected_text": "Squashing",
             "color": "yellow",
-            "note": "This won\u2019t show as two lines intersecting in a git graph. It just squashes the whole branch commits into one and add to the history of main.",
+            "note": "This won't show as two lines intersecting in a git graph. It just squashes the whole branch commits into one and add to the history of main.",
             "chapter": null
         },
         {
             "id": 772,
             "is_deleted": false,
-            "representative_text": "Amending a commit should  be done only when you are working with the\n            last commit.  ",
-            "selected_text": "Amending a commit should  be done only when you are working with the\n            last commit",
+            "representative_text": "Amending a commit should be done only when you are working with the last commit. ",
+            "selected_text": "Amending a commit should be done only when you are working with the last commit",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -780,8 +780,8 @@
         {
             "id": 773,
             "is_deleted": false,
-            "representative_text": "\n            Tags act like bookmarks in your repository. ",
-            "selected_text": "\n            Tags act like bookmarks in your repository",
+            "representative_text": " Tags act like bookmarks in your repository. ",
+            "selected_text": " Tags act like bookmarks in your repository",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -789,8 +789,8 @@
         {
             "id": 774,
             "is_deleted": false,
-            "representative_text": "Your default remote repository is\n            called origin.  It\u2019s an alias to the\n            full name of your repository\u2014whatever you cloned. ",
-            "selected_text": "Your default remote repository is\n            called origin.  It\u2019s an alias to the\n            full name of your repository\u2014whatever you cloned",
+            "representative_text": "Your default remote repository is called origin. It's an alias to the full name of your repository--whatever you cloned. ",
+            "selected_text": "Your default remote repository is called origin. It's an alias to the full name of your repository--whatever you cloned",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -798,7 +798,7 @@
         {
             "id": 775,
             "is_deleted": false,
-            "representative_text": "Experimental changes:  Want to try rewriting\n                algorithms just to see whether they\u2019re faster, or want to try refactoring\n                a section of code to a particular pattern? ",
+            "representative_text": "Experimental changes: Want to try rewriting algorithms just to see whether they're faster, or want to try refactoring a section of code to a particular pattern? ",
             "selected_text": "Experimental changes",
             "color": "yellow",
             "note": null,
@@ -807,8 +807,8 @@
         {
             "id": 776,
             "is_deleted": false,
-            "representative_text": " Adding the\n            -p option tells Git to display the diff\n            that revision created.",
-            "selected_text": " Adding the\n            -p option tells Git to display the diff\n            that revision created.",
+            "representative_text": " Adding the -p option tells Git to display the diff that revision created.",
+            "selected_text": " Adding the -p option tells Git to display the diff that revision created.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -816,8 +816,8 @@
         {
             "id": 777,
             "is_deleted": false,
-            "representative_text": "Now the changes from the alternate branch are\n                merged into your master branch.",
-            "selected_text": "Now the changes from the alternate branch are\n                merged into your master branch.",
+            "representative_text": "Now the changes from the alternate branch are merged into your master branch.",
+            "selected_text": "Now the changes from the alternate branch are merged into your master branch.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -825,8 +825,8 @@
         {
             "id": 778,
             "is_deleted": false,
-            "representative_text": "This works only when the branch you\u2019re trying to delete has been\n            successfully merged into the current branch you are on. ",
-            "selected_text": "This works only when the branch you\u2019re trying to delete has been\n            successfully merged into the current branch you are on.",
+            "representative_text": "This works only when the branch you're trying to delete has been successfully merged into the current branch you are on. ",
+            "selected_text": "This works only when the branch you're trying to delete has been successfully merged into the current branch you are on.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -834,8 +834,8 @@
         {
             "id": 779,
             "is_deleted": false,
-            "representative_text": "            You can choose which file or files you want to add via \n            patch mode.  Once you make your choice, you are presented with a diff of\n            the changed files and given the option to add the changes or not.\n            It looks something like this:",
-            "selected_text": "            You can choose which file or files you want to add via \n            patch mode.  Once you make your choice, you are presented with a diff of\n            the changed files and given the option to add the changes or not.\n            It looks something like this",
+            "representative_text": " You can choose which file or files you want to add via patch mode. Once you make your choice, you are presented with a diff of the changed files and given the option to add the changes or not. It looks something like this:",
+            "selected_text": " You can choose which file or files you want to add via patch mode. Once you make your choice, you are presented with a diff of the changed files and given the option to add the changes or not. It looks something like this",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -843,8 +843,8 @@
         {
             "id": 780,
             "is_deleted": false,
-            "representative_text": "Mark milestones within your project with tags\n\n\nHandle release branches to focus development when you\u2019re about to make a release\n\n\nGroup your tags and branches in directory-like structures\n\n\nTrack multiple projects using one or multiple repositories\n\n\nUse Git\u2019s submodules feature to track external repositories",
-            "selected_text": "Mark milestones within your project with tags\n\n\nHandle release branches to focus development when you\u2019re about to make a release\n\n\nGroup your tags and branches in directory-like structures\n\n\nTrack multiple projects using one or multiple repositories\n\n\nUse Git\u2019s submodules feature to track external repositories",
+            "representative_text": "Mark milestones within your project with tags Handle release branches to focus development when you're about to make a release Group your tags and branches in directory-like structures Track multiple projects using one or multiple repositories Use Git's submodules feature to track external repositories",
+            "selected_text": "Mark milestones within your project with tags Handle release branches to focus development when you're about to make a release Group your tags and branches in directory-like structures Track multiple projects using one or multiple repositories Use Git's submodules feature to track external repositories",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -852,8 +852,8 @@
         {
             "id": 781,
             "is_deleted": false,
-            "representative_text": "            that your commit message should explain the commit like you would\n            to a developer sitting right next to you.",
-            "selected_text": "            that your commit message should explain the commit like you would\n            to a developer sitting right next to you.",
+            "representative_text": " that your commit message should explain the commit like you would to a developer sitting right next to you.",
+            "selected_text": " that your commit message should explain the commit like you would to a developer sitting right next to you.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -861,8 +861,8 @@
         {
             "id": 782,
             "is_deleted": false,
-            "representative_text": "You can tell your local repository to ignore files like these without sharing the\n                exclusion with everyone else.  Edit the file .git/info/exclude,\n                and add your rules there.",
-            "selected_text": "You can tell your local repository to ignore files like these without sharing the\n                exclusion with everyone else.  Edit the file .git/info/exclude,\n                and add your rules there.",
+            "representative_text": "You can tell your local repository to ignore files like these without sharing the exclusion with everyone else. Edit the file .git/info/exclude, and add your rules there.",
+            "selected_text": "You can tell your local repository to ignore files like these without sharing the exclusion with everyone else. Edit the file .git/info/exclude, and add your rules there.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -870,8 +870,8 @@
         {
             "id": 783,
             "is_deleted": false,
-            "representative_text": "This type of branch will have only minimal changes made to it,\n            and all will focus around fixes, whether they are bugs or logic,\n            but no new features are added. ",
-            "selected_text": "This type of branch will have only minimal changes made to it,\n            and all will focus around fixes, whether they are bugs or logic,\n            but no new features are added.",
+            "representative_text": "This type of branch will have only minimal changes made to it, and all will focus around fixes, whether they are bugs or logic, but no new features are added. ",
+            "selected_text": "This type of branch will have only minimal changes made to it, and all will focus around fixes, whether they are bugs or logic, but no new features are added.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -879,8 +879,8 @@
         {
             "id": 784,
             "is_deleted": false,
-            "representative_text": "If they are released separately, then they probably need\n                their own history. ",
-            "selected_text": "If they are released separately, then they probably need\n                their own history",
+            "representative_text": "If they are released separately, then they probably need their own history. ",
+            "selected_text": "If they are released separately, then they probably need their own history",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -888,8 +888,8 @@
         {
             "id": 787,
             "is_deleted": false,
-            "representative_text": "            Once you have saved your changes, you need to stage and commit your \n            changes like normal.",
-            "selected_text": "            Once you have saved your changes, you need to stage and commit your \n            changes like normal.",
+            "representative_text": " Once you have saved your changes, you need to stage and commit your changes like normal.",
+            "selected_text": " Once you have saved your changes, you need to stage and commit your changes like normal.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -897,8 +897,8 @@
         {
             "id": 788,
             "is_deleted": false,
-            "representative_text": " Git\n            makes it easy to annotate a portion of a file with its -L\n            option.  This tells Git to display only a certain set of line ranges.\n",
-            "selected_text": " Git\n            makes it easy to annotate a portion of a file with its -L\n            option.  This tells Git to display only a certain set of line ranges.",
+            "representative_text": " Git makes it easy to annotate a portion of a file with its -L option. This tells Git to display only a certain set of line ranges. ",
+            "selected_text": " Git makes it easy to annotate a portion of a file with its -L option. This tells Git to display only a certain set of line ranges.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -906,8 +906,8 @@
         {
             "id": 790,
             "is_deleted": false,
-            "representative_text": "Git can show you the differences between what\u2019s in your working tree,\n                what\u2019s staged and ready to be committed, and what\u2019s in your repository. ",
-            "selected_text": "Git can show you the differences between what\u2019s in your working tree,\n                what\u2019s staged and ready to be committed, and what\u2019s in your repository",
+            "representative_text": "Git can show you the differences between what's in your working tree, what's staged and ready to be committed, and what's in your repository. ",
+            "selected_text": "Git can show you the differences between what's in your working tree, what's staged and ready to be committed, and what's in your repository",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -915,8 +915,8 @@
         {
             "id": 793,
             "is_deleted": false,
-            "representative_text": "You can view the log starting at a given revision by passing the revision as an\n            option at the command line:\n        \n\n\n\n\u00a0\n\n\n\n\u200b\u200bprompt> git log 7b1558c\u200b\u200b\n\n\n\n\n",
-            "selected_text": "You can view the log starting at a given revision by passing the revision as an\n            option at the command line:\n        \n\n\n\n\u00a0\n\n\n\n\u200b\u200bprompt> git log 7b1558c\u200b\u200b",
+            "representative_text": "You can view the log starting at a given revision by passing the revision as an option at the command line: \u200b\u200bprompt> git log 7b1558c\u200b\u200b ",
+            "selected_text": "You can view the log starting at a given revision by passing the revision as an option at the command line: \u200b\u200bprompt> git log 7b1558c\u200b\u200b",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -924,8 +924,8 @@
         {
             "id": 795,
             "is_deleted": false,
-            "representative_text": "Running git fetch updates your\n            remote branches; it doesn\u2019t merge the changes into your local\n            branch.  You can use git pull if you\n            want to fetch changes from a remote repository and merge\n            them into your local branch at the same time.",
-            "selected_text": "Running git fetch updates your\n            remote branches; it doesn\u2019t merge the changes into your local\n            branch.  You can use git pull if you\n            want to fetch changes from a remote repository and merge\n            them into your local branch at the same time.",
+            "representative_text": "Running git fetch updates your remote branches; it doesn't merge the changes into your local branch. You can use git pull if you want to fetch changes from a remote repository and merge them into your local branch at the same time.",
+            "selected_text": "Running git fetch updates your remote branches; it doesn't merge the changes into your local branch. You can use git pull if you want to fetch changes from a remote repository and merge them into your local branch at the same time.",
             "color": "yellow",
             "note": null,
             "chapter": null
@@ -933,8 +933,8 @@
         {
             "id": 796,
             "is_deleted": false,
-            "representative_text": "                    Is this kind of file something that everyone is going to have in their\n                    repositories?\n\n                    If the answer to that is yes, you need to ignore it by adding the rule to the\n                    .gitignore file and committing that file to the\n                    repository.  If it\u2019s only a file you\u2019ll see, add it to your\n                    .git/info/exclude file.",
-            "selected_text": "                    Is this kind of file something that everyone is going to have in their\n                    repositories?\n\n                    If the answer to that is yes, you need to ignore it by adding the rule to the\n                    .gitignore file and committing that file to the\n                    repository.  If it\u2019s only a file you\u2019ll see, add it to your\n                    .git/info/exclude file.",
+            "representative_text": " Is this kind of file something that everyone is going to have in their repositories? If the answer to that is yes, you need to ignore it by adding the rule to the .gitignore file and committing that file to the repository. If it's only a file you'll see, add it to your .git/info/exclude file.",
+            "selected_text": " Is this kind of file something that everyone is going to have in their repositories? If the answer to that is yes, you need to ignore it by adding the rule to the .gitignore file and committing that file to the repository. If it's only a file you'll see, add it to your .git/info/exclude file.",
             "color": "yellow",
             "note": null,
             "chapter": null
