@@ -1,0 +1,133 @@
+{
+    "asset_id": "6EAD47233B8363D7B9101C0143011598",
+    "title": "Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin Series)",
+    "author": "Robert C. Martin",
+    "highlights": [
+        {
+            "id": 1350,
+            "is_deleted": false,
+            "representative_text": "The goal of software architecture is to minimize the human resources required to build and maintain the required system.",
+            "selected_text": "The goal of software architecture is to minimize the human resources required to build and maintain the required system.",
+            "color": "green",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1351,
+            "is_deleted": false,
+            "representative_text": "Software developers often feel as if they are forced to jam square pegs into round holes. The problem, of course, is the architecture of the system. The more this architecture prefers one shape over another, the more likely new features will be harder and harder to fit into that structure. Therefore architectures should be as shape agnostic are practical.",
+            "selected_text": "Software developers often feel as if they are forced to jam square pegs into round holes. The problem, of course, is the architecture of the system. The more this architecture prefers one shape over another, the more likely new features will be harder and harder to fit into that structure. Therefore architectures should be as shape agnostic are practical.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1353,
+            "is_deleted": false,
+            "representative_text": "Their job, such as it is, has changed into moving the mess from one place to the next, and the next, and the next, so that they can add one more meager little feature.",
+            "selected_text": "Their job, such as it is, has changed into moving the mess from one place to the next, and the next, and the next, so that they can add one more meager little feature.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1355,
+            "is_deleted": false,
+            "representative_text": "The fact is that making messes is always slower than staying clean, no matter which time scale you are using.",
+            "selected_text": "making messes is always slower than staying clean",
+            "color": "green",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1357,
+            "is_deleted": false,
+            "representative_text": "Getting software right is hard. It takes knowledge and skills that most young programmers haven't yet acquired. ",
+            "selected_text": "Getting software right is hard. It takes knowledge and skills that most young programmers haven't yet acquired",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1359,
+            "is_deleted": false,
+            "representative_text": "But the creeping mess of code that saps their productivity never sleeps and never relents. If given its way, it will reduce productivity to zero in a matter of months.",
+            "selected_text": "But the creeping mess of code that saps their productivity never sleeps and never relents. If given its way, it will reduce productivity to zero in a matter of months.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1362,
+            "is_deleted": false,
+            "representative_text": "To fulfill its purpose, software must be soft--that is, it must be easy to change. ",
+            "selected_text": "To fulfill its purpose, software must be soft--that is, it must be easy to change",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1366,
+            "is_deleted": false,
+            "representative_text": "And when you get software right, something magical happens: You don't need hordes of programmers to keep it working. ",
+            "selected_text": "when you get software right, something magical happens: You don't need hordes of programmers to keep it working",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1370,
+            "is_deleted": false,
+            "representative_text": "I have two kinds of problems, the urgent and the important. The urgent are not important, and the important are never urgent.1",
+            "selected_text": "I have two kinds of problems, the urgent and the important. The urgent are not important, and the important are never urgent",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1372,
+            "is_deleted": false,
+            "representative_text": "* If you give me a program that works perfectly but is impossible to change, then it won't work when the requirements change, and I won't be able to make it work. Therefore the program will become useless. * If you give me a program that does not work but is easy to change, then I can make it work, and keep it working as requirements change. ",
+            "selected_text": "If you give me a program that works perfectly but is impossible to change, then it won't work when the requirements change, and I won't be able to make it work. Therefore the program will become useless. * If you give me a program that does not work but is easy to change, then I can make it work, and keep it working as requirements change",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1393,
+            "is_deleted": false,
+            "representative_text": "In the typical calling tree, main functions called high-level functions, which called mid-level functions, which called low-level functions. ",
+            "selected_text": "In the typical calling tree, main functions called high-level functions, which called mid-level functions, which called low-level functions",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1395,
+            "is_deleted": false,
+            "representative_text": "Dijkstra once said, \"Testing shows the presence, not the absence, of bugs.\" ",
+            "selected_text": "Testing shows the presence, not the absence, of bugs",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1399,
+            "is_deleted": false,
+            "representative_text": "In short, when the source code in a component changes, only that component needs to be redeployed. This is independent deployability.",
+            "selected_text": "when the source code in a component changes, only that component needs to be redeployed. This is independent deployability.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1403,
+            "is_deleted": false,
+            "representative_text": "As an example, you can rearrange the source code dependencies of your system so that the database and the user interface (UI) depend on the business rules (Figure 5.3), rather than the other way around.",
+            "selected_text": "As an example, you can rearrange the source code dependencies of your system so that the database and the user interface (UI) depend on the business rules (Figure 5.3), rather than the other way around.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        }
+    ]
+}

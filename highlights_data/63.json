@@ -1,0 +1,79 @@
+{
+    "asset_id": "88095DCB07C29887DCB72FF367AC7FFF",
+    "title": "Programming Rust, 2nd Edition",
+    "author": "Jim Blandy",
+    "highlights": [
+        {
+            "id": 1495,
+            "is_deleted": false,
+            "representative_text": "The #[test] marker is an example of an attribute. Attributes are an open-ended system for marking functions and other declarations with extra information, like attributes in C++ and C#, or annotations in Java. ",
+            "selected_text": "The #[test] marker is an example of an attribute. Attributes are an open-ended system for marking functions and other declarations with extra information, like attributes in C++ and C#, or annotations in Java",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1496,
+            "is_deleted": false,
+            "representative_text": "A trait is a collection of methods that types can implement. ",
+            "selected_text": "A trait is a collection of methods that types can implement.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1497,
+            "is_deleted": false,
+            "representative_text": "Vec is Rust's growable vector type, analogous to C++'s std::vector, a Python list, or a JavaScript array. ",
+            "selected_text": "Vec is Rust's growable vector type, analogous to C++'s std::vector, a Python list, or a JavaScript array",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1498,
+            "is_deleted": false,
+            "representative_text": "Unlike most modern languages, Rust does not have exceptions: all errors are handled using either Result or panic, as outlined in Chapter 7. ",
+            "selected_text": "Rust does not have exceptions: all errors are handled using either Result or panic",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1499,
+            "is_deleted": false,
+            "representative_text": " The * operator in *m dereferences m, yielding the value it refers to; this is the next u64 we want to pass to gcd. ",
+            "selected_text": " The * operator in *m dereferences m, yielding the value it refers to;",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1500,
+            "is_deleted": false,
+            "representative_text": "So when we iterate, we want to tell Rust that ownership of the vector should remain with numbers; we are merely borrowing its elements for the loop. The & operator in &numbers[1..] borrows a reference to the vector's elements from the second onward. ",
+            "selected_text": "So when we iterate, we want to tell Rust that ownership of the vector should remain with numbers; we are merely borrowing its elements for the loop. The & operator in &numbers[1..] borrows a reference to the vector's elements from the second onward",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1501,
+            "is_deleted": false,
+            "representative_text": "Finally, since numbers owns the vector, Rust automatically frees it when numbers goes out of scope at the end of main. ",
+            "selected_text": "Finally, since numbers owns the vector, Rust automatically frees it when numbers goes out of scope at the end of main.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1502,
+            "is_deleted": false,
+            "representative_text": "You'll need to be comfortable with those rules to be comfortable in Rust, but for this introductory tour, all you need to know is that &x borrows a reference to x, and that *r is the value that the reference r refers to. ",
+            "selected_text": "that &x borrows a reference to x, and that *r is the value that the reference r refers to.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        }
+    ]
+}
