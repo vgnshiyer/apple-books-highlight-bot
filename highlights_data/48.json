@@ -129,5 +129,14 @@
             "note": null,
             "chapter": null
         }
+    ],
+    "underlines": [
+        {
+            "id": 1371,
+            "is_deleted": false,
+            "selected_text": "petered",
+            "note": "reduced gradually",
+            "chapter": null
+        }
     ]
 }

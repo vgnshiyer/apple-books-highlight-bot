@@ -1488,5 +1488,658 @@
             "note": null,
             "chapter": null
         }
+    ],
+    "underlines": [
+        {
+            "id": 285,
+            "is_deleted": false,
+            "selected_text": "bequeathed",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 286,
+            "is_deleted": false,
+            "selected_text": "callous",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 287,
+            "is_deleted": false,
+            "selected_text": "bevy",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 288,
+            "is_deleted": false,
+            "selected_text": "hucksterism",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 289,
+            "is_deleted": false,
+            "selected_text": "tinged",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 292,
+            "is_deleted": false,
+            "selected_text": "impetuous",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 293,
+            "is_deleted": false,
+            "selected_text": "wiles",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 297,
+            "is_deleted": false,
+            "selected_text": "subpoenas",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 298,
+            "is_deleted": false,
+            "selected_text": "freighter",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 300,
+            "is_deleted": false,
+            "selected_text": "impasse",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 301,
+            "is_deleted": false,
+            "selected_text": "swaggering",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 302,
+            "is_deleted": false,
+            "selected_text": "prescient",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 303,
+            "is_deleted": false,
+            "selected_text": "balked",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 304,
+            "is_deleted": false,
+            "selected_text": "denizens",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 305,
+            "is_deleted": false,
+            "selected_text": "nooks and crannies ",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 307,
+            "is_deleted": false,
+            "selected_text": "unnerving",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 308,
+            "is_deleted": false,
+            "selected_text": "befuddled",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 310,
+            "is_deleted": false,
+            "selected_text": "rummaging",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 315,
+            "is_deleted": false,
+            "selected_text": "Physics",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 318,
+            "is_deleted": false,
+            "selected_text": "unseemly",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 324,
+            "is_deleted": false,
+            "selected_text": "amorous",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 325,
+            "is_deleted": false,
+            "selected_text": "mortified",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 326,
+            "is_deleted": false,
+            "selected_text": "jettisoned",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 327,
+            "is_deleted": false,
+            "selected_text": "housebroken",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 328,
+            "is_deleted": false,
+            "selected_text": "earnest",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 329,
+            "is_deleted": false,
+            "selected_text": "intransigent",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 330,
+            "is_deleted": false,
+            "selected_text": "ostentatious",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 331,
+            "is_deleted": false,
+            "selected_text": "smitten",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 332,
+            "is_deleted": false,
+            "selected_text": "insouciance",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 341,
+            "is_deleted": false,
+            "selected_text": "wiles",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 343,
+            "is_deleted": false,
+            "selected_text": "terse",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 344,
+            "is_deleted": false,
+            "selected_text": "coup",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 345,
+            "is_deleted": false,
+            "selected_text": "acolyte",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 351,
+            "is_deleted": false,
+            "selected_text": "coda",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 355,
+            "is_deleted": false,
+            "selected_text": "bemused",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 359,
+            "is_deleted": false,
+            "selected_text": "moniker",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 361,
+            "is_deleted": false,
+            "selected_text": "purported",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 367,
+            "is_deleted": false,
+            "selected_text": "cloak-and-dagger",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 373,
+            "is_deleted": false,
+            "selected_text": "platoon",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 380,
+            "is_deleted": false,
+            "selected_text": "cherubic",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 382,
+            "is_deleted": false,
+            "selected_text": "sclerotic",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 383,
+            "is_deleted": false,
+            "selected_text": "singed",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 385,
+            "is_deleted": false,
+            "selected_text": "badgered",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 386,
+            "is_deleted": false,
+            "selected_text": "assented",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 389,
+            "is_deleted": false,
+            "selected_text": "contortionist",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 390,
+            "is_deleted": false,
+            "selected_text": "slickness",
+            "note": "smoothness",
+            "chapter": null
+        },
+        {
+            "id": 395,
+            "is_deleted": false,
+            "selected_text": "smattering",
+            "note": "small number",
+            "chapter": null
+        },
+        {
+            "id": 396,
+            "is_deleted": false,
+            "selected_text": "farcical",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 403,
+            "is_deleted": false,
+            "selected_text": "poised",
+            "note": "In balance.. calm & composed",
+            "chapter": null
+        },
+        {
+            "id": 404,
+            "is_deleted": false,
+            "selected_text": "decreed",
+            "note": "issue an order",
+            "chapter": null
+        },
+        {
+            "id": 405,
+            "is_deleted": false,
+            "selected_text": "instilling",
+            "note": "installing. Establish ",
+            "chapter": null
+        },
+        {
+            "id": 412,
+            "is_deleted": false,
+            "selected_text": "paean",
+            "note": "praise note",
+            "chapter": null
+        },
+        {
+            "id": 420,
+            "is_deleted": false,
+            "selected_text": "harried",
+            "note": "stressed",
+            "chapter": null
+        },
+        {
+            "id": 430,
+            "is_deleted": false,
+            "selected_text": "atoll",
+            "note": "island",
+            "chapter": null
+        },
+        {
+            "id": 432,
+            "is_deleted": false,
+            "selected_text": "symposium",
+            "note": "meeting",
+            "chapter": null
+        },
+        {
+            "id": 439,
+            "is_deleted": false,
+            "selected_text": "molting",
+            "note": "Shedding skin",
+            "chapter": null
+        },
+        {
+            "id": 446,
+            "is_deleted": false,
+            "selected_text": "disparaging",
+            "note": "Demoralize",
+            "chapter": null
+        },
+        {
+            "id": 447,
+            "is_deleted": false,
+            "selected_text": "eccentric",
+            "note": "Different",
+            "chapter": null
+        },
+        {
+            "id": 448,
+            "is_deleted": false,
+            "selected_text": "libel",
+            "note": "Badnami",
+            "chapter": null
+        },
+        {
+            "id": 458,
+            "is_deleted": false,
+            "selected_text": "wranglings",
+            "note": "Arguement",
+            "chapter": null
+        },
+        {
+            "id": 459,
+            "is_deleted": false,
+            "selected_text": "unwieldy",
+            "note": "Complicated",
+            "chapter": null
+        },
+        {
+            "id": 465,
+            "is_deleted": false,
+            "selected_text": "jettisoned",
+            "note": "Discard",
+            "chapter": null
+        },
+        {
+            "id": 482,
+            "is_deleted": false,
+            "selected_text": "genteel",
+            "note": "Polite",
+            "chapter": null
+        },
+        {
+            "id": 498,
+            "is_deleted": false,
+            "selected_text": "size him up",
+            "note": "Judge him",
+            "chapter": null
+        },
+        {
+            "id": 502,
+            "is_deleted": false,
+            "selected_text": "undercut",
+            "note": "Undermine",
+            "chapter": null
+        },
+        {
+            "id": 503,
+            "is_deleted": false,
+            "selected_text": "prod",
+            "note": "Poke",
+            "chapter": null
+        },
+        {
+            "id": 504,
+            "is_deleted": false,
+            "selected_text": "valedictorian",
+            "note": "Topper",
+            "chapter": null
+        },
+        {
+            "id": 507,
+            "is_deleted": false,
+            "selected_text": "rapture",
+            "note": "Awe; ecstasy",
+            "chapter": null
+        },
+        {
+            "id": 508,
+            "is_deleted": false,
+            "selected_text": "bucked",
+            "note": "Avoided",
+            "chapter": null
+        },
+        {
+            "id": 509,
+            "is_deleted": false,
+            "selected_text": "harness",
+            "note": "Combine",
+            "chapter": null
+        },
+        {
+            "id": 510,
+            "is_deleted": false,
+            "selected_text": "curt",
+            "note": "Rudely short",
+            "chapter": null
+        },
+        {
+            "id": 511,
+            "is_deleted": false,
+            "selected_text": "sashay",
+            "note": "Exaggerated movement",
+            "chapter": null
+        },
+        {
+            "id": 512,
+            "is_deleted": false,
+            "selected_text": "sclerotic",
+            "note": "Stagnant ",
+            "chapter": null
+        },
+        {
+            "id": 519,
+            "is_deleted": false,
+            "selected_text": "callous",
+            "note": "No emotion",
+            "chapter": null
+        },
+        {
+            "id": 520,
+            "is_deleted": false,
+            "selected_text": "mercenary",
+            "note": "Money oriented",
+            "chapter": null
+        },
+        {
+            "id": 589,
+            "is_deleted": false,
+            "selected_text": "donned",
+            "note": "Put on",
+            "chapter": null
+        },
+        {
+            "id": 590,
+            "is_deleted": false,
+            "selected_text": "It takes two to tango",
+            "note": "2 hands needed to clap",
+            "chapter": null
+        },
+        {
+            "id": 596,
+            "is_deleted": false,
+            "selected_text": "blurting",
+            "note": "Ugal Dena",
+            "chapter": null
+        },
+        {
+            "id": 599,
+            "is_deleted": false,
+            "selected_text": "hurtling",
+            "note": "Move at speed",
+            "chapter": null
+        },
+        {
+            "id": 607,
+            "is_deleted": false,
+            "selected_text": "b\u00eate noire",
+            "note": "Person I hate",
+            "chapter": null
+        },
+        {
+            "id": 626,
+            "is_deleted": false,
+            "selected_text": "languidness",
+            "note": "lazy",
+            "chapter": null
+        },
+        {
+            "id": 628,
+            "is_deleted": false,
+            "selected_text": "jarring",
+            "note": "Shocking ",
+            "chapter": null
+        },
+        {
+            "id": 660,
+            "is_deleted": false,
+            "selected_text": "cul-de-sac.",
+            "note": "Dead end",
+            "chapter": null
+        },
+        {
+            "id": 664,
+            "is_deleted": false,
+            "selected_text": "gung-ho",
+            "note": "",
+            "chapter": null
+        },
+        {
+            "id": 665,
+            "is_deleted": false,
+            "selected_text": "cathartic",
+            "note": "Opening up of pent up emotions",
+            "chapter": null
+        },
+        {
+            "id": 682,
+            "is_deleted": false,
+            "selected_text": "tentatively",
+            "note": "Not sure",
+            "chapter": null
+        },
+        {
+            "id": 683,
+            "is_deleted": false,
+            "selected_text": "portended",
+            "note": "Signaled",
+            "chapter": null
+        },
+        {
+            "id": 786,
+            "is_deleted": false,
+            "selected_text": "he turned on the spigot",
+            "note": "Turn on the tap",
+            "chapter": null
+        },
+        {
+            "id": 789,
+            "is_deleted": false,
+            "selected_text": "upshot",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 791,
+            "is_deleted": false,
+            "selected_text": "fraternity",
+            "note": "Group",
+            "chapter": null
+        },
+        {
+            "id": 800,
+            "is_deleted": false,
+            "selected_text": "plainspoken",
+            "note": "Candid",
+            "chapter": null
+        },
+        {
+            "id": 950,
+            "is_deleted": false,
+            "selected_text": "vetoed",
+            "note": "Rejected",
+            "chapter": null
+        },
+        {
+            "id": 1043,
+            "is_deleted": false,
+            "selected_text": "ruefully",
+            "note": "Sadly",
+            "chapter": null
+        }
     ]
 }

@@ -19,9 +19,10 @@ class Exporter:
         book_obj = book_schema.Book(**book_dict)
         return book_obj.model_dump()
 
-    def _remove_empty_highlights(self, book_data: dict):
+    def _remove_empty_highlights_and_underlines(self, book_data: dict):
         book_data["highlights"] = [h for h in book_data["highlights"] if h["selected_text"] != None]
         book_data["highlights"] = [h for h in book_data["highlights"] if h["representative_text"] != None]
+        book_data["underlines"] = [u for u in book_data["underlines"] if u["selected_text"] != None]
         return book_data
 
     def _preprocess_text_fields(self, book_data: dict):
@@ -30,6 +31,10 @@ class Exporter:
             h["selected_text"] = replace_unicode_characters(h["selected_text"])
             if h["note"] != None:
                 h["note"] = replace_unicode_characters(h["note"])
+        for u in book_data["underlines"]:
+            u["selected_text"] = replace_unicode_characters(u["selected_text"])
+            if u["note"] != None:
+                u["note"] = replace_unicode_characters(u["note"])
         book_data["title"] = replace_unicode_characters(book_data["title"])
         book_data["author"] = replace_unicode_characters(book_data["author"])
         return book_data
@@ -48,7 +53,7 @@ class Exporter:
                 continue
 
             book_path = pathlib.Path(self.export_dir) / f"{book.id}.json"
-            book_data = self._remove_empty_highlights(book_data)
+            book_data = self._remove_empty_highlights_and_underlines(book_data)
             book_data = self._preprocess_text_fields(book_data)
 
             book_has_highlights = len(book_data["highlights"]) > 0

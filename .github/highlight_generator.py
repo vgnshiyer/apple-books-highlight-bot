@@ -31,12 +31,16 @@ def get_random_book():
 def get_random_highlight(highlights):
     return random.choice(highlights)
 
-def get_book_data(book):
-    logger.info(f"Getting data for {book}")
-    with open(book, "r") as f:
+def get_random_underline(underlines):
+    return random.choice(underlines)
+
+def get_book_data(book1, book2):
+    logger.info(f"Getting random highlight for {book1}")
+    res1, res2 = None, None
+    with open(book1, "r") as f:
         data = json.load(f)
         highlight = get_random_highlight(data["highlights"])
-        return {
+        res1 = {
             "title": data["title"],
             "chapter": highlight["chapter"],
             "representative_text": highlight["representative_text"],
@@ -45,20 +49,36 @@ def get_book_data(book):
             "color": highlight["color"],
         }
 
+    logger.info(f"Getting random underline for {book2}")
+    with open(book2, "r") as f:
+        data = json.load(f)
+        underline = get_random_underline(data["underlines"])
+        res2 = {
+            "title": data["title"],
+            "chapter": underline["chapter"],
+            "selected_text": underline["selected_text"],
+            "note": underline["note"],
+        }
+
+    return res1, res2
+
 def generate_daily_highlights_email():
-    book = get_random_book()
-    book_data = get_book_data(book)
-    
-    logger.info(f"Generating email for {book}")
+    book1 = get_random_book()
+    book2 = get_random_book()
+    highlight_data, underline_data = get_book_data(book1, book2)
+
+    logger.info(f"Generating email for {book1} & {book2}")
     with open(".github/templates/email_template.html", "r") as f:
         template = Template(f.read())
     return template.render(
-        book_title=book_data["title"],
-        chapter=book_data["chapter"],
-        representative_text=book_data["representative_text"],
-        selected_text=book_data["selected_text"],
-        note=book_data["note"],
-        highlight_color=book_data["color"],
+        book_title=highlight_data["title"],
+        chapter=highlight_data["chapter"],
+        representative_text=highlight_data["representative_text"],
+        selected_text=highlight_data["selected_text"],
+        note=highlight_data["note"],
+        highlight_color=highlight_data["color"],
+        word=underline_data["selected_text"],
+        definition=underline_data["note"],
     )
 
 if __name__ == "__main__":

@@ -993,5 +993,231 @@
             "note": null,
             "chapter": null
         }
+    ],
+    "underlines": [
+        {
+            "id": 387,
+            "is_deleted": false,
+            "selected_text": "ilk",
+            "note": "Kind; type",
+            "chapter": null
+        },
+        {
+            "id": 388,
+            "is_deleted": false,
+            "selected_text": "indelible",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 391,
+            "is_deleted": false,
+            "selected_text": "sycophant",
+            "note": "Obsequious chatu person ",
+            "chapter": null
+        },
+        {
+            "id": 393,
+            "is_deleted": false,
+            "selected_text": "Intrepid",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 394,
+            "is_deleted": false,
+            "selected_text": "furtive",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 398,
+            "is_deleted": false,
+            "selected_text": "exasperated",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 400,
+            "is_deleted": false,
+            "selected_text": "incredulously",
+            "note": "I don't believe ",
+            "chapter": null
+        },
+        {
+            "id": 401,
+            "is_deleted": false,
+            "selected_text": "Midas touch",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 406,
+            "is_deleted": false,
+            "selected_text": "stature",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 414,
+            "is_deleted": false,
+            "selected_text": "sycophants",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 415,
+            "is_deleted": false,
+            "selected_text": "edict",
+            "note": "Command",
+            "chapter": null
+        },
+        {
+            "id": 416,
+            "is_deleted": false,
+            "selected_text": "corrugated",
+            "note": "~~~",
+            "chapter": null
+        },
+        {
+            "id": 417,
+            "is_deleted": false,
+            "selected_text": "cliquish",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 422,
+            "is_deleted": false,
+            "selected_text": "brusque",
+            "note": "Abrupt",
+            "chapter": null
+        },
+        {
+            "id": 423,
+            "is_deleted": false,
+            "selected_text": "virulent",
+            "note": "Poisonous ",
+            "chapter": null
+        },
+        {
+            "id": 425,
+            "is_deleted": false,
+            "selected_text": "unswerving",
+            "note": "Unwavering ",
+            "chapter": null
+        },
+        {
+            "id": 433,
+            "is_deleted": false,
+            "selected_text": "valiant",
+            "note": "Brave, intrepid ",
+            "chapter": null
+        },
+        {
+            "id": 434,
+            "is_deleted": false,
+            "selected_text": "wallop",
+            "note": "Hit",
+            "chapter": null
+        },
+        {
+            "id": 440,
+            "is_deleted": false,
+            "selected_text": "precariously",
+            "note": "Riskyly",
+            "chapter": null
+        },
+        {
+            "id": 452,
+            "is_deleted": false,
+            "selected_text": "slouchers",
+            "note": "Jhukela",
+            "chapter": null
+        },
+        {
+            "id": 477,
+            "is_deleted": false,
+            "selected_text": "equine",
+            "note": "horse",
+            "chapter": null
+        },
+        {
+            "id": 478,
+            "is_deleted": false,
+            "selected_text": "canny",
+            "note": "Uncanny : strange Canny : smart",
+            "chapter": null
+        },
+        {
+            "id": 522,
+            "is_deleted": false,
+            "selected_text": "self-deprecatingly",
+            "note": "Modestly. Making fun of oneself ",
+            "chapter": null
+        },
+        {
+            "id": 524,
+            "is_deleted": false,
+            "selected_text": "riveting",
+            "note": "Charming",
+            "chapter": null
+        },
+        {
+            "id": 546,
+            "is_deleted": false,
+            "selected_text": "prosaic",
+            "note": "Ordinary",
+            "chapter": null
+        },
+        {
+            "id": 598,
+            "is_deleted": false,
+            "selected_text": "nincompoop",
+            "note": "Idiot",
+            "chapter": null
+        },
+        {
+            "id": 605,
+            "is_deleted": false,
+            "selected_text": "laconic",
+            "note": "Lack of words",
+            "chapter": null
+        },
+        {
+            "id": 609,
+            "is_deleted": false,
+            "selected_text": "swellegant",
+            "note": "Stylish",
+            "chapter": null
+        },
+        {
+            "id": 613,
+            "is_deleted": false,
+            "selected_text": "cantankerous",
+            "note": "Angry",
+            "chapter": null
+        },
+        {
+            "id": 614,
+            "is_deleted": false,
+            "selected_text": "prospect",
+            "note": "Possibility ",
+            "chapter": null
+        },
+        {
+            "id": 667,
+            "is_deleted": false,
+            "selected_text": "reverie",
+            "note": "Day dream",
+            "chapter": null
+        },
+        {
+            "id": 679,
+            "is_deleted": false,
+            "selected_text": "euphemisms",
+            "note": null,
+            "chapter": null
+        }
     ]
 }

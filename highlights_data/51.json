@@ -308,6 +308,63 @@
             "color": "yellow",
             "note": null,
             "chapter": null
+        },
+        {
+            "id": 1548,
+            "is_deleted": false,
+            "representative_text": " caution that in the long run, it's not how much you make, it's how much you keep, and how many generations you keep it. ",
+            "selected_text": "it's not how much you make, it's how much you keep, and how many generations you keep it.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1549,
+            "is_deleted": false,
+            "representative_text": "Most people, in their drive to get rich, are trying to build an Empire State Building on a 6-inch slab. ",
+            "selected_text": "Most people, in their drive to get rich, are trying to build an Empire State Building on a 6-inch slab.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1554,
+            "is_deleted": false,
+            "representative_text": "\"If you find you have dug yourself into a hole... stop digging.\" ",
+            "selected_text": "If you find you have dug yourself into a hole... stop digging.",
+            "color": "purple",
+            "note": null,
+            "chapter": null
+        }
+    ],
+    "underlines": [
+        {
+            "id": 1409,
+            "is_deleted": false,
+            "selected_text": " emphatic",
+            "note": "firm",
+            "chapter": null
+        },
+        {
+            "id": 1412,
+            "is_deleted": false,
+            "selected_text": "incredulously",
+            "note": "in a disbelieving manner",
+            "chapter": null
+        },
+        {
+            "id": 1432,
+            "is_deleted": false,
+            "selected_text": "lieu",
+            "note": "instead",
+            "chapter": null
+        },
+        {
+            "id": 1547,
+            "is_deleted": false,
+            "selected_text": "barring",
+            "note": "except for",
+            "chapter": null
         }
     ]
 }

@@ -318,5 +318,56 @@
             "note": null,
             "chapter": null
         }
+    ],
+    "underlines": [
+        {
+            "id": 1474,
+            "is_deleted": false,
+            "selected_text": "stonewalling",
+            "note": "uncooperative behavior",
+            "chapter": null
+        },
+        {
+            "id": 1480,
+            "is_deleted": false,
+            "selected_text": "Rummaging",
+            "note": "search",
+            "chapter": null
+        },
+        {
+            "id": 1481,
+            "is_deleted": false,
+            "selected_text": "leeway",
+            "note": "freedom",
+            "chapter": null
+        },
+        {
+            "id": 1482,
+            "is_deleted": false,
+            "selected_text": "marveling",
+            "note": "amazed",
+            "chapter": null
+        },
+        {
+            "id": 1483,
+            "is_deleted": false,
+            "selected_text": "veritable",
+            "note": "unreal ",
+            "chapter": null
+        },
+        {
+            "id": 1487,
+            "is_deleted": false,
+            "selected_text": "Withholding",
+            "note": "refusing to produce",
+            "chapter": null
+        },
+        {
+            "id": 1503,
+            "is_deleted": false,
+            "selected_text": "vis-a-vis",
+            "note": "in relation to",
+            "chapter": null
+        }
     ]
 }

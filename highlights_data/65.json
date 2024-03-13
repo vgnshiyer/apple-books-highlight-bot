@@ -101,6 +101,201 @@
             "color": "yellow",
             "note": null,
             "chapter": null
+        },
+        {
+            "id": 1529,
+            "is_deleted": false,
+            "representative_text": "Served me right for daring to call myself happy. ",
+            "selected_text": "Served me right for daring to call myself happy.",
+            "color": "green",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1534,
+            "is_deleted": false,
+            "representative_text": "Don't tell people how to do things, tell them what to do and let them surprise you with their results. ",
+            "selected_text": "Don't tell people how to do things, tell them what to do and let them surprise you with their results.",
+            "color": "purple",
+            "note": null,
+            "chapter": null
+        }
+    ],
+    "underlines": [
+        {
+            "id": 1508,
+            "is_deleted": false,
+            "selected_text": "resigned to that fact",
+            "note": "accept without complaining",
+            "chapter": null
+        },
+        {
+            "id": 1510,
+            "is_deleted": false,
+            "selected_text": "wan",
+            "note": "pale",
+            "chapter": null
+        },
+        {
+            "id": 1511,
+            "is_deleted": false,
+            "selected_text": "broached",
+            "note": "bring up",
+            "chapter": null
+        },
+        {
+            "id": 1512,
+            "is_deleted": false,
+            "selected_text": "spiel",
+            "note": "speech",
+            "chapter": null
+        },
+        {
+            "id": 1514,
+            "is_deleted": false,
+            "selected_text": "boondoggles",
+            "note": "pointless activities",
+            "chapter": null
+        },
+        {
+            "id": 1515,
+            "is_deleted": false,
+            "selected_text": "skewered",
+            "note": "criticize",
+            "chapter": null
+        },
+        {
+            "id": 1517,
+            "is_deleted": false,
+            "selected_text": "guffawed",
+            "note": "laughed",
+            "chapter": null
+        },
+        {
+            "id": 1518,
+            "is_deleted": false,
+            "selected_text": "carpe diem",
+            "note": "enjoy without concern for the future",
+            "chapter": null
+        },
+        {
+            "id": 1520,
+            "is_deleted": false,
+            "selected_text": "dingy",
+            "note": "gloomy",
+            "chapter": null
+        },
+        {
+            "id": 1523,
+            "is_deleted": false,
+            "selected_text": "bedlam",
+            "note": "uproar",
+            "chapter": null
+        },
+        {
+            "id": 1525,
+            "is_deleted": false,
+            "selected_text": "unabashedly",
+            "note": "shamelessly",
+            "chapter": null
+        },
+        {
+            "id": 1528,
+            "is_deleted": false,
+            "selected_text": "drudgeries",
+            "note": "hard works",
+            "chapter": null
+        },
+        {
+            "id": 1530,
+            "is_deleted": false,
+            "selected_text": "lark",
+            "note": "Hobby",
+            "chapter": null
+        },
+        {
+            "id": 1531,
+            "is_deleted": false,
+            "selected_text": "splitting hairs",
+            "note": "trying to find difference between things that are mostly similar",
+            "chapter": null
+        },
+        {
+            "id": 1535,
+            "is_deleted": false,
+            "selected_text": "vaunted",
+            "note": "pedestalized",
+            "chapter": null
+        },
+        {
+            "id": 1536,
+            "is_deleted": false,
+            "selected_text": "benighted",
+            "note": "mired in darkness can also be used as ignorant ",
+            "chapter": null
+        },
+        {
+            "id": 1538,
+            "is_deleted": false,
+            "selected_text": "incredulous",
+            "note": "can't believe",
+            "chapter": null
+        },
+        {
+            "id": 1540,
+            "is_deleted": false,
+            "selected_text": "gait",
+            "note": "manner of walking",
+            "chapter": null
+        },
+        {
+            "id": 1542,
+            "is_deleted": false,
+            "selected_text": "encroaching",
+            "note": "intruding",
+            "chapter": null
+        },
+        {
+            "id": 1545,
+            "is_deleted": false,
+            "selected_text": "winced",
+            "note": "recoiled",
+            "chapter": null
+        },
+        {
+            "id": 1546,
+            "is_deleted": false,
+            "selected_text": "reminisce",
+            "note": "remember the past ",
+            "chapter": null
+        },
+        {
+            "id": 1550,
+            "is_deleted": false,
+            "selected_text": "dampen",
+            "note": "lessen ",
+            "chapter": null
+        },
+        {
+            "id": 1551,
+            "is_deleted": false,
+            "selected_text": "unvarnished",
+            "note": "straightforward",
+            "chapter": null
+        },
+        {
+            "id": 1552,
+            "is_deleted": false,
+            "selected_text": "euphemism",
+            "note": "a mild version of a harsh word",
+            "chapter": null
+        },
+        {
+            "id": 1553,
+            "is_deleted": false,
+            "selected_text": "avuncular",
+            "note": "amicable",
+            "chapter": null
         }
     ]
 }

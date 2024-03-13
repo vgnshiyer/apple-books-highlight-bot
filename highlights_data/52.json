@@ -3468,5 +3468,42 @@
             "note": null,
             "chapter": null
         }
+    ],
+    "underlines": [
+        {
+            "id": 828,
+            "is_deleted": false,
+            "selected_text": "maelstrom",
+            "note": "A huge number of (whirlpool)",
+            "chapter": null
+        },
+        {
+            "id": 829,
+            "is_deleted": false,
+            "selected_text": "hubris",
+            "note": "Excess pride ; ghamand",
+            "chapter": null
+        },
+        {
+            "id": 865,
+            "is_deleted": false,
+            "selected_text": "plethora",
+            "note": "A huge number of ; excess of",
+            "chapter": null
+        },
+        {
+            "id": 961,
+            "is_deleted": false,
+            "selected_text": "profusion",
+            "note": "Plethora",
+            "chapter": null
+        },
+        {
+            "id": 1057,
+            "is_deleted": false,
+            "selected_text": "raison d'\u00eatre",
+            "note": "Reason for existence ",
+            "chapter": null
+        }
     ]
 }

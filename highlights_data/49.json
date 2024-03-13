@@ -1614,5 +1614,42 @@
             "note": null,
             "chapter": null
         }
+    ],
+    "underlines": [
+        {
+            "id": 1100,
+            "is_deleted": false,
+            "selected_text": "expletive",
+            "note": "Swear word",
+            "chapter": null
+        },
+        {
+            "id": 1133,
+            "is_deleted": false,
+            "selected_text": "masochistic",
+            "note": "Self harming",
+            "chapter": null
+        },
+        {
+            "id": 1313,
+            "is_deleted": false,
+            "selected_text": "FUBAR",
+            "note": "Fucked up beyond all recognition",
+            "chapter": null
+        },
+        {
+            "id": 1348,
+            "is_deleted": false,
+            "selected_text": "gentrified",
+            "note": "recently rich people moved here",
+            "chapter": null
+        },
+        {
+            "id": 1361,
+            "is_deleted": false,
+            "selected_text": "nihilist",
+            "note": "disbeliever ",
+            "chapter": null
+        }
     ]
 }

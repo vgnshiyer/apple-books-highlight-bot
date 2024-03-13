@@ -1,33 +1,35 @@
 <html>
-<head>
-    <style>
-        .highlight {
-            background-color: {{ highlight_color }};
-        }
-    </style>
-</head>
-<body>
-<p>Good morning,</p>
-<h4>Here is today's Highlight of the day:</h4>
-<p><b>Book Title:</b> {{ book_title }}</p>
-{% if chapter %}
-    <p>
-        <b>Chapter:</b> {{ chapter }}
-    </p>
-{% endif %}
-<p><b>Highlight:</b> 
-    {% if representative_text %}
-        {{ representative_text | replace(selected_text, '<span class="highlight">' + selected_text + '</span>') | safe }}
-    {% else %}
-        <span class="highlight">{{ selected_text }}</span>
-    {% endif %}
-</p>
-{% if note %}
-    <p>
-        <b>Note:</b> {{ note }}
-    </p>
-{% endif %}
-<br>
-<p>Best,<br>Apple Highlights Bot</p>
-</body>
+    <head>
+        <style>
+            .highlight {
+                background-color: {{ highlight_color }};
+            }
+        </style>
+    </head>
+    <body>
+        <p>Good morning,</p>
+        <h4>Here is today's Highlight of the day:</h4>
+        <p><b>Book Title:</b> {{ book_title }}</p>
+        {% if chapter %}
+        <p><b>Chapter:</b> {{ chapter }}</p>
+        {% endif %}
+        <p>
+            <b>Highlight:</b> {% if representative_text %} {{
+            representative_text | replace(selected_text, '<span
+                class="highlight"
+                >' + selected_text + '</span
+            >') | safe }} {% else %}
+            <span class="highlight">{{ selected_text }}</span>
+            {% endif %}
+        </p>
+        {% if note %}
+        <p><b>Note:</b> {{ note }}</p>
+        {% endif %}
+        <br />
+        <h4>Here is today's word of the day:</h4>
+        <br />
+        <p><b>{{ word }}: </b>{{ definition }}</p>
+        <br />
+        <p>Best,<br />Apple Highlights Bot</p>
+    </body>
 </html>
