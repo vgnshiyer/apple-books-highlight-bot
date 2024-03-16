@@ -26,9 +26,14 @@
         <p><b>Note:</b> {{ note }}</p>
         {% endif %}
         <br />
+        {% if word %}
         <h4>Here is today's word of the day:</h4>
         <p><b>{{ word }}: </b>{{ definition }}</p>
+        {% if example %}
+        <p><b>Example:</b> {{ example }}</p>
+        {% endif %}
         <br />
+        {% endif %}
         <p>Best,<br />Apple Highlights Bot</p>
     </body>
 </html>

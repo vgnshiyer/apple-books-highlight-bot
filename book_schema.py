@@ -13,6 +13,7 @@ class Highlight(BaseModel):
 class Underline(BaseModel):
     id: int
     is_deleted: Optional[bool]
+    representative_text: Optional[str]
     selected_text: Optional[str]
     note: Optional[str]
     chapter: Optional[str]
