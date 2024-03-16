@@ -323,6 +323,7 @@
         {
             "id": 1474,
             "is_deleted": false,
+            "representative_text": "The\u00a0\u00a0expression\u00a0\u00a0on\u00a0\u00a0Jonah's\u00a0\u00a0face\u00a0\u00a0says\u00a0\u00a0he's\u00a0\u00a0getting\u00a0\u00a0a\u00a0\u00a0little\u00a0\u00a0bored with\u00a0this\u00a0stonewalling.\u00a0",
             "selected_text": "stonewalling",
             "note": "uncooperative behavior",
             "chapter": null
@@ -330,6 +331,7 @@
         {
             "id": 1480,
             "is_deleted": false,
+            "representative_text": "Rummaging\u00a0\u00a0through\u00a0\u00a0the\u00a0\u00a0refrigerator,\u00a0\u00a0I\u00a0\u00a0attempt\u00a0\u00a0to\u00a0\u00a0find\u00a0\u00a0dinner, but\u00a0\u00a0have\u00a0\u00a0to\u00a0\u00a0settle\u00a0\u00a0for\u00a0\u00a0cold\u00a0\u00a0spaghetti\u00a0\u00a0and\u00a0\u00a0some\u00a0\u00a0leftover\u00a0\u00a0peas.\u00a0\u00a0",
             "selected_text": "Rummaging",
             "note": "search",
             "chapter": null
@@ -337,6 +339,7 @@
         {
             "id": 1481,
             "is_deleted": false,
+            "representative_text": "We\u00a0\u00a0have to\u00a0\u00a0have\u00a0\u00a0the\u00a0\u00a0leeway\u00a0\u00a0necessary\u00a0\u00a0to\u00a0\u00a0make\u00a0\u00a0changes\u00a0\u00a0that\u00a0\u00a0will\u00a0\u00a0allow\u00a0\u00a0the plant\u00a0\u00a0to\u00a0\u00a0make\u00a0\u00a0money.\u00a0\u00a0",
             "selected_text": "leeway",
             "note": "freedom",
             "chapter": null
@@ -344,6 +347,7 @@
         {
             "id": 1482,
             "is_deleted": false,
+            "representative_text": "I\u00a0\u00a0sit\u00a0\u00a0there\u00a0\u00a0marveling\u00a0\u00a0that\u00a0\u00a0we're\u00a0\u00a0going\u00a0\u00a0to\u00a0\u00a0 reduce the\u00a0\u00a0efficiency\u00a0\u00a0of\u00a0\u00a0some\u00a0\u00a0operations\u00a0\u00a0and\u00a0\u00a0make\u00a0\u00a0the\u00a0\u00a0entire\u00a0\u00a0plant\u00a0\u00a0more productive.\u00a0\u00a0",
             "selected_text": "marveling",
             "note": "amazed",
             "chapter": null
@@ -351,6 +355,7 @@
         {
             "id": 1483,
             "is_deleted": false,
+            "representative_text": "Stacey,\u00a0\u00a0who\u00a0\u00a0is\u00a0\u00a0sitting\u00a0\u00a0at\u00a0\u00a0the\u00a0\u00a0table\u00a0\u00a0with\u00a0\u00a0a\u00a0\u00a0veritable\u00a0\u00a0fortress\u00a0\u00a0of paper\u00a0\u00a0around\u00a0\u00a0her\u00a0\u00a0and\u00a0\u00a0looking\u00a0\u00a0as\u00a0\u00a0if\u00a0\u00a0she's\u00a0\u00a0ready\u00a0\u00a0for\u00a0\u00a0a\u00a0\u00a0siege,\u00a0\u00a0holds up\u00a0a\u00a0list.\u00a0",
             "selected_text": "veritable",
             "note": "unreal ",
             "chapter": null
@@ -358,6 +363,7 @@
         {
             "id": 1487,
             "is_deleted": false,
+            "representative_text": "Withholding\u00a0\u00a0some\u00a0\u00a0materials\u00a0\u00a0has\u00a0\u00a0meant\u00a0\u00a0we're\u00a0\u00a0no longer\u00a0\u00a0choking\u00a0\u00a0on\u00a0\u00a0work-in-process.\u00a0\u00a0",
             "selected_text": "Withholding",
             "note": "refusing to produce",
             "chapter": null
@@ -365,6 +371,7 @@
         {
             "id": 1503,
             "is_deleted": false,
+            "representative_text": "Where\u00a0\u00a0do\u00a0\u00a0we stand\u00a0vis-a-vis\u00a0the\u00a0clients?\"\u00a0",
             "selected_text": "vis-a-vis",
             "note": "in relation to",
             "chapter": null

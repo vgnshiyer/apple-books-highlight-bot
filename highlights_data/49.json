@@ -1619,6 +1619,7 @@
         {
             "id": 1100,
             "is_deleted": false,
+            "representative_text": "Buckle up and stop being such a (insert expletive)! ",
             "selected_text": "expletive",
             "note": "Swear word",
             "chapter": null
@@ -1626,6 +1627,7 @@
         {
             "id": 1133,
             "is_deleted": false,
+            "representative_text": "To think otherwise is masochistic.\n",
             "selected_text": "masochistic",
             "note": "Self harming",
             "chapter": null
@@ -1633,6 +1635,7 @@
         {
             "id": 1313,
             "is_deleted": false,
+            "representative_text": "Vacation FUBAR.\n",
             "selected_text": "FUBAR",
             "note": "Fucked up beyond all recognition",
             "chapter": null
@@ -1640,6 +1643,7 @@
         {
             "id": 1348,
             "is_deleted": false,
+            "representative_text": "Hip, recently gentrified artist areas, not unlike the Brooklyn of 10 years ago, can be found in almost all cities. ",
             "selected_text": "gentrified",
             "note": "recently rich people moved here",
             "chapter": null
@@ -1647,6 +1651,7 @@
         {
             "id": 1361,
             "is_deleted": false,
+            "representative_text": "I\u2019m no nihilist. ",
             "selected_text": "nihilist",
             "note": "disbeliever ",
             "chapter": null

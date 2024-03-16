@@ -119,12 +119,40 @@
             "color": "purple",
             "note": null,
             "chapter": null
+        },
+        {
+            "id": 1561,
+            "is_deleted": false,
+            "representative_text": "Was I adopting their man-of-few-words demeanor? ",
+            "selected_text": "adopting their man-of-few-words demeanor",
+            "color": "purple",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1585,
+            "is_deleted": false,
+            "representative_text": "Wisdom seemed an intangible asset, but an asset all the same, one that justified the risk. ",
+            "selected_text": "Wisdom seemed an intangible asset, but an asset all the same, one that justified the risk",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1586,
+            "is_deleted": false,
+            "representative_text": "But my hope was that when I failed, if I failed, I'd fail quickly, so I'd have enough time, enough years, to implement all the hard-won lessons. I wasn't much for setting goals, but this goal kept flashing through my mind every day, until it became my internal chant: Fail fast. ",
+            "selected_text": "But my hope was that when I failed, if I failed, I'd fail quickly, so I'd have enough time, enough years, to implement all the hard-won lessons. I wasn't much for setting goals, but this goal kept flashing through my mind every day, until it became my internal chant: Fail fast.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
         }
     ],
     "underlines": [
         {
             "id": 1508,
             "is_deleted": false,
+            "representative_text": "At twenty-four I was finally resigned to that fact. ",
             "selected_text": "resigned to that fact",
             "note": "accept without complaining",
             "chapter": null
@@ -132,6 +160,7 @@
         {
             "id": 1510,
             "is_deleted": false,
+            "representative_text": "I set a straight-backed chair beside him and gave a wan smile and waited for the next commercial. ",
             "selected_text": "wan",
             "note": "pale",
             "chapter": null
@@ -139,6 +168,7 @@
         {
             "id": 1511,
             "is_deleted": false,
+            "representative_text": "When I broached the subject with my father, when I worked up the nerve to speak to him about my Crazy Idea, I made sure it was in the early evening. ",
             "selected_text": "broached",
             "note": "bring up",
             "chapter": null
@@ -146,6 +176,7 @@
         {
             "id": 1512,
             "is_deleted": false,
+            "representative_text": "I\u2019d rehearsed my spiel, in my head, over and over, especially the opening. ",
             "selected_text": "spiel",
             "note": "speech",
             "chapter": null
@@ -153,6 +184,7 @@
         {
             "id": 1514,
             "is_deleted": false,
+            "representative_text": "Talk about boondoggles.\n\t\t\t",
             "selected_text": "boondoggles",
             "note": "pointless activities",
             "chapter": null
@@ -160,6 +192,7 @@
         {
             "id": 1515,
             "is_deleted": false,
+            "representative_text": "Critics skewered Heatter for his shameless cheerleading, for abandoning all pretense of journalistic objectivity, but the public hatred of Japan was so intense, most people hailed Heatter as a folk hero. ",
             "selected_text": "skewered",
             "note": "criticize",
             "chapter": null
@@ -167,6 +200,7 @@
         {
             "id": 1517,
             "is_deleted": false,
+            "representative_text": "When I laid out the list of places I wanted to see\u2014Hawaii, Tokyo, Hong Kong, Rangoon, Calcutta, Bombay, Saigon, Kathmandu, Cairo, Istanbul, Athens, Jordan, Jerusalem, Nairobi, Rome, Paris, Vienna, West Berlin, East Berlin, Munich, London\u2014he rocked back on his heels and guffawed. ",
             "selected_text": "guffawed",
             "note": "laughed",
             "chapter": null
@@ -174,6 +208,7 @@
         {
             "id": 1518,
             "is_deleted": false,
+            "representative_text": "Our sense of carpe diem was heightened by the fact that the world was coming to an end. ",
             "selected_text": "carpe diem",
             "note": "enjoy without concern for the future",
             "chapter": null
@@ -181,6 +216,7 @@
         {
             "id": 1520,
             "is_deleted": false,
+            "representative_text": "Beyond dingy. ",
             "selected_text": "dingy",
             "note": "gloomy",
             "chapter": null
@@ -188,6 +224,7 @@
         {
             "id": 1523,
             "is_deleted": false,
+            "representative_text": "Inside, however, all was bedlam. ",
             "selected_text": "bedlam",
             "note": "uproar",
             "chapter": null
@@ -195,6 +232,7 @@
         {
             "id": 1525,
             "is_deleted": false,
+            "representative_text": "I\u2019d also covered one wall with my blue ribbons from track, the one thing in my life of which I was unabashedly proud. ",
             "selected_text": "unabashedly",
             "note": "shamelessly",
             "chapter": null
@@ -202,6 +240,7 @@
         {
             "id": 1528,
             "is_deleted": false,
+            "representative_text": "But these, he said, were merely his daytime drudgeries. ",
             "selected_text": "drudgeries",
             "note": "hard works",
             "chapter": null
@@ -209,6 +248,7 @@
         {
             "id": 1530,
             "is_deleted": false,
+            "representative_text": "Besides, he\u2019d thought this shoe thing was a lark. ",
             "selected_text": "lark",
             "note": "Hobby",
             "chapter": null
@@ -216,6 +256,7 @@
         {
             "id": 1531,
             "is_deleted": false,
+            "representative_text": "But that was splitting hairs. ",
             "selected_text": "splitting hairs",
             "note": "trying to find difference between things that are mostly similar",
             "chapter": null
@@ -223,6 +264,7 @@
         {
             "id": 1535,
             "is_deleted": false,
+            "representative_text": "My father\u2019s vaunted respectability was finally paying dividends, at least for me.\n\t\t\t",
             "selected_text": "vaunted",
             "note": "pedestalized",
             "chapter": null
@@ -230,6 +272,7 @@
         {
             "id": 1536,
             "is_deleted": false,
+            "representative_text": "It was from a high school wrestling coach in some benighted town back east, some little burg on Long Island called Valley Stream or Massapequa or Manhasset. ",
             "selected_text": "benighted",
             "note": "mired in darkness can also be used as ignorant ",
             "chapter": null
@@ -237,6 +280,7 @@
         {
             "id": 1538,
             "is_deleted": false,
+            "representative_text": "My father, hands jammed into his pockets, would watch the whole transaction, incredulous.\n\t\t\t",
             "selected_text": "incredulous",
             "note": "can't believe",
             "chapter": null
@@ -244,6 +288,7 @@
         {
             "id": 1540,
             "is_deleted": false,
+            "representative_text": "He came forward haltingly, with a shuffling gait, giving no sign that he was the boss of all bosses, the shogun of shoes. ",
             "selected_text": "gait",
             "note": "manner of walking",
             "chapter": null
@@ -251,6 +296,7 @@
         {
             "id": 1542,
             "is_deleted": false,
+            "representative_text": "I told Morimoto how distressed I was by this Marlboro Man encroaching on my turf. ",
             "selected_text": "encroaching",
             "note": "intruding",
             "chapter": null
@@ -258,6 +304,7 @@
         {
             "id": 1545,
             "is_deleted": false,
+            "representative_text": "I winced. ",
             "selected_text": "winced",
             "note": "recoiled",
             "chapter": null
@@ -265,6 +312,7 @@
         {
             "id": 1546,
             "is_deleted": false,
+            "representative_text": "She saw Mount Hood in the distance and agreed that it looked astonishingly like Fuji, which made us both reminisce.\n\t\t\t",
             "selected_text": "reminisce",
             "note": "remember the past ",
             "chapter": null
@@ -272,6 +320,7 @@
         {
             "id": 1550,
             "is_deleted": false,
+            "representative_text": "At every turn I tried to dampen his enthusiasm for me and my company. ",
             "selected_text": "dampen",
             "note": "lessen ",
             "chapter": null
@@ -279,6 +328,7 @@
         {
             "id": 1551,
             "is_deleted": false,
+            "representative_text": "I also never missed an opportunity to tell him the unvarnished truth. ",
             "selected_text": "unvarnished",
             "note": "straightforward",
             "chapter": null
@@ -286,6 +336,7 @@
         {
             "id": 1552,
             "is_deleted": false,
+            "representative_text": "Equity\u2014I reached the point where I refused to even say it aloud, because it wasn\u2019t a real word, it was bureaucratic jargon, a euphemism for cold hard cash, of which I had none. ",
             "selected_text": "euphemism",
             "note": "a mild version of a harsh word",
             "chapter": null
@@ -293,8 +344,57 @@
         {
             "id": 1553,
             "is_deleted": false,
+            "representative_text": "Fiftyish, avuncular, with a voice like a handful of gravel in a blender, he didn\u2019t seem to want to be a banker, and he particularly didn\u2019t want to be my banker. ",
             "selected_text": "avuncular",
             "note": "amicable",
+            "chapter": null
+        },
+        {
+            "id": 1556,
+            "is_deleted": false,
+            "representative_text": "After, I overheard one panting soldier tell another: \u201cI was listening real close as Lieutenant Knight counted cadence. ",
+            "selected_text": "panting",
+            "note": "out of breath",
+            "chapter": null
+        },
+        {
+            "id": 1557,
+            "is_deleted": false,
+            "representative_text": "Instructors would talk to us about military strategy, which I found riveting. ",
+            "selected_text": "riveting",
+            "note": "interesting",
+            "chapter": null
+        },
+        {
+            "id": 1558,
+            "is_deleted": false,
+            "representative_text": "Such loyalty, such unreasonable and unwarranted fealty\u2014that might have been the moment I fell in love with Hayes. ",
+            "selected_text": "fealty",
+            "note": "loyalty",
+            "chapter": null
+        },
+        {
+            "id": 1559,
+            "is_deleted": false,
+            "representative_text": "Inspiration, he learned, can come from quotidian things. ",
+            "selected_text": "quotidian",
+            "note": "daily ordinary",
+            "chapter": null
+        },
+        {
+            "id": 1560,
+            "is_deleted": false,
+            "representative_text": "How Johnson had chased and badgered the head coach at such-and-such high school, and tried to sell him six pairs, but in the end sold him a baker\u2019s dozen\u00a0.\u00a0.\u00a0. which just went to show\u00a0.\u00a0.\u00a0.\n\t\t\t",
+            "selected_text": "badgered",
+            "note": "pester ",
+            "chapter": null
+        },
+        {
+            "id": 1562,
+            "is_deleted": false,
+            "representative_text": "He had hundreds and hundreds of customer-correspondents, all along the spectrum of humanity, from high school track stars to octogenarian weekend joggers. ",
+            "selected_text": "octogenarian",
+            "note": "80 to 89 years of age",
             "chapter": null
         }
     ]

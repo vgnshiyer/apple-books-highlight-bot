@@ -341,6 +341,7 @@
         {
             "id": 1409,
             "is_deleted": false,
+            "representative_text": "\n        emphatic about being financially competent.\n      ",
             "selected_text": " emphatic",
             "note": "firm",
             "chapter": null
@@ -348,6 +349,7 @@
         {
             "id": 1412,
             "is_deleted": false,
+            "representative_text": "my dad asked incredulously.\n      ",
             "selected_text": "incredulously",
             "note": "in a disbelieving manner",
             "chapter": null
@@ -355,6 +357,7 @@
         {
             "id": 1432,
             "is_deleted": false,
+            "representative_text": "\n        decision to own a house that is too expensive in lieu of starting an investment portfolio \n        early on impacts an individual in at least the following three ways:\n      ",
             "selected_text": "lieu",
             "note": "instead",
             "chapter": null
@@ -362,6 +365,7 @@
         {
             "id": 1547,
             "is_deleted": false,
+            "representative_text": "To my wife and me, it means that barring unforeseen cataclysmic changes, we \n        can work or not work, and our wealth grows automatically, staying way ahead of inflation. ",
             "selected_text": "barring",
             "note": "except for",
             "chapter": null
