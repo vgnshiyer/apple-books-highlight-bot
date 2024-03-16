@@ -1,11 +1,8 @@
 name: Send highlight of the day
 
 on:
-  # schedule:
-  #   - cron: '0 16 * * *'
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: "0 16 * * *"
 
 jobs:
   send_highlight:
