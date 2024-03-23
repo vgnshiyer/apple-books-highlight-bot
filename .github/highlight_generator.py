@@ -90,7 +90,6 @@ def generate_daily_highlights_email():
     )
 
 if __name__ == "__main__":
-    os.chdir("..")
     logger.info("Getting random highlight -- " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     email = generate_daily_highlights_email()
     logger.info("Email generated")
