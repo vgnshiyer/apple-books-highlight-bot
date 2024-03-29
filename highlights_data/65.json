@@ -146,6 +146,51 @@
             "color": "yellow",
             "note": null,
             "chapter": null
+        },
+        {
+            "id": 1597,
+            "is_deleted": false,
+            "representative_text": "I was putting in six days a week at Price Waterhouse, spending early mornings and late nights and all weekends and vacations at Blue Ribbon. No friends, no exercise, no social life--and wholly content. My life was out of balance, sure, but I didn't care. In fact, I wanted even more imbalance. ",
+            "selected_text": "I was putting in six days a week at Price Waterhouse, spending early mornings and late nights and all weekends and vacations at Blue Ribbon. No friends, no exercise, no social life--and wholly content. My life was out of balance, sure, but I didn't care. In fact, I wanted even more imbalance",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1599,
+            "is_deleted": false,
+            "representative_text": "Even at his most vulnerable, with me balancing him precariously at the top of some dark flight of stairs, he'd never lose touch with his essential philosophy: Don't you dare feel sorry for me. I'm here to kill you. ",
+            "selected_text": "Don't you dare feel sorry for me. I'm here to kill you.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1600,
+            "is_deleted": false,
+            "representative_text": "I told myself: Life is growth. You grow or you die. ",
+            "selected_text": "Life is growth. You grow or you die.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1603,
+            "is_deleted": false,
+            "representative_text": "Early on, I drummed into my students the primary principle of all accounting: Assets equal liabilities plus equity. This foundational equation, I said, must always, always be in balance. ",
+            "selected_text": "Assets equal liabilities plus equity. This foundational equation, I said, must always, always be in balance",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1638,
+            "is_deleted": false,
+            "representative_text": "He compensated, at times, by being loud, and profane, but mostly he kept his mouth shut and downplayed his intelligence, rather than risk alienating people. ",
+            "selected_text": "downplayed his intelligence, rather than risk alienating people",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
         }
     ],
     "underlines": [
@@ -395,6 +440,310 @@
             "representative_text": "He had hundreds and hundreds of customer-correspondents, all along the spectrum of humanity, from high school track stars to octogenarian weekend joggers. ",
             "selected_text": "octogenarian",
             "note": "80 to 89 years of age",
+            "chapter": null
+        },
+        {
+            "id": 1592,
+            "is_deleted": false,
+            "representative_text": "Alone, without allies, trapped in the unfamiliar conference room, I plunged ahead.\n\t\t\t",
+            "selected_text": "plunged",
+            "note": "jump",
+            "chapter": null
+        },
+        {
+            "id": 1595,
+            "is_deleted": false,
+            "representative_text": "Yet another shootout with a consummate negotiator. ",
+            "selected_text": "consummate",
+            "note": "complete",
+            "chapter": null
+        },
+        {
+            "id": 1596,
+            "is_deleted": false,
+            "representative_text": "He\u2019d complained a million times about my lack of communication, but in fact my laissez-faire management style had fostered him, unleashed him. ",
+            "selected_text": "laissez-faire",
+            "note": "care free - letting things happen ",
+            "chapter": null
+        },
+        {
+            "id": 1598,
+            "is_deleted": false,
+            "representative_text": "Once again, in my quixotic effort to overtake a superior opponent, I had Bowerman as my coach. ",
+            "selected_text": "quixotic",
+            "note": "idealistic ",
+            "chapter": null
+        },
+        {
+            "id": 1601,
+            "is_deleted": false,
+            "representative_text": "My psyche was in true harmony when I had a mix of alone time and team time. ",
+            "selected_text": "psyche",
+            "note": "soul ",
+            "chapter": null
+        },
+        {
+            "id": 1602,
+            "is_deleted": false,
+            "representative_text": "Or if I\u2019d have to flunk her.\n\t\t\t",
+            "selected_text": "flunk",
+            "note": "fail",
+            "chapter": null
+        },
+        {
+            "id": 1604,
+            "is_deleted": false,
+            "representative_text": "It all felt like a foregone conclusion. ",
+            "selected_text": "foregone",
+            "note": "past ",
+            "chapter": null
+        },
+        {
+            "id": 1605,
+            "is_deleted": false,
+            "representative_text": "He was weary of this whole thing, he said, weary of me. ",
+            "selected_text": "weary",
+            "note": "tired",
+            "chapter": null
+        },
+        {
+            "id": 1606,
+            "is_deleted": false,
+            "representative_text": "Woodell and I sent out fliers advertising the offering, then sat back and braced for the clamorous response.\n\t\t\t",
+            "selected_text": "clamorous",
+            "note": "noisy",
+            "chapter": null
+        },
+        {
+            "id": 1607,
+            "is_deleted": false,
+            "representative_text": "Languorous days of golden sunshine, clear blue skies, the world a paradise. ",
+            "selected_text": "Languorous",
+            "note": "lathargic",
+            "chapter": null
+        },
+        {
+            "id": 1610,
+            "is_deleted": false,
+            "representative_text": "I knew that, with their son\u2019s medical bills, they were scuffling more than I. ",
+            "selected_text": "scuffling",
+            "note": "struggling",
+            "chapter": null
+        },
+        {
+            "id": 1611,
+            "is_deleted": false,
+            "representative_text": "And if tight suits and the specter of hypocrisy weren\u2019t enough incentive, another motivation soon came along.\n\t\t\t",
+            "selected_text": "specter",
+            "note": "threat",
+            "chapter": null
+        },
+        {
+            "id": 1612,
+            "is_deleted": false,
+            "representative_text": "And if tight suits and the specter of hypocrisy weren\u2019t enough incentive, another motivation soon came along.\n\t\t\t",
+            "selected_text": "hypocrisy",
+            "note": "badi badi baate but not following it themselves",
+            "chapter": null
+        },
+        {
+            "id": 1613,
+            "is_deleted": false,
+            "representative_text": "In the days ahead, in other articles I clipped, Bowerman was even more effusive, calling Pre \u201cthe best runner I\u2019ve ever had.\u201d ",
+            "selected_text": "effusive",
+            "note": "filled with gratitude",
+            "chapter": null
+        },
+        {
+            "id": 1614,
+            "is_deleted": false,
+            "representative_text": "He\u2019d abandoned Dreyfus Funds and begun selling shares in his own mutual funds, along with gold mines, real estate, and sundry other things. ",
+            "selected_text": "sundry",
+            "note": "various",
+            "chapter": null
+        },
+        {
+            "id": 1615,
+            "is_deleted": false,
+            "representative_text": "Kitami had a companion with him, a sort of bag carrier, personal assistant, amanuensis, named Hiraku Iwano. ",
+            "selected_text": "amanuensis",
+            "note": "assistant",
+            "chapter": null
+        },
+        {
+            "id": 1616,
+            "is_deleted": false,
+            "representative_text": "We both slaved to give the two men an idyllic Pacific Northwest weekend. ",
+            "selected_text": "idyllic",
+            "note": "idealistic",
+            "chapter": null
+        },
+        {
+            "id": 1617,
+            "is_deleted": false,
+            "representative_text": "We tried to focus most of our attention on Kitami, but both Penny and I found it easier to talk to Iwano, who read books and seemed guileless. ",
+            "selected_text": "guileless",
+            "note": "innocent",
+            "chapter": null
+        },
+        {
+            "id": 1618,
+            "is_deleted": false,
+            "representative_text": "ON THE LAST day of Kitami\u2019s visit, hours before the big dinner party, I hurried down to Eugene to confer with Bowerman and his lawyer, Jaqua. ",
+            "selected_text": "confer",
+            "note": "consult",
+            "chapter": null
+        },
+        {
+            "id": 1619,
+            "is_deleted": false,
+            "representative_text": "\u201cAnd now,\u201d I said to Woodell, \u201cI have to go meet this Judas for cocktails.\u201d\n\t\t\t",
+            "selected_text": "Judas",
+            "note": "traitor",
+            "chapter": null
+        },
+        {
+            "id": 1620,
+            "is_deleted": false,
+            "representative_text": "I opened his briefcase and rummaged through and took out what looked like the folder he\u2019d been referring to. ",
+            "selected_text": "rummaged",
+            "note": "search",
+            "chapter": null
+        },
+        {
+            "id": 1621,
+            "is_deleted": false,
+            "representative_text": "Cut to Penny, hair disheveled, dress smeared with grease, pulling up to Bowerman\u2019s house. ",
+            "selected_text": "disheveled",
+            "note": "untidy disordered",
+            "chapter": null
+        },
+        {
+            "id": 1622,
+            "is_deleted": false,
+            "representative_text": "I finagled a meeting with Chuck at his office in San Francisco and found myself wildly intimidated from the moment I walked in the door. ",
+            "selected_text": "finagled",
+            "note": "obtain something in devious manner",
+            "chapter": null
+        },
+        {
+            "id": 1623,
+            "is_deleted": false,
+            "representative_text": "\u201cAch,\u201d I said. ",
+            "selected_text": "Ach",
+            "note": "express surprise",
+            "chapter": null
+        },
+        {
+            "id": 1624,
+            "is_deleted": false,
+            "representative_text": "I\u2019d asked myself, time and again, what it was about Pre that triggered such visceral responses from so many people, including myself. ",
+            "selected_text": "visceral",
+            "note": "instinctive",
+            "chapter": null
+        },
+        {
+            "id": 1625,
+            "is_deleted": false,
+            "representative_text": "On the first play from scrimmage, Oregon\u2019s burly quarterback, a sharpshooter named Dan Fouts, handed the ball to Donny Reynolds, who made one cut on his Nike waffles and\u00a0.\u00a0.\u00a0. took it to the house. ",
+            "selected_text": "scrimmage",
+            "note": "fight",
+            "chapter": null
+        },
+        {
+            "id": 1627,
+            "is_deleted": false,
+            "representative_text": "While continuing to build up our East Coast operation, Johnson had spent much of 1972 slaving on something that he christened the Pre Montreal, a shoe that would be an homage to Pre, and to the upcoming Olympics, and to the American Bicentennial. ",
+            "selected_text": "homage",
+            "note": "honor",
+            "chapter": null
+        },
+        {
+            "id": 1628,
+            "is_deleted": false,
+            "representative_text": "Now I saw the rough contours of a man. ",
+            "selected_text": "contours",
+            "note": "siloette",
+            "chapter": null
+        },
+        {
+            "id": 1629,
+            "is_deleted": false,
+            "representative_text": "His geographical inferiority complex was exacerbated by his ungainly size, and homeliness. ",
+            "selected_text": "ungainly",
+            "note": "awkward",
+            "chapter": null
+        },
+        {
+            "id": 1630,
+            "is_deleted": false,
+            "representative_text": "His geographical inferiority complex was exacerbated by his ungainly size, and homeliness. ",
+            "selected_text": "homeliness",
+            "note": "ugliness",
+            "chapter": null
+        },
+        {
+            "id": 1631,
+            "is_deleted": false,
+            "representative_text": "Before long, the stragglers and holdouts were desperate to be included.\n\t\t\t",
+            "selected_text": "holdouts",
+            "note": "kept on hold without accepting",
+            "chapter": null
+        },
+        {
+            "id": 1632,
+            "is_deleted": false,
+            "representative_text": "We were leveraged to the hilt, and like most people who live from paycheck to paycheck, we were walking the edge of a precipice. ",
+            "selected_text": "we were walking the edge of a precipice",
+            "note": "walking on the edge of the cliff.. ",
+            "chapter": null
+        },
+        {
+            "id": 1633,
+            "is_deleted": false,
+            "representative_text": "He could see it through the locked fence: boxes and boxes of what the world was clamoring for. ",
+            "selected_text": "clamoring",
+            "note": "demanding",
+            "chapter": null
+        },
+        {
+            "id": 1634,
+            "is_deleted": false,
+            "representative_text": "Now, though he retained slight traces of the impediment, he\u2019d largely overcome it, and as he addressed the packed courtroom that day, I was filled with admiration, and filial loyalty. ",
+            "selected_text": "filial loyalty",
+            "note": "obliged loyalty ",
+            "chapter": null
+        },
+        {
+            "id": 1635,
+            "is_deleted": false,
+            "representative_text": "We were leveraged to the hilt, and like most people who live from paycheck to paycheck, we were walking the edge of a precipice. ",
+            "selected_text": "hilt",
+            "note": "handle",
+            "chapter": null
+        },
+        {
+            "id": 1636,
+            "is_deleted": false,
+            "representative_text": "Phil Knight went to Japan in 1962 and pretended there was a company called Blue Ribbon, and thereafter he employed subterfuge, theft, spies, whatever necessary, to perpetuate this con.\n\t\t\t",
+            "selected_text": "subterfuge",
+            "note": "deception",
+            "chapter": null
+        },
+        {
+            "id": 1637,
+            "is_deleted": false,
+            "representative_text": "Between our legal troubles and our supply woes, we might be out of business any minute. ",
+            "selected_text": "woes",
+            "note": "problems",
+            "chapter": null
+        },
+        {
+            "id": 1639,
+            "is_deleted": false,
+            "representative_text": "Before long, the stragglers and holdouts were desperate to be included.\n\t\t\t",
+            "selected_text": "stragglers",
+            "note": "slow mover ",
             "chapter": null
         }
     ]
