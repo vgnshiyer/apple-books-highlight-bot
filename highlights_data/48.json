@@ -128,6 +128,60 @@
             "color": "yellow",
             "note": null,
             "chapter": null
+        },
+        {
+            "id": 1709,
+            "is_deleted": false,
+            "representative_text": "The code that implements high-level policy should not depend on the code that implements low-level details. ",
+            "selected_text": "The code that implements high-level policy should not depend on the code that implements low-level details",
+            "color": "yellow",
+            "note": "high level modules should not depend on low level modules , but should depend on their abstractions easily change the low level implementation without affecting the high level code",
+            "chapter": null
+        },
+        {
+            "id": 1710,
+            "is_deleted": false,
+            "representative_text": "An active corollary to Conway's law: The best structure for a software system is heavily influenced by the social structure of the organization that uses it so that each software module has one, and only one, reason to change. ",
+            "selected_text": "Conway's law: The best structure for a software system is heavily influenced by the social structure of the organization that uses it",
+            "color": "yellow",
+            "note": "if a programmer designs module A and a programmer designs module B, for the modules tp he able to communicate, there must be a communication between the programmers",
+            "chapter": null
+        },
+        {
+            "id": 1711,
+            "is_deleted": false,
+            "representative_text": "The gist is that for software systems to be easy to change, they must be designed to allow the behavior of those systems to be changed by adding new code, rather than changing existing code. ",
+            "selected_text": "changed by adding new code, rather than changing existing code.",
+            "color": "yellow",
+            "note": "extensible architecture ",
+            "chapter": null
+        },
+        {
+            "id": 1714,
+            "is_deleted": false,
+            "representative_text": "The SOLID principles tell us how to arrange our functions and data structures into classes, and how those classes should be interconnected. ",
+            "selected_text": "SOLID principles tell us how to arrange our functions and data structures into classes, and how those classes should be interconnected",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1715,
+            "is_deleted": false,
+            "representative_text": "In short, this principle says that to build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be substituted one for another. ",
+            "selected_text": "In short, this principle says that to build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be substituted one for another",
+            "color": "yellow",
+            "note": "child classes should behave in the same way. example, a database class should return results in the same format like any other database class if ur child class have to override every single method of ur parent class, you have violated this principle ",
+            "chapter": null
+        },
+        {
+            "id": 1716,
+            "is_deleted": false,
+            "representative_text": "This principle advises software designers to avoid depending on things that they don't use. ",
+            "selected_text": "This principle advises software designers to avoid depending on things that they don't use.",
+            "color": "yellow",
+            "note": "segregate larger interfaces into smaller ones",
+            "chapter": null
         }
     ],
     "underlines": [

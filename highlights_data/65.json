@@ -191,6 +191,78 @@
             "color": "yellow",
             "note": null,
             "chapter": null
+        },
+        {
+            "id": 1644,
+            "is_deleted": false,
+            "representative_text": "Light seemed to bounce off him differently. ",
+            "selected_text": "Light seemed to bounce off him differently",
+            "color": "purple",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1646,
+            "is_deleted": false,
+            "representative_text": "Not that any of us thought we wouldn't fail; in fact we had every expectation that we would. But when we did fail, we had faith that we'd do it fast, learn from it, and be better for it. ",
+            "selected_text": "in fact we had every expectation that we would. But when we did fail, we had faith that we'd do it fast, learn from it, and be better for it.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1664,
+            "is_deleted": false,
+            "representative_text": "\"No brilliant idea was ever born in a conference room,\" he assured the Dane. \"But a lot of silly ideas have died there,\" said Stahr. ",
+            "selected_text": "\"No brilliant idea was ever born in a conference room,\" he assured the Dane. \"But a lot of silly ideas have died there,\" said Stahr.",
+            "color": "purple",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1669,
+            "is_deleted": false,
+            "representative_text": "Pre was most famous for saying, \"Somebody may beat me--but they're going to have to bleed to do it.\" ",
+            "selected_text": "Somebody may beat me--but they're going to have to bleed to do it",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1692,
+            "is_deleted": false,
+            "representative_text": "Clearly the Buttfaces liked the culture I'd created. I trusted them, wholly, and didn't look over their shoulders, and that bred a powerful two-way loyalty. My management style wouldn't have worked for people who wanted to be guided, every step, but this group found it liberating, empowering. ",
+            "selected_text": "Clearly the Buttfaces liked the culture I'd created. I trusted them, wholly, and didn't look over their shoulders, and that bred a powerful two-way loyalty. My management style wouldn't have worked for people who wanted to be guided, every step, but this group found it liberating, empowering",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1713,
+            "is_deleted": false,
+            "representative_text": "I was transitioning him from legal to marketing, moving him out of his comfort zone, as I liked to do with everyone now and then, to prevent them from growing stale. ",
+            "selected_text": "moving him out of his comfort zone, as I liked to do with everyone now and then, to prevent them from growing stale",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1723,
+            "is_deleted": false,
+            "representative_text": "A lone cricket chirped. Then died. ",
+            "selected_text": "A lone cricket chirped. Then died.",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
+        },
+        {
+            "id": 1726,
+            "is_deleted": false,
+            "representative_text": "I tell them about the untapped resources, natural and human, that the world has at its disposal, the abundant ways and means to solve its many crises. All we have to do, I tell the students, is work and study, study and work, hard as we can. ",
+            "selected_text": " All we have to do, I tell the students, is work and study, study and work, hard as we can",
+            "color": "yellow",
+            "note": null,
+            "chapter": null
         }
     ],
     "underlines": [
@@ -744,6 +816,550 @@
             "representative_text": "Before long, the stragglers and holdouts were desperate to be included.\n\t\t\t",
             "selected_text": "stragglers",
             "note": "slow mover ",
+            "chapter": null
+        },
+        {
+            "id": 1640,
+            "is_deleted": false,
+            "representative_text": "That same day, James the Just called a halt to the trial and admonished both sides. ",
+            "selected_text": "admonished",
+            "note": "scolded",
+            "chapter": null
+        },
+        {
+            "id": 1641,
+            "is_deleted": false,
+            "representative_text": "Iconoclastic. ",
+            "selected_text": "Iconoclastic",
+            "note": "rebellious",
+            "chapter": null
+        },
+        {
+            "id": 1642,
+            "is_deleted": false,
+            "representative_text": "He had a thick Boston accent, and besides shoes the only subject he ever broached was his beloved wife and kids. ",
+            "selected_text": "broached",
+            "note": "talked about",
+            "chapter": null
+        },
+        {
+            "id": 1643,
+            "is_deleted": false,
+            "representative_text": "And so, as we entered the final days of 1974, Johnson was firmly ensconced in Exeter, and often, late at night, thinking of him back there, I\u2019d smile and say under my breath: Godspeed, old friend.\n\t\t\t",
+            "selected_text": "ensconced",
+            "note": "settled",
+            "chapter": null
+        },
+        {
+            "id": 1645,
+            "is_deleted": false,
+            "representative_text": "I was mortified. ",
+            "selected_text": "mortified",
+            "note": "ashamed",
+            "chapter": null
+        },
+        {
+            "id": 1647,
+            "is_deleted": false,
+            "representative_text": "Out of contempt for Onitsuka, and disdain for the whole sordid business, he\u2019d decided to wing it. ",
+            "selected_text": "sordid",
+            "note": "dirty",
+            "chapter": null
+        },
+        {
+            "id": 1648,
+            "is_deleted": false,
+            "representative_text": "That laugh\u2014I was struck again by the incongruous falsetto. ",
+            "selected_text": "falsetto",
+            "note": "voice",
+            "chapter": null
+        },
+        {
+            "id": 1649,
+            "is_deleted": false,
+            "representative_text": "Renting and fixing up the Exeter factory, plus workers, materials, sundries\u2014he guessed $250,000.\n\t\t\t",
+            "selected_text": "sundries",
+            "note": "various",
+            "chapter": null
+        },
+        {
+            "id": 1650,
+            "is_deleted": false,
+            "representative_text": "We were fighting against conformity, against boringness, against drudgery. ",
+            "selected_text": "drudgery",
+            "note": "hard work",
+            "chapter": null
+        },
+        {
+            "id": 1651,
+            "is_deleted": false,
+            "representative_text": "I started to hyperventilate, thinking James the Just was going to find our expert witness in contempt.\n\t\t\t",
+            "selected_text": "hyperventilate",
+            "note": "breathe heavily",
+            "chapter": null
+        },
+        {
+            "id": 1652,
+            "is_deleted": false,
+            "representative_text": "That laugh\u2014I was struck again by the incongruous falsetto. ",
+            "selected_text": "incongruous",
+            "note": "not in harmony",
+            "chapter": null
+        },
+        {
+            "id": 1653,
+            "is_deleted": false,
+            "representative_text": "The same dad who\u2019d told the cops to haul Strasser away? ",
+            "selected_text": "haul",
+            "note": "drag",
+            "chapter": null
+        },
+        {
+            "id": 1654,
+            "is_deleted": false,
+            "representative_text": "We both guffawed. ",
+            "selected_text": "guffawed",
+            "note": "laughed",
+            "chapter": null
+        },
+        {
+            "id": 1655,
+            "is_deleted": false,
+            "representative_text": "Agreeable, friendly, loyal, but absolutely feckless, because he had rigid loan limits that were always well below our requests. ",
+            "selected_text": "feckless",
+            "note": "useless ",
+            "chapter": null
+        },
+        {
+            "id": 1656,
+            "is_deleted": false,
+            "representative_text": "Talk about your deadbeats. ",
+            "selected_text": "deadbeats",
+            "note": "loafer. lukkha",
+            "chapter": null
+        },
+        {
+            "id": 1657,
+            "is_deleted": false,
+            "representative_text": "Also, Johnson had been down there to scout factories, in 1973, and he\u2019d reported that they weren\u2019t much better than the dilapidated ones he saw all over New England. ",
+            "selected_text": "dilapidated",
+            "note": "ruined",
+            "chapter": null
+        },
+        {
+            "id": 1658,
+            "is_deleted": false,
+            "representative_text": "He had the serene expression and callused hands of a craftsman, and he proudly wore the standard uniform: stained pants, stained denim shirt, rolled up to the stained elbows. ",
+            "selected_text": "callused hands ",
+            "note": "hardened hands",
+            "chapter": null
+        },
+        {
+            "id": 1659,
+            "is_deleted": false,
+            "representative_text": "They were building factories at warp speed. ",
+            "selected_text": "warp",
+            "note": "crazy",
+            "chapter": null
+        },
+        {
+            "id": 1660,
+            "is_deleted": false,
+            "representative_text": "He was fifty, thereabouts, but his hair had no gray. ",
+            "selected_text": "thereabouts",
+            "note": "approximately",
+            "chapter": null
+        },
+        {
+            "id": 1661,
+            "is_deleted": false,
+            "representative_text": "He said he wouldn\u2019t consider doing business with some fly-by-night company he\u2019d never heard of\u2014let alone from Oregon.\n\t\t\t",
+            "selected_text": "fly-by-night",
+            "note": "unreliable",
+            "chapter": null
+        },
+        {
+            "id": 1662,
+            "is_deleted": false,
+            "representative_text": "By then Ito had accepted that Sumeragi was acting unilaterally, hiding invoices on his own initiative, unbeknownst to me. ",
+            "selected_text": "unbeknownst",
+            "note": "without my knowledge",
+            "chapter": null
+        },
+        {
+            "id": 1663,
+            "is_deleted": false,
+            "representative_text": "In his eulogy Bowerman talked about Pre\u2019s athletic feats, of course, but insisted that Pre\u2019s life and his legend were about larger, loftier things. ",
+            "selected_text": "eulogy",
+            "note": "speech of praise for someone that died ",
+            "chapter": null
+        },
+        {
+            "id": 1665,
+            "is_deleted": false,
+            "representative_text": "We were too overwrought. ",
+            "selected_text": "overwrought",
+            "note": "tensed",
+            "chapter": null
+        },
+        {
+            "id": 1666,
+            "is_deleted": false,
+            "representative_text": "Meanwhile, I would scurry from room to room, apologizing and genuflecting.\n\t\t\t",
+            "selected_text": "scurry",
+            "note": "rush",
+            "chapter": null
+        },
+        {
+            "id": 1667,
+            "is_deleted": false,
+            "representative_text": "Campbell kept repeating this word, bludgeoning me with it. ",
+            "selected_text": "bludgeoning",
+            "note": "hitting",
+            "chapter": null
+        },
+        {
+            "id": 1668,
+            "is_deleted": false,
+            "representative_text": "We all sat in silence and waited for Holland\u2019s cohorts to be released from whatever crypt they were kept in. ",
+            "selected_text": "cohorts",
+            "note": "colleagues",
+            "chapter": null
+        },
+        {
+            "id": 1670,
+            "is_deleted": false,
+            "representative_text": "Meanwhile, I would scurry from room to room, apologizing and genuflecting.\n\t\t\t",
+            "selected_text": "genuflecting",
+            "note": "prostate",
+            "chapter": null
+        },
+        {
+            "id": 1671,
+            "is_deleted": false,
+            "representative_text": "Ito and Sumeragi were going to pore through our books, and while there was no telling what they might think of our finances, one thing was pretty much preordained. ",
+            "selected_text": "preordained",
+            "note": "predetermined",
+            "chapter": null
+        },
+        {
+            "id": 1672,
+            "is_deleted": false,
+            "representative_text": "Two creditors in particular were livid. ",
+            "selected_text": "livid",
+            "note": "furious",
+            "chapter": null
+        },
+        {
+            "id": 1673,
+            "is_deleted": false,
+            "representative_text": "Hangdog, Sumeragi explained that he\u2019d been worried about us, that he\u2019d tried to help us manage our credit problems by hiding Nissho\u2019s invoices in a drawer. ",
+            "selected_text": "Hangdog",
+            "note": "ashamed",
+            "chapter": null
+        },
+        {
+            "id": 1674,
+            "is_deleted": false,
+            "representative_text": "If they considered our accounting sleight of hand a full-fledged betrayal, they would abandon us, faster than the bank had, in which case we\u2019d be out of business. ",
+            "selected_text": "sleight",
+            "note": "deceit",
+            "chapter": null
+        },
+        {
+            "id": 1675,
+            "is_deleted": false,
+            "representative_text": "At first he suspected Sumeragi of acting at our behest. ",
+            "selected_text": "behest",
+            "note": "instructions",
+            "chapter": null
+        },
+        {
+            "id": 1676,
+            "is_deleted": false,
+            "representative_text": "He identified its provenance, told us why it was poorly made, why it would soon fall apart, then tossed it aside with disdain. ",
+            "selected_text": "provenance",
+            "note": "origin",
+            "chapter": null
+        },
+        {
+            "id": 1677,
+            "is_deleted": false,
+            "representative_text": "While taking copious notes, Gorman also came up with new, fresh ideas, which gave me new insights, things to think about. ",
+            "selected_text": "copious",
+            "note": "abundant",
+            "chapter": null
+        },
+        {
+            "id": 1678,
+            "is_deleted": false,
+            "representative_text": "Inside we found a precarious staircase. ",
+            "selected_text": "precarious",
+            "note": "risky",
+            "chapter": null
+        },
+        {
+            "id": 1679,
+            "is_deleted": false,
+            "representative_text": "When we weren\u2019t touring factories, Gorman and I were being feted by factory owners. ",
+            "selected_text": "feted",
+            "note": "mehman navazi",
+            "chapter": null
+        },
+        {
+            "id": 1680,
+            "is_deleted": false,
+            "representative_text": "And invariably, embedded in the patriotic programming, there would be yet another \u201cBicentennial Minute,\u201d a public service announcement in which Dick Van Dyke or Lucille Ball or Gabe Kaplan would recount some episode that took place on this date during the Revolutionary era. ",
+            "selected_text": "invariably",
+            "note": "no matter what; always",
+            "chapter": null
+        },
+        {
+            "id": 1681,
+            "is_deleted": false,
+            "representative_text": "The concierge at our hotel drew us a map\u2014which proved useless. ",
+            "selected_text": "concierge",
+            "note": "hotel employee provides assistance",
+            "chapter": null
+        },
+        {
+            "id": 1682,
+            "is_deleted": false,
+            "representative_text": "We haggled over commission per pair, for a few minutes, but it was a friendly haggling. ",
+            "selected_text": "haggled",
+            "note": "argument about cost",
+            "chapter": null
+        },
+        {
+            "id": 1683,
+            "is_deleted": false,
+            "representative_text": "He rotated the shoe in the scant daylight that managed to fight through the grime on his windows. ",
+            "selected_text": "grime",
+            "note": "dirt ",
+            "chapter": null
+        },
+        {
+            "id": 1684,
+            "is_deleted": false,
+            "representative_text": "We had an inborn need to prove ourselves, to show the world that we weren\u2019t hicks and hayseeds. ",
+            "selected_text": "hicks and hayseeds",
+            "note": "gaav wale",
+            "chapter": null
+        },
+        {
+            "id": 1685,
+            "is_deleted": false,
+            "representative_text": "I love to close my eyes and remember us storming through the entrance, scattering all other patrons. ",
+            "selected_text": "patrons",
+            "note": "customers",
+            "chapter": null
+        },
+        {
+            "id": 1686,
+            "is_deleted": false,
+            "representative_text": "But going public would change our culture, make us beholden, make us corporate. ",
+            "selected_text": "beholden",
+            "note": "obliged",
+            "chapter": null
+        },
+        {
+            "id": 1687,
+            "is_deleted": false,
+            "representative_text": "It was bracing to realize that, in this group, the one with whom I had the most in common was\u00a0.\u00a0.\u00a0. ",
+            "selected_text": "bracing",
+            "note": "energizing",
+            "chapter": null
+        },
+        {
+            "id": 1688,
+            "is_deleted": false,
+            "representative_text": "The problems confronting us were grave, complex, seemingly insurmountable, made more so by the fact we were separated from each other by three thousand miles, at a time when communication wasn\u2019t easy or instant. ",
+            "selected_text": "insurmountable",
+            "note": "too big to overcome",
+            "chapter": null
+        },
+        {
+            "id": 1689,
+            "is_deleted": false,
+            "representative_text": "The only person who didn\u2019t join us in these late-night revels was Johnson. ",
+            "selected_text": "revels",
+            "note": "celebrations",
+            "chapter": null
+        },
+        {
+            "id": 1690,
+            "is_deleted": false,
+            "representative_text": "In the Bicentennial Year alone we were struggling with a number of unusually stressful problems. ",
+            "selected_text": "Bicentennial",
+            "note": "200th",
+            "chapter": null
+        },
+        {
+            "id": 1691,
+            "is_deleted": false,
+            "representative_text": "We\u2019d buy drinks for the house, then commandeer a corner and continue laying into each other about some problem or idea or harebrained scheme. ",
+            "selected_text": "harebrained",
+            "note": "stupid; ill judged",
+            "chapter": null
+        },
+        {
+            "id": 1693,
+            "is_deleted": false,
+            "representative_text": "But before the bartender gave last call, we\u2019d know full well why those midsoles weren\u2019t getting from Point A to Point B, and the person responsible would be contrite, and put on notice, and we\u2019d have ourselves a creative solution.\n\t\t\t",
+            "selected_text": "contrite",
+            "note": "guilty; remorseful ",
+            "chapter": null
+        },
+        {
+            "id": 1694,
+            "is_deleted": false,
+            "representative_text": "Still, nonjock or not, Brown managed to dream up a campaign and a tagline that perfectly captured Nike\u2019s philosophy. ",
+            "selected_text": "nonjock",
+            "note": "non athlete",
+            "chapter": null
+        },
+        {
+            "id": 1695,
+            "is_deleted": false,
+            "representative_text": "He kept at it, unflappable, earnest. ",
+            "selected_text": "unflappable",
+            "note": "composed ",
+            "chapter": null
+        },
+        {
+            "id": 1696,
+            "is_deleted": false,
+            "representative_text": "He saw me appraising him, saw my skepticism, and wasn\u2019t the least fazed. ",
+            "selected_text": "fazed",
+            "note": "disturbed",
+            "chapter": null
+        },
+        {
+            "id": 1697,
+            "is_deleted": false,
+            "representative_text": "He was never so at peace as when frolicking in the water. ",
+            "selected_text": "frolicking",
+            "note": "play ",
+            "chapter": null
+        },
+        {
+            "id": 1698,
+            "is_deleted": false,
+            "representative_text": "They\u2019d managed to convince customs officials to effectively hobble us by enforcing this American Selling Price, an archaic law that dated back to the protectionist days, which preceded\u2014some say prompted\u2014the Great Depression.\n\t\t\t",
+            "selected_text": "hobble",
+            "note": "make langda",
+            "chapter": null
+        },
+        {
+            "id": 1699,
+            "is_deleted": false,
+            "representative_text": "Down went the kid, out came the parents, and pandemonium would ensue. ",
+            "selected_text": "pandemonium",
+            "note": "uproar",
+            "chapter": null
+        },
+        {
+            "id": 1700,
+            "is_deleted": false,
+            "representative_text": "And while he could be very witty, even silly, he could change on a dime and become scary serious.\n\t\t\t",
+            "selected_text": "witty",
+            "note": "humorous",
+            "chapter": null
+        },
+        {
+            "id": 1701,
+            "is_deleted": false,
+            "representative_text": "The Feds were dunning me for $25 million I didn\u2019t have and my men were running around the country writing checks for hundreds of thousands of dollars more, without even asking me. ",
+            "selected_text": "dunning",
+            "note": "make persistent demands on debt",
+            "chapter": null
+        },
+        {
+            "id": 1702,
+            "is_deleted": false,
+            "representative_text": "This was rank insubordination.\n\t\t\t",
+            "selected_text": "insubordination",
+            "note": "disobedience",
+            "chapter": null
+        },
+        {
+            "id": 1703,
+            "is_deleted": false,
+            "representative_text": "If Bowerman requisitions a Sherman tank, I told Woodell, don\u2019t ask questions. ",
+            "selected_text": "requisitions",
+            "note": "order",
+            "chapter": null
+        },
+        {
+            "id": 1704,
+            "is_deleted": false,
+            "representative_text": "They meant it as a farce, but also as a protest, a gesture of civil disobedience, and I was in no mood for two fashion Gandhis staging a dress-in. ",
+            "selected_text": "farce",
+            "note": "joke",
+            "chapter": null
+        },
+        {
+            "id": 1705,
+            "is_deleted": false,
+            "representative_text": "And he\u2019d been valedictorian at his high school. ",
+            "selected_text": "valedictorian",
+            "note": "student with highest achievements",
+            "chapter": null
+        },
+        {
+            "id": 1707,
+            "is_deleted": false,
+            "representative_text": "Soiled workout shorts, ragged T-shirts, wrinkled hoodies\u2014each putrid item looked as if it had been donated to, or pilfered from, a Dumpster. ",
+            "selected_text": "pilfered",
+            "note": "steal",
+            "chapter": null
+        },
+        {
+            "id": 1708,
+            "is_deleted": false,
+            "representative_text": "Quasi-comatose. ",
+            "selected_text": "comatose",
+            "note": "unconscious. unable to respond",
+            "chapter": null
+        },
+        {
+            "id": 1712,
+            "is_deleted": false,
+            "representative_text": "I toggled dazedly between my baseball mitt and my recliner.\n\t\t\t",
+            "selected_text": "dazedly",
+            "note": "bewildered; unable to think",
+            "chapter": null
+        },
+        {
+            "id": 1718,
+            "is_deleted": false,
+            "representative_text": "I became petulant. ",
+            "selected_text": "petulant",
+            "note": "angry ",
+            "chapter": null
+        },
+        {
+            "id": 1724,
+            "is_deleted": false,
+            "representative_text": "There was no overarching sense of cleanliness, no real quality control. ",
+            "selected_text": "overarching",
+            "note": "dominating everything else",
+            "chapter": null
+        },
+        {
+            "id": 1725,
+            "is_deleted": false,
+            "representative_text": "The race was afoot.\n\t\t\t",
+            "selected_text": "afoot",
+            "note": "going on",
+            "chapter": null
+        },
+        {
+            "id": 1727,
+            "is_deleted": false,
+            "representative_text": "In the ten years since the bad headlines and lurid expos\u00e9s, we\u2019ve used the crisis to reinvent the entire company.\n\t\t\t",
+            "selected_text": "lurid",
+            "note": "vivid",
             "chapter": null
         }
     ]
