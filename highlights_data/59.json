@@ -302,6 +302,70 @@
             "selected_text": "deterred",
             "note": "put off",
             "chapter": null
+        },
+        {
+            "id": 1847,
+            "is_deleted": false,
+            "representative_text": "This time the fanfare was quite perfunctory, the voice now distinctly cold.\n",
+            "selected_text": "perfunctory",
+            "note": "mechanical",
+            "chapter": null
+        },
+        {
+            "id": 1851,
+            "is_deleted": false,
+            "representative_text": "From time to time promising features would appear on the distant horizon\u2014ravines, maybe mountains, maybe even cities\u2014but as they approached the lines would soften and blur into anonymity and nothing would transpire. ",
+            "selected_text": "transpire",
+            "note": "happen",
+            "chapter": null
+        },
+        {
+            "id": 1863,
+            "is_deleted": false,
+            "representative_text": "The two missiles loomed massively on the screens as they thundered toward the ship.\n",
+            "selected_text": "loomed",
+            "note": "emerge",
+            "chapter": null
+        },
+        {
+            "id": 1864,
+            "is_deleted": false,
+            "representative_text": "\u201cThe suspense is killing me,\u201d said Arthur testily.\n",
+            "selected_text": "testily",
+            "note": "impatiently",
+            "chapter": null
+        },
+        {
+            "id": 1865,
+            "is_deleted": false,
+            "representative_text": "The suns now stood high in the black sky, the pyrotechnics of dawn were over, and the surface of the planet appeared bleak and forbidding in the common light of day\u2014gray, dusty and only dimly contoured. ",
+            "selected_text": "bleak",
+            "note": "banjar. dry",
+            "chapter": null
+        },
+        {
+            "id": 1870,
+            "is_deleted": false,
+            "representative_text": "Stress and nervous tension are now serious social problems in all parts of the Galaxy, and it is in order that this situation should not be in any way exacerbated that the following facts will now be revealed in advance.\n",
+            "selected_text": "it is in order that",
+            "note": "i think that",
+            "chapter": null
+        },
+        {
+            "id": 1875,
+            "is_deleted": false,
+            "representative_text": "In order that some sense of mystery should still be preserved, no revelation will yet be made concerning whose upper arm sustains the bruise. ",
+            "selected_text": "revelation",
+            "note": "disclosure",
+            "chapter": null
+        },
+        {
+            "id": 1880,
+            "is_deleted": false,
+            "representative_text": "The suns now stood high in the black sky, the pyrotechnics of dawn were over, and the surface of the planet appeared bleak and forbidding in the common light of day\u2014gray, dusty and only dimly contoured. ",
+            "selected_text": "pyrotechnics",
+            "note": "fireworks",
+            "chapter": null
         }
     ]
 }
