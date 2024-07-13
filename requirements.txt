@@ -1,4 +1,4 @@
-py_apple_books==0.2.2
+py_apple_books
 click==8.1.7
 pydantic==2.5.3
 Jinja2>=2.9.5
